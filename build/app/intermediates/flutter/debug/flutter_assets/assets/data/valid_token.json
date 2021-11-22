@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "data": {
+    "id": 1,
+    "full_name": "Steve Garrett",
+    "nickname": "Steve",
+    "photo": "assets/images/profile-2.jpg",
+    "url": "http://passionui.com",
+    "level": "Developer",
+    "description": "from Singapore, Golden Mile",
+    "tag": "@steve.garrett",
+    "rate": 4.5,
+    "token": "abc"
+  },
+  "message": "valid success"
+}
