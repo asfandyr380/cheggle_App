@@ -225,9 +225,9 @@
     },
     {
       "name": "image_picker",
-      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.7.5+4",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.8.4+4",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.14"
     },
     {
       "name": "image_picker_for_web",
@@ -494,7 +494,7 @@
       "languageVersion": "2.1"
     }
   ],
-  "generated": "2021-11-16T05:51:02.093574Z",
+  "generated": "2021-11-29T11:47:41.606458Z",
   "generator": "pub",
   "generatorVersion": "2.14.4"
 }

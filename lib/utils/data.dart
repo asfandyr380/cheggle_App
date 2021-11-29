@@ -2,6 +2,7 @@ import 'package:listar_flutter/utils/utils.dart';
 
 class UtilData {
   static Future<Map<String, dynamic>> login() async {
+    
     return await UtilAsset.loadJson("assets/data/login.json");
   }
 

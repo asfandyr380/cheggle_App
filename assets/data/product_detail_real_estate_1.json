@@ -15,7 +15,7 @@
   "description": "New to the market, this spacious Deepdale Gardens apartment located in Little Neck is awaiting your personal design. Spacious 2 bedroom with Formal dining room or home office, has many possibilities. Washer/Dryers permitted and No Flip Tax. Beautiful landscaped courtyard and tree line street offers your very own urban retreat in Queens. Close proximity to Local Bus & Express Bus, Highways, Schools (SD 26), Parks, Stores and Douglaston Golf Course. make this a perfect choice.",
   "price": 1299.99,
   "author": {
-    "id": 1,
+    "id": "1",
     "full_name": "Steve Garrett",
     "nickname": "Steve",
     "photo": "assets/images/profile-2.jpg",
@@ -69,7 +69,7 @@
       "description": "New to the market, this spacious Deepdale Gardens apartment located in Little Neck is awaiting your personal design. Spacious 2 bedroom with Formal dining room or home office, has many possibilities. Washer/Dryers permitted and No Flip Tax. Beautiful landscaped courtyard and tree line street offers your very own urban retreat in Queens. Close proximity to Local Bus & Express Bus, Highways, Schools (SD 26), Parks, Stores and Douglaston Golf Course. make this a perfect choice.",
       "price": 1299.99,
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -125,7 +125,7 @@
       "description": "This art deco landmark from 1935 features a high-tech planetarium, public telescopes & city views.",
       "price": 1199.99,
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -181,7 +181,7 @@
       "description": "New to the market, this spacious Deepdale Gardens apartment located in Little Neck is awaiting your personal design. Spacious 2 bedroom with Formal dining room or home office, has many possibilities. Washer/Dryers permitted and No Flip Tax. Beautiful landscaped courtyard and tree line street offers your very own urban retreat in Queens. Close proximity to Local Bus & Express Bus, Highways, Schools (SD 26), Parks, Stores and Douglaston Golf Course. make this a perfect choice.",
       "price": 1099.99,
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -237,7 +237,7 @@
       "description": "This art deco landmark from 1935 features a high-tech planetarium, public telescopes & city views.",
       "price": 999.99,
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -293,7 +293,7 @@
       "description": "New to the market, this spacious Deepdale Gardens apartment located in Little Neck is awaiting your personal design. Spacious 2 bedroom with Formal dining room or home office, has many possibilities. Washer/Dryers permitted and No Flip Tax. Beautiful landscaped courtyard and tree line street offers your very own urban retreat in Queens. Close proximity to Local Bus & Express Bus, Highways, Schools (SD 26), Parks, Stores and Douglaston Golf Course. make this a perfect choice.",
       "price": 899.99,
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -349,7 +349,7 @@
       "description": "This art deco landmark from 1935 features a high-tech planetarium, public telescopes & city views.",
       "price": 799.99,
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -405,7 +405,7 @@
       "description": "New to the market, this spacious Deepdale Gardens apartment located in Little Neck is awaiting your personal design. Spacious 2 bedroom with Formal dining room or home office, has many possibilities. Washer/Dryers permitted and No Flip Tax. Beautiful landscaped courtyard and tree line street offers your very own urban retreat in Queens. Close proximity to Local Bus & Express Bus, Highways, Schools (SD 26), Parks, Stores and Douglaston Golf Course. make this a perfect choice.",
       "price": 699.99,
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -461,7 +461,7 @@
       "description": "This art deco landmark from 1935 features a high-tech planetarium, public telescopes & city views.",
       "price": 599.99,
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",

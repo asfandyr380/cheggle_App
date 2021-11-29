@@ -1,6 +1,9 @@
 class UserModel {
-  final int id;
+  final String id;
   final String name;
+  final String firstName;
+  final String lastName;
+  final String email;
   final String nickname;
   final String image;
   final String link;
@@ -9,6 +12,7 @@ class UserModel {
   final String tag;
   final double rate;
   final String token;
+  final String website;
 
   UserModel(
     this.id,
@@ -21,12 +25,16 @@ class UserModel {
     this.tag,
     this.rate,
     this.token,
+    this.email,
+    this.website,
+    this.firstName,
+    this.lastName,
   );
 
   factory UserModel.fromJson(Map<String, dynamic> json) {
     if (json == null) return null;
     return UserModel(
-      json['id'] ?? 0,
+      json['id'] ?? '0',
       json['full_name'] ?? 'Unknown',
       json['nickname'] ?? 'Unknown',
       json['photo'] ?? 'Unknown',
@@ -36,13 +44,20 @@ class UserModel {
       json['tag'] ?? 'Unknown',
       json['rate'] ?? 0.0,
       json['token'] ?? 'Unknown',
+      json['email'] ?? "Unknown",
+      json['url'] ?? "Unknown",
+      json['firstName'] ?? "Unknown",
+      json['lastName'] ?? "Unknown",
     );
   }
 
   Map<String, dynamic> toJson() {
     return {
       'id': id,
+      'email': email,
       'full_name': name,
+      'firstName': firstName,
+      'lastName': lastName,
       'nickname': nickname,
       'photo': image,
       'url': link,
@@ -50,6 +65,7 @@ class UserModel {
       'description': description,
       'tag': tag,
       'rate': rate,
+      'website': website,
       'token': token,
     };
   }

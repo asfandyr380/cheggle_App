@@ -2,7 +2,7 @@
   "success": true,
   "data": {
     "user": {
-      "id": 1,
+      "id": "1",
       "full_name": "Steve Garrett",
       "nickname": "Steve",
       "photo": "assets/images/profile-2.jpg",

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:listar_flutter/api/api.dart';
+import 'package:listar_flutter/models/model.dart';
+import 'package:listar_flutter/models/screen_models/profile_page_model.dart';
 import 'package:listar_flutter/utils/utils.dart';
 import 'package:listar_flutter/widgets/widget.dart';
 
@@ -32,13 +35,34 @@ class _ChangePasswordState extends State<ChangePassword> {
         data: _textRePassController.text,
       );
     });
-    if (_validPass == null && _validRePass == null) {
+    if (_validPass == null && _validRePass == null && _profilePage != null) {
       setState(() {
         _loading = true;
       });
-      await Future.delayed(Duration(seconds: 1));
-      Navigator.pop(context);
+      final ResultApiModel result = await Api.changePassword(
+          _profilePage.user.id, _textRePassController.text);
+      if (result.success) {
+        Navigator.pop(context);
+      }
     }
+  }
+
+  ProfilePageModel _profilePage;
+
+  ///Fetch API
+  Future<void> _loadData() async {
+    final ResultApiModel result = await Api.getProfile();
+    if (result.success) {
+      setState(() {
+        _profilePage = ProfilePageModel.fromJson(result.data);
+      });
+    }
+  }
+
+  @override
+  void initState() {
+    _loadData();
+    super.initState();
   }
 
   @override

@@ -16,7 +16,7 @@
   "distance": "20 Km",
   "description": "Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus magna justo,lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt. Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus.",
   "author": {
-    "id": 1,
+    "id": "1",
     "full_name": "Steve Garrett",
     "nickname": "Steve",
     "photo": "assets/images/profile-2.jpg",
@@ -61,7 +61,7 @@
       "distance": "15 Km",
       "description": "Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus magna justo,lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt. Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus.",
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -107,7 +107,7 @@
       "distance": "20 Km",
       "description": "Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus magna justo,lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt. Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus.",
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -152,7 +152,7 @@
       "distance": "900 m",
       "description": "Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus magna justo,lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt. Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus.",
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -197,7 +197,7 @@
       "distance": "500 m",
       "description": "Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus magna justo,lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt. Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus.",
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -241,7 +241,7 @@
       "distance": "200m",
       "description": "Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus magna justo,lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt. Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus.",
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -285,7 +285,7 @@
       "distance": "2 Km",
       "description": "Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus magna justo,lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt. Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus.",
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -329,7 +329,7 @@
       "distance": "1.5 Km",
       "description": "Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus magna justo,lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt. Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus.",
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",

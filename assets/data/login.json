@@ -1,15 +1,15 @@
 {
   "success": true,
   "data": {
-    "id": 1,
-    "full_name": "Steve Garrett",
-    "nickname": "Steve",
+    "id": "1",
+    "full_name": "Asfand Yar",
+    "nickname": "Asfand",
     "photo": "assets/images/profile-2.jpg",
     "url": "http://passionui.com",
     "level": "Developer",
-    "description": "from Singapore, Golden Mile",
-    "tag": "@steve.garrett",
-    "rate": 4.5,
+    "description": "From Pakistan",
+    "tag": "@asfandyr",
+    "rate": 5.1,
     "token": "abc"
   },
   "message": "login success"

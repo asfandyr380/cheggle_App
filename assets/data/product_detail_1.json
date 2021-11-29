@@ -24,7 +24,7 @@
     { "id": 5, "title": "related", "key": "related" }
   ],
   "author": {
-    "id": 1,
+    "id": "1",
     "full_name": "Steve Garrett",
     "nickname": "Steve",
     "photo": "assets/images/profile-2.jpg",
@@ -96,7 +96,7 @@
         { "id": 5, "title": "related", "key": "related" }
       ],
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -161,7 +161,7 @@
       "description": "Frank Gehry-designed music hall with striking steel architecture & pristine acoustics.",
       "price_range": "$46.00 to $93.00",
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -232,7 +232,7 @@
         { "id": 5, "title": "related", "key": "related" }
       ],
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -297,7 +297,7 @@
       "description": "Erected in 1923, this symbolic landmark on Mount Lee is often viewed from Griffith Park ",
       "price_range": "$46.00 to $93.00",
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -368,7 +368,7 @@
         { "id": 5, "title": "related", "key": "related" }
       ],
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -432,7 +432,7 @@
       "description": "Urban oasis featuring hiking & equestrian trails, plus city views, the Greek Theatre & L.A. Zoo.",
       "price_range": "$46.00 to $93.00",
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -503,7 +503,7 @@
         { "id": 5, "title": "related", "key": "related" }
       ],
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -568,7 +568,7 @@
       "description": "Modern art museum with a honeycomb-like facade housing rotating exhibits, plus a shop",
       "price_range": "$46.00 to $93.00",
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -640,7 +640,7 @@
         { "id": 5, "title": "related", "key": "related" }
       ],
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -704,7 +704,7 @@
       "description": "Besides the Oscars, this chic, state-of-the-art theater hosts film premieres, shows & public tours.",
       "price_range": "$46.00 to $93.00",
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -775,7 +775,7 @@
         { "id": 5, "title": "related", "key": "related" }
       ],
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -839,7 +839,7 @@
       "description": "Sprawling amusement park with a cinema theme, featuring rides, restaurants, shops & shows.",
       "price_range": "$46.00 to $93.00",
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -911,7 +911,7 @@
         { "id": 5, "title": "related", "key": "related" }
       ],
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -976,7 +976,7 @@
       "description": "Ice Age–fossil excavation site with an adjacent museum, plus a re-created prehistoric garden.",
       "price_range": "$46.00 to $93.00",
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -1047,7 +1047,7 @@
         { "id": 5, "title": "related", "key": "related" }
       ],
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -1121,7 +1121,7 @@
         { "id": 5, "title": "related", "key": "related" }
       ],
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -1186,7 +1186,7 @@
       "description": "Frank Gehry-designed music hall with striking steel architecture & pristine acoustics.",
       "price_range": "$46.00 to $93.00",
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -1257,7 +1257,7 @@
         { "id": 5, "title": "related", "key": "related" }
       ],
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -1322,7 +1322,7 @@
       "description": "Erected in 1923, this symbolic landmark on Mount Lee is often viewed from Griffith Park ",
       "price_range": "$46.00 to $93.00",
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -1393,7 +1393,7 @@
         { "id": 5, "title": "related", "key": "related" }
       ],
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -1457,7 +1457,7 @@
       "description": "Urban oasis featuring hiking & equestrian trails, plus city views, the Greek Theatre & L.A. Zoo.",
       "price_range": "$46.00 to $93.00",
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -1528,7 +1528,7 @@
         { "id": 5, "title": "related", "key": "related" }
       ],
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -1593,7 +1593,7 @@
       "description": "Modern art museum with a honeycomb-like facade housing rotating exhibits, plus a shop",
       "price_range": "$46.00 to $93.00",
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -1665,7 +1665,7 @@
         { "id": 5, "title": "related", "key": "related" }
       ],
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -1729,7 +1729,7 @@
       "description": "Besides the Oscars, this chic, state-of-the-art theater hosts film premieres, shows & public tours.",
       "price_range": "$46.00 to $93.00",
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -1800,7 +1800,7 @@
         { "id": 5, "title": "related", "key": "related" }
       ],
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -1864,7 +1864,7 @@
       "description": "Sprawling amusement park with a cinema theme, featuring rides, restaurants, shops & shows.",
       "price_range": "$46.00 to $93.00",
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -1936,7 +1936,7 @@
         { "id": 5, "title": "related", "key": "related" }
       ],
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -2001,7 +2001,7 @@
       "description": "Ice Age–fossil excavation site with an adjacent museum, plus a re-created prehistoric garden.",
       "price_range": "$46.00 to $93.00",
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",
@@ -2072,7 +2072,7 @@
         { "id": 5, "title": "related", "key": "related" }
       ],
       "author": {
-        "id": 1,
+        "id": "1",
         "full_name": "Steve Garrett",
         "nickname": "Steve",
         "photo": "assets/images/profile-2.jpg",

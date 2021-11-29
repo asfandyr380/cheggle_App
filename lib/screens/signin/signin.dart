@@ -27,8 +27,6 @@ class _SignInState extends State<SignIn> {
   @override
   void initState() {
     super.initState();
-    _textIDController.text = "test";
-    _textPassController.text = "123456";
   }
 
   ///On navigate forgot password
@@ -102,7 +100,7 @@ class _SignInState extends State<SignIn> {
             child: Column(
               children: <Widget>[
                 AppTextInput(
-                  hintText: Translate.of(context).translate('account'),
+                  hintText: Translate.of(context).translate('Email'),
                   errorText: _validID,
                   icon: Icon(Icons.clear),
                   controller: _textIDController,

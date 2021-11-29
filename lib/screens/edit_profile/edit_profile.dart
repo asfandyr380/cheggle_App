@@ -2,7 +2,10 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:listar_flutter/api/api.dart';
 import 'package:listar_flutter/configs/config.dart';
+import 'package:listar_flutter/models/model_result_api.dart';
+import 'package:listar_flutter/models/screen_models/profile_page_model.dart';
 import 'package:listar_flutter/utils/utils.dart';
 import 'package:listar_flutter/widgets/widget.dart';
 
@@ -18,40 +21,62 @@ class EditProfile extends StatefulWidget {
 class _EditProfileState extends State<EditProfile> {
   final _picker = ImagePicker();
   final _textNameController = TextEditingController();
+  final _textLastNameController = TextEditingController();
   final _textEmailController = TextEditingController();
   final _textAddressController = TextEditingController();
   final _textWebsiteController = TextEditingController();
-  final _textInfoController = TextEditingController();
+
   final _focusName = FocusNode();
+  final _focusLastName = FocusNode();
   final _focusEmail = FocusNode();
   final _focusAddress = FocusNode();
   final _focusWebsite = FocusNode();
-  final _focusInfo = FocusNode();
 
-  PickedFile _image;
+  XFile _image;
   bool _loading = false;
   String _validName;
+  String _validLastName;
   String _validEmail;
   String _validAddress;
   String _validWebsite;
-  String _validInfo;
+
+  ProfilePageModel _profilePage;
 
   @override
   void initState() {
     super.initState();
-    _textNameController.text = 'Steve Garrett';
-    _textEmailController.text = 'steve.garrett@passionui.com';
-    _textAddressController.text = 'Singapore, Golden Mile';
-    _textWebsiteController.text = 'passionui.com';
+    _loadData().then((value) {
+      _textNameController.text = _profilePage.user.firstName;
+      _textLastNameController.text = _profilePage.user.lastName;
+      _textEmailController.text = _profilePage.user.email;
+      _textAddressController.text = _profilePage.user.description;
+      _textWebsiteController.text = _profilePage.user.website;
+    });
+  }
+
+  ///Fetch API
+  Future<void> _loadData() async {
+    final ResultApiModel result = await Api.getProfile();
+    if (result.success) {
+      setState(() {
+        _profilePage = ProfilePageModel.fromJson(result.data);
+      });
+    }
   }
 
   ///On async get Image file
   Future _getImage() async {
-    final image = await _picker.getImage(source: ImageSource.gallery);
+    final image = await _picker.pickImage(source: ImageSource.gallery);
     if (image != null) {
-      setState(() {
-        _image = image;
-      });
+      final ResultApiModel result = await Api.uploadProfileImg(
+        id: _profilePage.user.id,
+        filePath: image.path,
+      );
+      if (result.success) {
+        setState(() {
+          _image = image;
+        });
+      }
     }
   }
 
@@ -61,6 +86,9 @@ class _EditProfileState extends State<EditProfile> {
     setState(() {
       _validName = UtilValidator.validate(
         data: _textNameController.text,
+      );
+      _validLastName = UtilValidator.validate(
+        data: _textLastNameController.text,
       );
       _validEmail = UtilValidator.validate(
         data: _textEmailController.text,
@@ -72,20 +100,29 @@ class _EditProfileState extends State<EditProfile> {
       _validWebsite = UtilValidator.validate(
         data: _textWebsiteController.text,
       );
-      _validInfo = UtilValidator.validate(
-        data: _textInfoController.text,
-      );
     });
     if (_validName == null &&
+        _validLastName == null &&
         _validEmail == null &&
         _validAddress == null &&
-        _validWebsite == null &&
-        _validInfo == null) {
+        _validWebsite == null) {
       setState(() {
         _loading = true;
       });
-      await Future.delayed(Duration(seconds: 1));
-      Navigator.pop(context);
+      final ResultApiModel result = await Api.updateProfile(
+        id: _profilePage.user.id,
+        firstName: _textNameController.text,
+        lastName: _textLastNameController.text,
+        email: _textEmailController.text,
+        address: _textAddressController.text,
+        website: _textWebsiteController.text,
+      );
+      if (result.success) {
+        Navigator.pop(context);
+      }
+      setState(() {
+        _loading = false;
+      });
     }
   }
 
@@ -118,7 +155,10 @@ class _EditProfileState extends State<EditProfile> {
                                       shape: BoxShape.circle,
                                       image: DecorationImage(
                                         fit: BoxFit.cover,
-                                        image: AssetImage(Images.Profile2),
+                                        image: _profilePage != null
+                                            ? NetworkImage(
+                                                '$BASE_URL_Img${_profilePage.user.image}')
+                                            : AssetImage(Images.Avatar1),
                                       ),
                                     ),
                                   )
@@ -144,7 +184,7 @@ class _EditProfileState extends State<EditProfile> {
                   Padding(
                     padding: EdgeInsets.only(top: 16, bottom: 8),
                     child: Text(
-                      Translate.of(context).translate('name'),
+                      Translate.of(context).translate('First Name'),
                       style: Theme.of(context)
                           .textTheme
                           .subtitle2
@@ -163,7 +203,7 @@ class _EditProfileState extends State<EditProfile> {
                       UtilOther.fieldFocusChange(
                         context,
                         _focusName,
-                        _focusEmail,
+                        _focusLastName,
                       );
                     },
                     onChanged: (text) {
@@ -175,6 +215,41 @@ class _EditProfileState extends State<EditProfile> {
                     },
                     icon: Icon(Icons.clear),
                     controller: _textNameController,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 16, bottom: 8),
+                    child: Text(
+                      Translate.of(context).translate('Last Name'),
+                      style: Theme.of(context)
+                          .textTheme
+                          .subtitle2
+                          .copyWith(fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                  AppTextInput(
+                    hintText: Translate.of(context).translate('input_name'),
+                    errorText: _validLastName,
+                    focusNode: _focusLastName,
+                    textInputAction: TextInputAction.next,
+                    onTapIcon: () {
+                      _textLastNameController.clear();
+                    },
+                    onSubmitted: (text) {
+                      UtilOther.fieldFocusChange(
+                        context,
+                        _focusLastName,
+                        _focusEmail,
+                      );
+                    },
+                    onChanged: (text) {
+                      setState(() {
+                        _validLastName = UtilValidator.validate(
+                          data: _textLastNameController.text,
+                        );
+                      });
+                    },
+                    icon: Icon(Icons.clear),
+                    controller: _textLastNameController,
                   ),
                   Padding(
                     padding: EdgeInsets.only(top: 16, bottom: 8),
@@ -261,17 +336,13 @@ class _EditProfileState extends State<EditProfile> {
                   AppTextInput(
                     hintText: Translate.of(context).translate('input_website'),
                     errorText: _validAddress,
-                    focusNode: _focusAddress,
+                    focusNode: _focusWebsite,
                     textInputAction: TextInputAction.next,
                     onTapIcon: () {
                       _textWebsiteController.clear();
                     },
                     onSubmitted: (text) {
-                      UtilOther.fieldFocusChange(
-                        context,
-                        _focusWebsite,
-                        _focusInfo,
-                      );
+                      _update();
                     },
                     onChanged: (text) {
                       setState(() {
@@ -283,40 +354,6 @@ class _EditProfileState extends State<EditProfile> {
                     icon: Icon(Icons.clear),
                     controller: _textWebsiteController,
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(top: 16, bottom: 8),
-                    child: Text(
-                      Translate.of(context).translate('information'),
-                      style: Theme.of(context)
-                          .textTheme
-                          .subtitle2
-                          .copyWith(fontWeight: FontWeight.w600),
-                    ),
-                  ),
-                  AppTextInput(
-                    hintText: Translate.of(context).translate(
-                      'input_information',
-                    ),
-                    errorText: _validInfo,
-                    focusNode: _focusInfo,
-                    maxLines: 5,
-                    onTapIcon: () {
-                      _textInfoController.clear();
-                    },
-                    onSubmitted: (text) {
-                      _update();
-                    },
-                    onChanged: (text) {
-                      setState(() {
-                        _validInfo = UtilValidator.validate(
-                          data: _textInfoController.text,
-                          type: Type.email,
-                        );
-                      });
-                    },
-                    icon: Icon(Icons.clear),
-                    controller: _textInfoController,
-                  ),
                 ],
               ),
             ),
@@ -326,6 +363,7 @@ class _EditProfileState extends State<EditProfile> {
                 Translate.of(context).translate('confirm'),
                 onPressed: _update,
                 loading: _loading,
+                disabled: _loading,
               ),
             )
           ],

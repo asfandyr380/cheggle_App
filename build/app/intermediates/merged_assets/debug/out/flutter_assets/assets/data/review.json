@@ -1,7 +1,7 @@
 {
   "data": {
     "author": {
-      "id": 1,
+      "id": "1",
       "full_name": "Steve Garrett",
       "nickname": "Steve",
       "photo": "assets/images/profile-2.jpg",
@@ -25,7 +25,7 @@
       {
         "id": 1,
         "user": {
-          "id": 1,
+          "id": "1",
           "full_name": "Kondo Ieyasu",
           "nickname": "",
           "photo": "assets/images/profile-2.jpg",
@@ -42,7 +42,7 @@
       {
         "id": 2,
         "user": {
-          "id": 2,
+          "id": "2",
           "full_name": "Yeray Rosales",
           "nickname": "",
           "photo": "assets/images/profile-3.jpg",
@@ -59,7 +59,7 @@
       {
         "id": 3,
         "user": {
-          "id": 3,
+          "id": "3",
           "full_name": "Alf Huncoot",
           "nickname": "",
           "photo": "assets/images/profile-5.jpg",
@@ -76,7 +76,7 @@
       {
         "id": 4,
         "user": {
-          "id": 4,
+          "id": "4",
           "full_name": "Chioke Okonkwo",
           "nickname": "",
           "photo": "assets/images/profile-4.jpg",

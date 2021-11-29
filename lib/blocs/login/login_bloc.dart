@@ -22,7 +22,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
         password: event.password,
       );
 
-      ///Case API fail but not have token
+      ///Case API fail but not hve taoken
       if (user != null) {
         ///Begin start AuthBloc Event AuthenticationSave
         AppBloc.authBloc.add(AuthenticationSave(user));
@@ -31,7 +31,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
         yield LoginSuccess();
       } else {
         ///Notify loading to UI
-        yield LoginFail('login_fail');
+        yield LoginFail('login fail try again');
       }
     }
 

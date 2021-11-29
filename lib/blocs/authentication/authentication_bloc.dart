@@ -24,7 +24,7 @@ class AuthBloc extends Bloc<AuthenticationEvent, AuthenticationState> {
         await application.setUser(user);
 
         ///Valid & refresh User Info
-        user = await userRepository.validateToken();
+        // user = await userRepository.validateToken();
 
         ///Fetch api success
         if (user != null) {

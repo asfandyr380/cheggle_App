@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
 import 'package:listar_flutter/blocs/bloc.dart';
 import 'package:listar_flutter/configs/config.dart';
@@ -63,9 +65,11 @@ class HTTPManager {
   ///Post method
   Future<dynamic> post({
     String url,
-    Map<String, dynamic> data,
+    dynamic data,
     Options options,
   }) async {
+    print("Post URL ==> $url");
+    print("Post DATA ==> $data");
     UtilLogger.log("POST URL", url);
     UtilLogger.log("DATA", data);
     Dio dio = new Dio(exportOption());
@@ -75,6 +79,7 @@ class HTTPManager {
         data: data,
         options: options,
       );
+      print(response.data);
       return response.data;
     } on DioError catch (error) {
       return errorHandle(error: error);
