@@ -13,9 +13,9 @@ import 'package:share/share.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProductDetailRealEstate extends StatefulWidget {
-  ProductDetailRealEstate({Key key, this.id = 0}) : super(key: key);
+  ProductDetailRealEstate({Key key, this.id = '0'}) : super(key: key);
 
-  final num id;
+  final String id;
 
   @override
   _ProductDetailRealEstateState createState() {

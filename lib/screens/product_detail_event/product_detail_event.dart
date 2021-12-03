@@ -14,9 +14,9 @@ import 'package:share/share.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProductDetailEvent extends StatefulWidget {
-  ProductDetailEvent({Key key, this.id = 0}) : super(key: key);
+  ProductDetailEvent({Key key, this.id = '0'}) : super(key: key);
 
-  final num id;
+  final String id;
 
   @override
   _ProductDetailEventState createState() {

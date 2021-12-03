@@ -1,0 +1,29 @@
+{
+    "tabs": [
+        {
+            "id": 1,
+            "title": "information",
+            "key": "information"
+        },
+        {
+            "id": 2,
+            "title": "facilities",
+            "key": "facilities"
+        },
+        {
+            "id": 3,
+            "title": "featured",
+            "key": "featured"
+        },
+        {
+            "id": 4,
+            "title": "nearly",
+            "key": "nearly"
+        },
+        {
+            "id": 5,
+            "title": "related",
+            "key": "related"
+        }
+    ]
+}

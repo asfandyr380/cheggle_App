@@ -140,7 +140,7 @@ class AppProductItem extends StatelessWidget {
                           RatingBar.builder(
                 onRatingUpdate: (_){},
 
-                            initialRating: item.rate,
+                            initialRating: item.rate.toDouble(),
                             minRating: 1,
                             allowHalfRating: true,
                             unratedColor: Colors.amber.withAlpha(100),

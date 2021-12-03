@@ -5,7 +5,7 @@ enum DetailViewStyle { basic, tab }
 enum ProductViewType { small, gird, list, block, cardLarge, cardSmall }
 
 class ProductModel {
-  final int id;
+  final String id;
   final String title;
   final String subtitle;
   final String image;
@@ -69,7 +69,7 @@ class ProductModel {
   factory ProductModel.fromJson(Map<String, dynamic> json) {
     if (json == null) return null;
     return ProductModel(
-      id: json['id'] ?? 0,
+      id: json['_id'] ?? "0",
       title: json['title'] ?? 'Unknown',
       subtitle: json['subtitle'] ?? 'Unknown',
       image: json['image'] ?? 'Unknown',
@@ -102,7 +102,7 @@ class ProductModel {
         return ProductModel.fromJson(item);
       }).toList(),
       location: LocationModel.fromJson(json['location']),
-      author: UserModel.fromJson(json['author']),
+      author: UserModel.fromJson(json['auther']),
       viewStyle: _setViewStyle(json),
     );
   }

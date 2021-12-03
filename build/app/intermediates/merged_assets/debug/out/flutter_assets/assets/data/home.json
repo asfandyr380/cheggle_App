@@ -2,9 +2,9 @@
   "success": true,
   "data": {
     "banner": [
-      { "id": 1, "image": "assets/images/banner-2.jpg" },
-      { "id": 2, "image": "assets/images/banner-1.jpg" },
-      { "id": 3, "image": "assets/images/banner-3.jpg" }
+      { "id": "1", "image": "assets/images/banner-2.jpg" },
+      { "id": "2", "image": "assets/images/banner-1.jpg" },
+      { "id": "3", "image": "assets/images/banner-3.jpg" }
     ],
     "category": [
       {
@@ -62,38 +62,6 @@
         "icon": "hotel",
         "color": "#ff8a65",
         "type": "hotel"
-      }
-    ],
-    "popular": [
-      {
-        "id": 11,
-        "title": "Michigan",
-        "subtitle": "Arts & Humanities",
-        "image": "assets/images/trip-1.jpg"
-      },
-      {
-        "id": 12,
-        "title": "Colorado",
-        "subtitle": "Arts & Humanities",
-        "image": "assets/images/trip-4.jpg"
-      },
-      {
-        "id": 13,
-        "title": "Utah",
-        "subtitle": "Arts & Humanities",
-        "image": "assets/images/trip-5.jpg"
-      },
-      {
-        "id": 14,
-        "title": "King Utah",
-        "subtitle": "Arts & Humanities",
-        "image": "assets/images/trip-6.jpg"
-      },
-      {
-        "id": 15,
-        "title": "Colorado King",
-        "subtitle": "Arts & Humanities",
-        "image": "assets/images/trip-7.jpg"
       }
     ]
   },

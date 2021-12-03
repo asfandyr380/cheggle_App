@@ -159,7 +159,7 @@ class Api {
   }
 
   ///Get ProductDetail and Product Detail Tab
-  static Future<dynamic> getProductDetail({int id}) async {
+  static Future<dynamic> getProductDetail({String id}) async {
     await Future.delayed(Duration(seconds: 1));
     var result;
     switch (AppBloc.businessCubit.state) {

@@ -16,9 +16,9 @@ const expandedBarHeight = 150.0;
 const tabHeight = 50.0;
 
 class ProductDetailTab extends StatefulWidget {
-  ProductDetailTab({Key key, this.id = 0}) : super(key: key);
+  ProductDetailTab({Key key, this.id = '0'}) : super(key: key);
 
-  final num id;
+  final String id;
 
   @override
   _ProductDetailTabState createState() {

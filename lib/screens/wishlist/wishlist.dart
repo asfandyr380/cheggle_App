@@ -36,7 +36,7 @@ class _WishListState extends State<WishList> {
 
   ///On refresh
   Future<void> _onRefresh() async {
-    await Future.delayed(Duration(seconds: 1));
+    _loadData();
   }
 
   ///On navigate product detail

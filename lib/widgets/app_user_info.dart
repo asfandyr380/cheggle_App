@@ -159,7 +159,7 @@ class AppUserInfo extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        user.name,
+                        user.firstName,
                         maxLines: 1,
                         style: Theme.of(context).textTheme.subtitle2,
                       ),
@@ -193,8 +193,8 @@ class AppUserInfo extends StatelessWidget {
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
-                    image: AssetImage(
-                      user.image,
+                    image: NetworkImage(
+                      "$BASE_URL_Img/${user.image}",
                     ),
                     fit: BoxFit.cover,
                   ),
@@ -206,7 +206,7 @@ class AppUserInfo extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      user.name,
+                      user.firstName + user.lastName,
                       style: Theme.of(context)
                           .textTheme
                           .subtitle1

@@ -119,7 +119,7 @@ class ProductHeader extends SliverPersistentHeaderDelegate {
                         SizedBox(width: 4),
                         RatingBar.builder(
                           onRatingUpdate: (_) {},
-                          initialRating: productTabPage?.product?.rate,
+                          initialRating: productTabPage?.product?.rate.toDouble(),
                           minRating: 1,
                           allowHalfRating: true,
                           unratedColor: Colors.amber.withAlpha(100),

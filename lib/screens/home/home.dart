@@ -52,7 +52,7 @@ class _HomeState extends State<Home> {
 
   ///On refresh
   Future<void> _onRefresh() async {
-    await Future.delayed(Duration(seconds: 1));
+    _loadData();
   }
 
   ///Choose Business

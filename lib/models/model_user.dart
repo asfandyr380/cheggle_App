@@ -40,14 +40,14 @@ class UserModel {
       json['photo'] ?? 'Unknown',
       json['url'] ?? 'Unknown',
       json['level'] ?? 'Unknown',
-      json['description'] ?? 'Unknown',
+      json['street'] ?? 'Unknown',
       json['tag'] ?? 'Unknown',
       json['rate'] ?? 0.0,
       json['token'] ?? 'Unknown',
       json['email'] ?? "Unknown",
       json['url'] ?? "Unknown",
-      json['firstName'] ?? "Unknown",
-      json['lastName'] ?? "Unknown",
+      json['firstname'] ?? "Unknown",
+      json['lastname'] ?? "Unknown",
     );
   }
 

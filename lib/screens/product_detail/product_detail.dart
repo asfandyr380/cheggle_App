@@ -11,9 +11,9 @@ import 'package:listar_flutter/widgets/widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProductDetail extends StatefulWidget {
-  ProductDetail({Key key, this.id = 0}) : super(key: key);
+  ProductDetail({Key key, this.id = '0'}) : super(key: key);
 
-  final num id;
+  final String id;
 
   @override
   _ProductDetailState createState() {
@@ -34,6 +34,7 @@ class _ProductDetailState extends State<ProductDetail> {
 
   ///Fetch API
   Future<void> _loadData() async {
+    
     final ResultApiModel result = await Api.getProductDetail(id: widget.id);
     if (result.success) {
       setState(() {
@@ -394,7 +395,7 @@ class _ProductDetailState extends State<ProductDetail> {
                         SizedBox(width: 4),
                         RatingBar.builder(
                           onRatingUpdate: (_){},
-                          initialRating: _detailPage?.product?.rate,
+                          initialRating: _detailPage?.product?.rate.toDouble(),
                           minRating: 1,
                           allowHalfRating: true,
                           unratedColor: Colors.amber.withAlpha(100),

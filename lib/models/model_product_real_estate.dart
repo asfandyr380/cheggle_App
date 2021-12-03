@@ -1,7 +1,7 @@
 import 'package:listar_flutter/models/model.dart';
 
 class ProductRealEstateModel {
-  final int id;
+  final String id;
   final String title;
   final String subtitle;
   final String image;
@@ -50,7 +50,7 @@ class ProductRealEstateModel {
   factory ProductRealEstateModel.fromJson(Map<String, dynamic> json) {
     if (json == null) return null;
     return ProductRealEstateModel(
-      id: json['id'] ?? 0,
+      id: json['id'] ?? '0',
       title: json['title'] ?? 'Unknown',
       subtitle: json['subtitle'] ?? 'Unknown',
       image: json['image'] ?? 'Unknown',

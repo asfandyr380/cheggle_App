@@ -1,5 +1,5 @@
 class ImageModel {
-  final int id;
+  final String id;
   final String image;
 
   ImageModel(
@@ -10,7 +10,7 @@ class ImageModel {
   factory ImageModel.fromJson(Map<String, dynamic> json) {
     if (json == null) return null;
     return ImageModel(
-      json['id'] ?? 0,
+      json['_id'] ?? "0",
       json['image'] ?? "Unknown",
     );
   }

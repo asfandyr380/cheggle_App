@@ -12,9 +12,9 @@ import 'package:share/share.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProductDetailFood extends StatefulWidget {
-  ProductDetailFood({Key key, this.id = 0}) : super(key: key);
+  ProductDetailFood({Key key, this.id = "0"}) : super(key: key);
 
-  final num id;
+  final String id;
 
   @override
   _ProductDetailFoodState createState() {
