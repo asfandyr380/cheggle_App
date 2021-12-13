@@ -160,7 +160,6 @@ class Api {
 
   ///Get ProductDetail and Product Detail Tab
   static Future<dynamic> getProductDetail({String id}) async {
-    await Future.delayed(Duration(seconds: 1));
     var result;
     switch (AppBloc.businessCubit.state) {
       case BusinessState.realEstate:
@@ -259,7 +258,6 @@ class Api {
 
   ///Get Product List
   static Future<dynamic> getProduct() async {
-    await Future.delayed(Duration(seconds: 1));
     var result;
     switch (AppBloc.businessCubit.state) {
       case BusinessState.realEstate:

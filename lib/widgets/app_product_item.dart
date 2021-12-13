@@ -233,20 +233,20 @@ class AppProductItem extends StatelessWidget {
                       Row(
                         children: [status],
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: <Widget>[
-                          Padding(
-                            padding: EdgeInsets.all(4),
-                            child: Icon(
-                              item.favorite
-                                  ? Icons.favorite
-                                  : Icons.favorite_border,
-                              color: Colors.white,
-                            ),
-                          )
-                        ],
-                      )
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.end,
+                      //   children: <Widget>[
+                      //     Padding(
+                      //       padding: EdgeInsets.all(4),
+                      //       child: Icon(
+                      //         item.favorite
+                      //             ? Icons.favorite
+                      //             : Icons.favorite_border,
+                      //         color: Colors.white,
+                      //       ),
+                      //     )
+                      //   ],
+                      // )
                     ],
                   ),
                 ),
@@ -279,7 +279,7 @@ class AppProductItem extends StatelessWidget {
                     RatingBar.builder(
                 onRatingUpdate: (_){},
 
-                      initialRating: item.rate,
+                      initialRating: item.rate.toDouble(),
                       minRating: 1,
                       allowHalfRating: true,
                       unratedColor: Colors.amber.withAlpha(100),
@@ -453,7 +453,7 @@ class AppProductItem extends StatelessWidget {
                               RatingBar.builder(
                 onRatingUpdate: (_){},
 
-                                initialRating: item.rate,
+                                initialRating: item.rate.toDouble(),
                                 minRating: 1,
                                 allowHalfRating: true,
                                 unratedColor: Colors.amber.withAlpha(100),

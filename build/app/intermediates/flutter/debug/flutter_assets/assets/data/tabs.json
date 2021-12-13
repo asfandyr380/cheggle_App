@@ -1,5 +1,5 @@
 {
-    "tab": [
+    "tabs": [
         {
             "id": 1,
             "title": "information",
@@ -14,16 +14,6 @@
             "id": 3,
             "title": "featured",
             "key": "featured"
-        },
-        {
-            "id": 4,
-            "title": "nearly",
-            "key": "nearly"
-        },
-        {
-            "id": 5,
-            "title": "related",
-            "key": "related"
         }
     ]
 }

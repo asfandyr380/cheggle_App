@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:listar_flutter/api/http_manager.dart';
 import 'package:listar_flutter/blocs/bloc.dart';
+import 'package:listar_flutter/configs/routes.dart';
 import 'package:listar_flutter/utils/utils.dart';
 import 'package:listar_flutter/widgets/widget.dart';
 
@@ -179,10 +180,7 @@ class _SignUpState extends State<SignUp> {
         _validFax == null &&
         _validMobile == null &&
         _validWebsite == null) {
-      _apiSignup().then((value) async {
-        await Future.delayed(Duration(seconds: 1));
-        Navigator.pop(context);
-      });
+      _apiSignup();
     }
   }
 
@@ -209,6 +207,7 @@ class _SignUpState extends State<SignUp> {
         "city": _textCityController.text,
         "district": _textDistrictController.text,
         "country": selectedCountry,
+        "status": "InComplete"
       },
     );
     if (result['success']) {
@@ -216,6 +215,7 @@ class _SignUpState extends State<SignUp> {
         username: _textEmailController.text,
         password: _textPassController.text,
       ));
+      Navigator.pushReplacementNamed(context, Routes.selectPackage);
     }
   }
 

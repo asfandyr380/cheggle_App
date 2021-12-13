@@ -2,7 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:listar_flutter/blocs/bloc.dart';
 import 'package:listar_flutter/models/model.dart';
+import 'package:listar_flutter/screens/add_address/add_address.dart';
+import 'package:listar_flutter/screens/cashbox/cashbox.dart';
+import 'package:listar_flutter/screens/privacy_policy/privacy_policy.dart';
 import 'package:listar_flutter/screens/screen.dart';
+import 'package:listar_flutter/screens/select_package/selectPackage.dart';
+import 'package:listar_flutter/screens/terms_services/terms_services.dart';
+import 'package:listar_flutter/screens/upload_content_aftersignup/upload_content.dart';
 
 class Routes {
   static const String signIn = "/signIn";
@@ -29,6 +35,12 @@ class Routes {
   static const String setting = "/setting";
   static const String fontSetting = "/fontSetting";
   static const String chooseLocation = "/chooseLocation";
+  static const String uploadContent = "/upload";
+  static const String privacyPolicy = "/policy";
+  static const String termsServices = "/terms";
+  static const String selectPackage = "/packages";
+  static const String cashBox = "/cashbox";
+  static const String addAddress = "/address";
 
   Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -240,6 +252,52 @@ class Routes {
         return MaterialPageRoute(
           builder: (context) {
             return ChooseLocation(location: location);
+          },
+        );
+
+      case uploadContent:
+        final package = settings.arguments;
+
+        return MaterialPageRoute(
+          builder: (context) {
+            return UploadContent(package: package);
+          },
+        );
+
+      case privacyPolicy:
+        return MaterialPageRoute(
+          builder: (context) {
+            return PrivacyPolicy();
+          },
+        );
+
+      case termsServices:
+        return MaterialPageRoute(
+          builder: (context) {
+            return TermsServices();
+          },
+        );
+
+      case selectPackage:
+        return MaterialPageRoute(
+          builder: (context) {
+            return SelectPackage();
+          },
+        );
+
+      case cashBox:
+        final data = settings.arguments;
+
+        return MaterialPageRoute(
+          builder: (context) {
+            return CashBox(data: data);
+          },
+        );
+
+      case addAddress:
+        return MaterialPageRoute(
+          builder: (context) {
+            return AddAdress();
           },
         );
 

@@ -6,12 +6,12 @@ enum Type {
 }
 
 class UtilValidator {
-  static const String error_empty = "value_not_empty";
-  static const String error_range = "value_not_valid_range";
-  static const String error_email = "value_not_valid_email";
-  static const String error_phone = "value_not_valid_phone";
-  static const String error_password = "value_not_valid_password";
-  static const String error_id = "value_not_valid_id";
+  static const String error_empty = "value not empty";
+  static const String error_range = "value not valid range";
+  static const String error_email = "value not valid email";
+  static const String error_phone = "value not valid phone";
+  static const String error_password = "value not valid password";
+  static const String error_id = "value not valid id";
 
   static validate({
     String data,

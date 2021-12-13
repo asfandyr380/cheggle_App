@@ -1,11 +1,12 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:listar_flutter/api/api.dart';
+import 'package:listar_flutter/api/http_manager.dart';
 import 'package:listar_flutter/configs/config.dart';
 import 'package:listar_flutter/models/model.dart';
 import 'package:listar_flutter/models/screen_models/screen_models.dart';
+import 'package:listar_flutter/repository/repository.dart';
 import 'package:listar_flutter/utils/utils.dart';
 import 'package:listar_flutter/widgets/widget.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -34,12 +35,34 @@ class _ProductDetailState extends State<ProductDetail> {
 
   ///Fetch API
   Future<void> _loadData() async {
-    
     final ResultApiModel result = await Api.getProductDetail(id: widget.id);
     if (result.success) {
       setState(() {
         _detailPage = ProductDetailPageModel.fromJson(result.data);
-        _favorite = _detailPage?.product?.favorite;
+        checkFavourite();
+      });
+    }
+  }
+
+  checkFavourite() async {
+    final userRepository = UserRepository();
+    UserModel user = await userRepository.getUser();
+    var http = HTTPManager();
+    if (user != null) {
+      var res = await http.get(url: '$BASE_URL/user/wishlist/${user.id}');
+      if (res['success']) {
+        List products = res['data'];
+        for (var p in products) {
+          if (p["_id"] == _detailPage.product.id) {
+            setState(() {
+              _favorite = true;
+            });
+          }
+        }
+      }
+    } else {
+      setState(() {
+        _favorite = false;
       });
     }
   }
@@ -73,10 +96,18 @@ class _ProductDetailState extends State<ProductDetail> {
   }
 
   ///On like product
-  void _onLike() {
-    setState(() {
-      _favorite = !_favorite;
-    });
+  void _onLike() async {
+    var http = HTTPManager();
+    final user = await UserRepository().getUser();
+    var result = await http.post(
+      url: '$BASE_URL/user/wishlist/add',
+      data: {'productId': _detailPage.product.id, 'id': user.id},
+    );
+    if (result['success']) {
+      setState(() {
+        _favorite = !_favorite;
+      });
+    }
   }
 
   ///Make action
@@ -394,7 +425,7 @@ class _ProductDetailState extends State<ProductDetail> {
                         ),
                         SizedBox(width: 4),
                         RatingBar.builder(
-                          onRatingUpdate: (_){},
+                          onRatingUpdate: (_) {},
                           initialRating: _detailPage?.product?.rate.toDouble(),
                           minRating: 1,
                           allowHalfRating: true,
@@ -908,7 +939,7 @@ class _ProductDetailState extends State<ProductDetail> {
                     ),
                     _buildInfo(),
                     _buildFeature(),
-                    _buildRelated()
+                    // _buildRelated()
                   ],
                 ),
               ),

@@ -3,11 +3,18 @@ import 'package:listar_flutter/api/http_manager.dart';
 import 'package:listar_flutter/models/model_user.dart';
 import 'package:listar_flutter/repository/user.dart';
 import 'package:listar_flutter/utils/utils.dart';
-import 'dart:developer';
 
 class UtilData {
   static Future<Map<String, dynamic>> login() async {
     return await UtilAsset.loadJson("assets/data/login.json");
+  }
+
+  static Future<Map<String, dynamic>> privacyPolicy() async {
+    return await UtilAsset.loadJson("assets/data/privacy_policy.json");
+  }
+
+  static Future<Map<String, dynamic>> termsServices() async {
+    return await UtilAsset.loadJson("assets/data/terms_services.json");
   }
 
   static Future<Map<String, dynamic>> validateToken() async {
@@ -154,8 +161,14 @@ class UtilData {
 
     Map result = await http.get(url: '$BASE_URL/product/$id');
     if (result['success']) {
-      // tabs = result['data'];
       result['data']['tab'] = tabs['tabs'];
+
+      Map res_featured = await http.get(url: '$BASE_URL/product/featured');
+      if (res_featured['success']) {
+        // res_featured['data']['tab'] = tabs['tabs'];
+        result['data']['feature'] = res_featured['data'];
+      }
+
       if (jsonResultApi) {
         return {
           "success": true,
@@ -328,7 +341,11 @@ class UtilData {
         };
       }
     } else {
-      return {"success": false, "data": [], "message": "User not Loged in Nothing to show"};
+      return {
+        "success": false,
+        "data": [],
+        "message": "User not Loged in Nothing to show"
+      };
     }
   }
 
@@ -378,21 +395,21 @@ class UtilData {
     return {
       "success": true,
       "data": [
-        await getProductDetailBasic(id: "1"),
-        await getProductDetailBasic(id: "2"),
-        await getProductDetailBasic(id: "3"),
-        await getProductDetailBasic(id: "4"),
-        await getProductDetailBasic(id: "5"),
-        await getProductDetailBasic(id: "6"),
-        await getProductDetailBasic(id: "7"),
-        await getProductDetailBasic(id: "8"),
-        await getProductDetailBasic(id: "9"),
-        await getProductDetailBasic(id: "10"),
-        await getProductDetailBasic(id: "11"),
-        await getProductDetailBasic(id: "12"),
-        await getProductDetailBasic(id: "13"),
-        await getProductDetailBasic(id: "14"),
-        await getProductDetailBasic(id: "15"),
+        await getProductDetailBasic(id: "61a9fcc828c7dbc304a2366f"),
+        await getProductDetailBasic(id: "61a9fce928c7dbc304a23682"),
+        await getProductDetailBasic(id: "61a9fd1328c7dbc304a236a8"),
+        await getProductDetailBasic(id: "61a9fd2c28c7dbc304a236bb"),
+        await getProductDetailBasic(id: "61aa143fbd3cebaa020aaff4"),
+        await getProductDetailBasic(id: "61aa146ebd3cebaa020ab007"),
+        await getProductDetailBasic(id: "61aa14b6bd3cebaa020ab01a"),
+        await getProductDetailBasic(id: "61aa14cfbd3cebaa020ab02d"),
+        await getProductDetailBasic(id: "61aa14ebbd3cebaa020ab040"),
+        await getProductDetailBasic(id: "61aa1503bd3cebaa020ab053"),
+        await getProductDetailBasic(id: "61aa1518bd3cebaa020ab066"),
+        await getProductDetailBasic(id: "61aa152cbd3cebaa020ab079"),
+        await getProductDetailBasic(id: "61aa1545bd3cebaa020ab08c"),
+        await getProductDetailBasic(id: "61aa155abd3cebaa020ab09f"),
+        // await getProductDetailBasic(id: "15"),
       ],
       "message": "get data success"
     };

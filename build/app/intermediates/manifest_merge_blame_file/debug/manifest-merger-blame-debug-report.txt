@@ -29,601 +29,600 @@
 17    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 17-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:25:5-82
 17-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:25:22-79
-18
-19    <uses-feature
-19-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\35ca5acb9af9f5e41fc93d65fef5b062\play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
-20        android:glEsVersion="0x00020000"
-20-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\35ca5acb9af9f5e41fc93d65fef5b062\play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
-21        android:required="true" />
-21-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\35ca5acb9af9f5e41fc93d65fef5b062\play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
-22
-23    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Android package visibility setting -->
-23-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:26:5-110
-23-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:26:22-107
-24    <queries>
-24-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:27:5-43:15
-25
-26        <!-- For browser content -->
-27        <intent>
-27-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:30:9-36:18
-28            <action android:name="android.intent.action.VIEW" />
-28-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:31:13-65
-28-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:31:21-62
-29
-30            <category android:name="android.intent.category.BROWSABLE" />
-30-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:33:13-74
-30-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:33:23-71
-31
-32            <data android:scheme="https" />
-32-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:35:13-44
-32-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:35:19-41
-33        </intent>
-34        <!-- End of browser content -->
-35        <!-- For CustomTabsService -->
-36        <intent>
-36-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:30:9-36:18
-37            <action android:name="android.support.customtabs.action.CustomTabsService" />
-38        </intent>
-39        <!-- End of CustomTabsService -->
-40    </queries>
-41
-42    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-42-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:27:5-81
-42-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:27:22-78
-43
-44    <application
-44-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:7:5-39:19
-45        android:name="io.flutter.app.FlutterApplication"
-45-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:8:9-57
-46        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-46-->[androidx.core:core:1.3.1] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\bf55d8e9b44c57c8a0539cac74f0c2bf\core-1.3.1\AndroidManifest.xml:24:18-86
-47        android:debuggable="true"
-48        android:icon="@mipmap/ic_launcher"
-48-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:10:9-43
-49        android:label="Listar Flux" >
-49-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:9:9-36
-50        <meta-data
-50-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:11:9-12:70
-51            android:name="com.google.android.geo.API_KEY"
-51-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:11:20-65
-52            android:value="AIzaSyAGHlk0PoZ-BdSwUJh_HGSHXWKlARE4Pt8" />
-52-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:12:13-68
-53
-54        <activity
-54-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:13:9-32:20
-55            android:name="com.huynh.listar_flutter.MainActivity"
-55-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:14:13-41
-56            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-56-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:17:13-163
-57            android:hardwareAccelerated="true"
-57-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:18:13-47
-58            android:launchMode="singleTop"
-58-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:15:13-43
-59            android:theme="@style/LaunchTheme"
-59-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:16:13-47
-60            android:windowSoftInputMode="adjustResize" >
-60-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:19:13-55
-61            <meta-data
-61-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:20:13-23:17
-62                android:name="io.flutter.embedding.android.SplashScreenDrawable"
-62-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:21:15-79
-63                android:resource="@drawable/launch_background" />
-63-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:22:15-61
-64
-65            <intent-filter>
-65-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:24:13-27:29
-66                <action android:name="android.intent.action.MAIN" />
-66-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:25:17-68
-66-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:25:25-66
-67
-68                <category android:name="android.intent.category.LAUNCHER" />
-68-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:26:17-76
-68-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:26:27-74
-69            </intent-filter>
-70            <intent-filter>
-70-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:28:13-31:29
-71                <action android:name="FLUTTER_NOTIFICATION_CLICK" />
-71-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:29:17-69
-71-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:29:25-66
-72
-73                <category android:name="android.intent.category.DEFAULT" />
-73-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:30:17-76
-73-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:30:27-73
-74            </intent-filter>
-75        </activity>
-76
-77        <meta-data
-77-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:33:9-35:33
-78            android:name="flutterEmbedding"
-78-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:34:13-44
-79            android:value="2" />
-79-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:35:13-30
-80        <meta-data
-80-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:36:9-38:69
-81            android:name="com.google.android.gms.ads.APPLICATION_ID"
-81-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:37:13-69
-82            android:value="ca-app-pub-8318136058462894~6297476501" />
-82-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:38:13-67
-83
-84        <service
-84-->[:firebase_analytics] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_analytics\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-16:19
-85            android:name="com.google.firebase.components.ComponentDiscoveryService"
-85-->[:firebase_analytics] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_analytics\intermediates\library_manifest\debug\AndroidManifest.xml:12:18-89
-86            android:directBootAware="true"
-86-->[com.google.firebase:firebase-common:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\5d9f636b4d175ad603fd0e7720af12c0\jetified-firebase-common-20.0.0\AndroidManifest.xml:35:13-43
-87            android:exported="false" >
-87-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:51:13-37
-88            <meta-data
-88-->[:firebase_analytics] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_analytics\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-15:85
-89                android:name="com.google.firebase.components:io.flutter.plugins.firebaseanalytics.FlutterFirebaseAppRegistrar"
-89-->[:firebase_analytics] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_analytics\intermediates\library_manifest\debug\AndroidManifest.xml:14:17-127
-90                android:value="com.google.firebase.components.ComponentRegistrar" />
-90-->[:firebase_analytics] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_analytics\intermediates\library_manifest\debug\AndroidManifest.xml:15:17-82
-91            <meta-data
-91-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:34:13-36:85
-92                android:name="com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar"
-92-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:35:17-128
-93                android:value="com.google.firebase.components.ComponentRegistrar" />
-93-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:36:17-82
-94            <meta-data
-94-->[:firebase_core] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
-95                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-95-->[:firebase_core] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
-96                android:value="com.google.firebase.components.ComponentRegistrar" />
-96-->[:firebase_core] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
-97            <meta-data
-97-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:52:13-54:85
-98                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
-98-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:53:17-119
-99                android:value="com.google.firebase.components.ComponentRegistrar" />
-99-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:54:17-82
-100            <meta-data
-100-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\606505aa2e4186fe89a406b07c0f82b4\play-services-measurement-api-20.0.0\AndroidManifest.xml:30:13-32:85
-101                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-101-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\606505aa2e4186fe89a406b07c0f82b4\play-services-measurement-api-20.0.0\AndroidManifest.xml:31:17-139
-102                android:value="com.google.firebase.components.ComponentRegistrar" />
-102-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\606505aa2e4186fe89a406b07c0f82b4\play-services-measurement-api-20.0.0\AndroidManifest.xml:32:17-82
-103            <meta-data
-103-->[com.google.firebase:firebase-datatransport:18.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\29b8326bb86852119f771b5543a76f70\firebase-datatransport-18.0.0\AndroidManifest.xml:28:13-30:85
-104                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-104-->[com.google.firebase:firebase-datatransport:18.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\29b8326bb86852119f771b5543a76f70\firebase-datatransport-18.0.0\AndroidManifest.xml:29:17-115
-105                android:value="com.google.firebase.components.ComponentRegistrar" />
-105-->[com.google.firebase:firebase-datatransport:18.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\29b8326bb86852119f771b5543a76f70\firebase-datatransport-18.0.0\AndroidManifest.xml:30:17-82
-106            <meta-data
-106-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\3c4fb76b5867f8b02d407f353c87dffc\firebase-installations-17.0.0\AndroidManifest.xml:18:13-20:85
-107                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-107-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\3c4fb76b5867f8b02d407f353c87dffc\firebase-installations-17.0.0\AndroidManifest.xml:19:17-127
-108                android:value="com.google.firebase.components.ComponentRegistrar" />
-108-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\3c4fb76b5867f8b02d407f353c87dffc\firebase-installations-17.0.0\AndroidManifest.xml:20:17-82
-109        </service>
-110        <service
-110-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-15:72
-111            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService"
-111-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-107
-112            android:exported="false"
-112-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-37
-113            android:permission="android.permission.BIND_JOB_SERVICE" />
-113-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-69
-114        <service
-114-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-22:19
-115            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService"
-115-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-97
-116            android:exported="false" >
-116-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-37
-117            <intent-filter>
-117-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-21:29
-118                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-118-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:20:17-78
-118-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:20:25-75
-119            </intent-filter>
-120        </service>
-121
-122        <receiver
-122-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:24:9-31:20
-123            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver"
-123-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:25:13-98
-124            android:exported="true"
-124-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:26:13-36
-125            android:permission="com.google.android.c2dm.permission.SEND" >
-125-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:27:13-73
-126            <intent-filter>
-126-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-30:29
-127                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-127-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:29:17-81
-127-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:29:25-78
-128            </intent-filter>
-129        </receiver>
-130
-131        <provider
-131-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:39:9-43:38
-132            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider"
-132-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:40:13-102
-133            android:authorities="com.huynh.listar_flutter.flutterfirebasemessaginginitprovider"
-133-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:41:13-88
-134            android:exported="false"
-134-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:42:13-37
-135            android:initOrder="99" />
-135-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:43:13-35
-136        <provider
-136-->[:image_picker] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-16:20
-137            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-137-->[:image_picker] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-82
-138            android:authorities="com.huynh.listar_flutter.flutter.image_provider"
-138-->[:image_picker] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-74
-139            android:exported="false"
-139-->[:image_picker] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-37
-140            android:grantUriPermissions="true" >
-140-->[:image_picker] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-47
-141            <meta-data
-141-->[:image_picker] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-15:75
-142                android:name="android.support.FILE_PROVIDER_PATHS"
-142-->[:image_picker] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:14:17-67
-143                android:resource="@xml/flutter_image_picker_file_paths" />
-143-->[:image_picker] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:15:17-72
-144        </provider>
-145
-146        <meta-data
-146-->[:google_mobile_ads] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\google_mobile_ads\intermediates\library_manifest\debug\AndroidManifest.xml:10:9-12:36
-147            android:name="io.flutter.embedded_views_preview"
-147-->[:google_mobile_ads] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\google_mobile_ads\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-61
-148            android:value="true" />
-148-->[:google_mobile_ads] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\google_mobile_ads\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-33
-149
-150        <activity
-150-->[:url_launcher] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-11:74
-151            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
-151-->[:url_launcher] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-74
-152            android:exported="false"
-152-->[:url_launcher] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-37
-153            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-153-->[:url_launcher] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-71
-154
-155        <provider
-155-->[:share] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\share\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-16:20
-156            android:name="io.flutter.plugins.share.ShareFileProvider"
-156-->[:share] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\share\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-70
-157            android:authorities="com.huynh.listar_flutter.flutter.share_provider"
-157-->[:share] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\share\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-74
-158            android:exported="false"
-158-->[:share] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\share\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-37
-159            android:grantUriPermissions="true" >
-159-->[:share] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\share\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-47
-160            <meta-data
-160-->[:image_picker] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-15:75
-161                android:name="android.support.FILE_PROVIDER_PATHS"
-161-->[:image_picker] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:14:17-67
-162                android:resource="@xml/flutter_share_file_paths" />
-162-->[:image_picker] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:15:17-72
-163        </provider>
-164
-165        <receiver
-165-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:28:9-35:20
-166            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-166-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:29:13-78
-167            android:exported="true"
-167-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:30:13-36
-168            android:permission="com.google.android.c2dm.permission.SEND" >
-168-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:31:13-73
-169            <intent-filter>
-169-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-30:29
-170                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-170-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:29:17-81
-170-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:29:25-78
-171            </intent-filter>
-172        </receiver>
-173        <!--
-174             FirebaseMessagingService performs security checks at runtime,
-175             but set to not exported to explicitly avoid allowing another app to call it.
-176        -->
-177        <service
-177-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:41:9-48:19
-178            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-178-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:42:13-82
-179            android:directBootAware="true"
-179-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:43:13-43
-180            android:exported="false" >
-180-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:44:13-37
-181            <intent-filter android:priority="-500" >
-181-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-21:29
-182                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-182-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:20:17-78
-182-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:20:25-75
-183            </intent-filter>
-184        </service>
-185
-186        <provider
-186-->[com.google.firebase:firebase-common:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\5d9f636b4d175ad603fd0e7720af12c0\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
-187            android:name="com.google.firebase.provider.FirebaseInitProvider"
-187-->[com.google.firebase:firebase-common:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\5d9f636b4d175ad603fd0e7720af12c0\jetified-firebase-common-20.0.0\AndroidManifest.xml:27:13-77
-188            android:authorities="com.huynh.listar_flutter.firebaseinitprovider"
-188-->[com.google.firebase:firebase-common:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\5d9f636b4d175ad603fd0e7720af12c0\jetified-firebase-common-20.0.0\AndroidManifest.xml:28:13-72
-189            android:directBootAware="true"
-189-->[com.google.firebase:firebase-common:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\5d9f636b4d175ad603fd0e7720af12c0\jetified-firebase-common-20.0.0\AndroidManifest.xml:29:13-43
-190            android:exported="false"
-190-->[com.google.firebase:firebase-common:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\5d9f636b4d175ad603fd0e7720af12c0\jetified-firebase-common-20.0.0\AndroidManifest.xml:30:13-37
-191            android:initOrder="100" /> <!-- Needs to be explicitly declared on P+ -->
-191-->[com.google.firebase:firebase-common:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\5d9f636b4d175ad603fd0e7720af12c0\jetified-firebase-common-20.0.0\AndroidManifest.xml:31:13-36
-192        <uses-library
-192-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\35ca5acb9af9f5e41fc93d65fef5b062\play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
-193            android:name="org.apache.http.legacy"
-193-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\35ca5acb9af9f5e41fc93d65fef5b062\play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
-194            android:required="false" />
-194-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\35ca5acb9af9f5e41fc93d65fef5b062\play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
-195
-196        <activity
-196-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\7140138e2c026678623b326251c2c7f5\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
-197            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-197-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\7140138e2c026678623b326251c2c7f5\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
-198            android:exported="false"
-198-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\7140138e2c026678623b326251c2c7f5\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
-199            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-199-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\7140138e2c026678623b326251c2c7f5\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
-200
-201        <receiver
-201-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:29:9-33:20
-202            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-202-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:30:13-85
-203            android:enabled="true"
-203-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:31:13-35
-204            android:exported="false" >
-204-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:32:13-37
-205        </receiver>
-206
-207        <service
-207-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:35:9-38:40
-208            android:name="com.google.android.gms.measurement.AppMeasurementService"
-208-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:36:13-84
-209            android:enabled="true"
-209-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:37:13-35
-210            android:exported="false" />
-210-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:38:13-37
-211        <service
-211-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:39:9-43:72
-212            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-212-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:40:13-87
-213            android:enabled="true"
-213-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:41:13-35
-214            android:exported="false"
-214-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:42:13-37
-215            android:permission="android.permission.BIND_JOB_SERVICE" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
-215-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:43:13-69
-216        <activity
-216-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:48:9-52:64
-217            android:name="com.google.android.gms.ads.AdActivity"
-217-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:49:13-65
-218            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-218-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:50:13-122
-219            android:exported="false"
-219-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:51:13-37
-220            android:theme="@android:style/Theme.Translucent" />
-220-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:52:13-61
-221
-222        <provider
-222-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:54:9-58:39
-223            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
-223-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:55:13-76
-224            android:authorities="com.huynh.listar_flutter.mobileadsinitprovider"
-224-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:56:13-73
-225            android:exported="false"
-225-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:57:13-37
-226            android:initOrder="100" />
-226-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:58:13-36
-227
-228        <service
-228-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:60:9-63:40
-229            android:name="com.google.android.gms.ads.AdService"
-229-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:61:13-64
-230            android:enabled="true"
-230-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:62:13-35
-231            android:exported="false" />
-231-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:63:13-37
-232
-233        <meta-data
-233-->[com.google.android.gms:play-services-basement:17.3.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\221d6fdc94bb1ad10069da8d208e547f\jetified-play-services-basement-17.3.0\AndroidManifest.xml:23:9-25:69
-234            android:name="com.google.android.gms.version"
-234-->[com.google.android.gms:play-services-basement:17.3.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\221d6fdc94bb1ad10069da8d208e547f\jetified-play-services-basement-17.3.0\AndroidManifest.xml:24:13-58
-235            android:value="@integer/google_play_services_version" />
-235-->[com.google.android.gms:play-services-basement:17.3.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\221d6fdc94bb1ad10069da8d208e547f\jetified-play-services-basement-17.3.0\AndroidManifest.xml:25:13-66
-236
-237        <provider
-237-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:30:9-36:35
-238            android:name="androidx.work.impl.WorkManagerInitializer"
-238-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:31:13-69
-239            android:authorities="com.huynh.listar_flutter.workmanager-init"
-239-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:32:13-68
-240            android:directBootAware="false"
-240-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:33:13-44
-241            android:exported="false"
-241-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:34:13-37
-242            android:multiprocess="true" />
-242-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:35:13-40
-243
-244        <service
-244-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:38:9-43:35
-245            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
-245-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:39:13-88
-246            android:directBootAware="false"
-246-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:40:13-44
-247            android:enabled="@bool/enable_system_alarm_service_default"
-247-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:41:13-72
-248            android:exported="false" />
-248-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:42:13-37
-249        <service
-249-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:44:9-50:35
-250            android:name="androidx.work.impl.background.systemjob.SystemJobService"
-250-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:45:13-84
-251            android:directBootAware="false"
-251-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:46:13-44
-252            android:enabled="@bool/enable_system_job_service_default"
-252-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:47:13-70
-253            android:exported="true"
-253-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:48:13-36
-254            android:permission="android.permission.BIND_JOB_SERVICE" />
-254-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:49:13-69
-255
-256        <receiver
-256-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:52:9-57:35
-257            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
-257-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:53:13-88
-258            android:directBootAware="false"
-258-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:54:13-44
-259            android:enabled="true"
-259-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:55:13-35
-260            android:exported="false" />
-260-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:56:13-37
-261        <receiver
-261-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:58:9-68:20
-262            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
-262-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:59:13-106
-263            android:directBootAware="false"
-263-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:60:13-44
-264            android:enabled="false"
-264-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:61:13-36
-265            android:exported="false" >
-265-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:62:13-37
-266            <intent-filter>
-266-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:64:13-67:29
-267                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
-267-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:65:17-87
-267-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:65:25-84
-268                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
-268-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:66:17-90
-268-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:66:25-87
-269            </intent-filter>
-270        </receiver>
-271        <receiver
-271-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:69:9-79:20
-272            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
-272-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:70:13-104
-273            android:directBootAware="false"
-273-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:71:13-44
-274            android:enabled="false"
-274-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:72:13-36
-275            android:exported="false" >
-275-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:73:13-37
-276            <intent-filter>
-276-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:75:13-78:29
-277                <action android:name="android.intent.action.BATTERY_OKAY" />
-277-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:76:17-77
-277-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:76:25-74
-278                <action android:name="android.intent.action.BATTERY_LOW" />
-278-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:77:17-76
-278-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:77:25-73
-279            </intent-filter>
-280        </receiver>
-281        <receiver
-281-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:80:9-90:20
-282            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
-282-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:81:13-104
-283            android:directBootAware="false"
-283-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:82:13-44
-284            android:enabled="false"
-284-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:83:13-36
-285            android:exported="false" >
-285-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:84:13-37
-286            <intent-filter>
-286-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:86:13-89:29
-287                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
-287-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:87:17-83
-287-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:87:25-80
-288                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
-288-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:88:17-82
-288-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:88:25-79
-289            </intent-filter>
-290        </receiver>
-291        <receiver
-291-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:91:9-100:20
-292            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
-292-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:92:13-103
-293            android:directBootAware="false"
-293-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:93:13-44
-294            android:enabled="false"
-294-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:94:13-36
-295            android:exported="false" >
-295-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:95:13-37
-296            <intent-filter>
-296-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:97:13-99:29
-297                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-297-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:98:17-79
-297-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:98:25-76
-298            </intent-filter>
-299        </receiver>
-300        <receiver
-300-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:101:9-112:20
-301            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
-301-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:102:13-88
-302            android:directBootAware="false"
-302-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:103:13-44
-303            android:enabled="false"
-303-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:104:13-36
-304            android:exported="false" >
-304-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:105:13-37
-305            <intent-filter>
-305-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:107:13-111:29
-306                <action android:name="android.intent.action.BOOT_COMPLETED" />
-306-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:108:17-79
-306-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:108:25-76
-307                <action android:name="android.intent.action.TIME_SET" />
-307-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:109:17-73
-307-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:109:25-70
-308                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
-308-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:110:17-81
-308-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:110:25-78
-309            </intent-filter>
-310        </receiver>
-311        <receiver
-311-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:113:9-122:20
-312            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
-312-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:114:13-99
-313            android:directBootAware="false"
-313-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:115:13-44
-314            android:enabled="@bool/enable_system_alarm_service_default"
-314-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:116:13-72
-315            android:exported="false" >
-315-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:117:13-37
-316            <intent-filter>
-316-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:119:13-121:29
-317                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
-317-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:120:17-98
-317-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:120:25-95
-318            </intent-filter>
-319        </receiver>
-320
-321        <service
-321-->[androidx.room:room-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\bb1d883b563774ba89ee5022cf1c17ec\room-runtime-2.1.0\AndroidManifest.xml:25:9-27:40
-322            android:name="androidx.room.MultiInstanceInvalidationService"
-322-->[androidx.room:room-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\bb1d883b563774ba89ee5022cf1c17ec\room-runtime-2.1.0\AndroidManifest.xml:26:13-74
-323            android:exported="false" />
-323-->[androidx.room:room-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\bb1d883b563774ba89ee5022cf1c17ec\room-runtime-2.1.0\AndroidManifest.xml:27:13-37
-324        <service
-324-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\4db94bcedb3803554672302d32d0db52\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:29:9-35:19
-325            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-325-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\4db94bcedb3803554672302d32d0db52\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:30:13-103
-326            android:exported="false" >
-326-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\4db94bcedb3803554672302d32d0db52\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:31:13-37
-327            <meta-data
-327-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\4db94bcedb3803554672302d32d0db52\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:32:13-34:39
-328                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-328-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\4db94bcedb3803554672302d32d0db52\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:33:17-94
-329                android:value="cct" />
-329-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\4db94bcedb3803554672302d32d0db52\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:34:17-36
-330        </service>
-331        <service
-331-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\49f75b8cc6ed90605966325abe72c8fd\jetified-transport-runtime-3.0.0\AndroidManifest.xml:26:9-30:19
-332            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-332-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\49f75b8cc6ed90605966325abe72c8fd\jetified-transport-runtime-3.0.0\AndroidManifest.xml:27:13-117
-333            android:exported="false"
-333-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\49f75b8cc6ed90605966325abe72c8fd\jetified-transport-runtime-3.0.0\AndroidManifest.xml:28:13-37
-334            android:permission="android.permission.BIND_JOB_SERVICE" >
-334-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\49f75b8cc6ed90605966325abe72c8fd\jetified-transport-runtime-3.0.0\AndroidManifest.xml:29:13-69
-335        </service>
-336
-337        <receiver
-337-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\49f75b8cc6ed90605966325abe72c8fd\jetified-transport-runtime-3.0.0\AndroidManifest.xml:32:9-34:40
-338            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-338-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\49f75b8cc6ed90605966325abe72c8fd\jetified-transport-runtime-3.0.0\AndroidManifest.xml:33:13-132
-339            android:exported="false" />
-339-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\49f75b8cc6ed90605966325abe72c8fd\jetified-transport-runtime-3.0.0\AndroidManifest.xml:34:13-37
-340    </application>
-341
-342</manifest>
+18    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+18-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:26:5-110
+18-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:26:22-107
+19
+20    <uses-feature
+20-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\35ca5acb9af9f5e41fc93d65fef5b062\play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
+21        android:glEsVersion="0x00020000"
+21-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\35ca5acb9af9f5e41fc93d65fef5b062\play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
+22        android:required="true" /> <!-- Android package visibility setting -->
+22-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\35ca5acb9af9f5e41fc93d65fef5b062\play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
+23    <queries>
+23-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:27:5-43:15
+24
+25        <!-- For browser content -->
+26        <intent>
+26-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:30:9-36:18
+27            <action android:name="android.intent.action.VIEW" />
+27-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:31:13-65
+27-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:31:21-62
+28
+29            <category android:name="android.intent.category.BROWSABLE" />
+29-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:33:13-74
+29-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:33:23-71
+30
+31            <data android:scheme="https" />
+31-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:35:13-44
+31-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:35:19-41
+32        </intent>
+33        <!-- End of browser content -->
+34        <!-- For CustomTabsService -->
+35        <intent>
+35-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:30:9-36:18
+36            <action android:name="android.support.customtabs.action.CustomTabsService" />
+37        </intent>
+38        <!-- End of CustomTabsService -->
+39    </queries>
+40
+41    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+41-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:27:5-81
+41-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:27:22-78
+42
+43    <application
+43-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:7:5-39:19
+44        android:name="io.flutter.app.FlutterApplication"
+44-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:8:9-57
+45        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+45-->[androidx.core:core:1.6.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\31243989ea9117b03b5c2a45da655090\core-1.6.0\AndroidManifest.xml:24:18-86
+46        android:debuggable="true"
+47        android:icon="@mipmap/ic_launcher"
+47-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:10:9-43
+48        android:label="Listar Flux" >
+48-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:9:9-36
+49        <meta-data
+49-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:11:9-12:70
+50            android:name="com.google.android.geo.API_KEY"
+50-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:11:20-65
+51            android:value="AIzaSyAGHlk0PoZ-BdSwUJh_HGSHXWKlARE4Pt8" />
+51-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:12:13-68
+52
+53        <activity
+53-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:13:9-32:20
+54            android:name="com.huynh.listar_flutter.MainActivity"
+54-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:14:13-41
+55            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+55-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:17:13-163
+56            android:hardwareAccelerated="true"
+56-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:18:13-47
+57            android:launchMode="singleTop"
+57-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:15:13-43
+58            android:theme="@style/LaunchTheme"
+58-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:16:13-47
+59            android:windowSoftInputMode="adjustResize" >
+59-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:19:13-55
+60            <meta-data
+60-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:20:13-23:17
+61                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+61-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:21:15-79
+62                android:resource="@drawable/launch_background" />
+62-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:22:15-61
+63
+64            <intent-filter>
+64-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:24:13-27:29
+65                <action android:name="android.intent.action.MAIN" />
+65-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:25:17-68
+65-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:25:25-66
+66
+67                <category android:name="android.intent.category.LAUNCHER" />
+67-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:26:17-76
+67-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:26:27-74
+68            </intent-filter>
+69            <intent-filter>
+69-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:28:13-31:29
+70                <action android:name="FLUTTER_NOTIFICATION_CLICK" />
+70-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:29:17-69
+70-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:29:25-66
+71
+72                <category android:name="android.intent.category.DEFAULT" />
+72-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:30:17-76
+72-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:30:27-73
+73            </intent-filter>
+74        </activity>
+75
+76        <meta-data
+76-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:33:9-35:33
+77            android:name="flutterEmbedding"
+77-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:34:13-44
+78            android:value="2" />
+78-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:35:13-30
+79        <meta-data
+79-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:36:9-38:69
+80            android:name="com.google.android.gms.ads.APPLICATION_ID"
+80-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:37:13-69
+81            android:value="ca-app-pub-8318136058462894~6297476501" />
+81-->C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\android\app\src\main\AndroidManifest.xml:38:13-67
+82
+83        <service
+83-->[:firebase_analytics] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_analytics\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-16:19
+84            android:name="com.google.firebase.components.ComponentDiscoveryService"
+84-->[:firebase_analytics] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_analytics\intermediates\library_manifest\debug\AndroidManifest.xml:12:18-89
+85            android:directBootAware="true"
+85-->[com.google.firebase:firebase-common:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\5d9f636b4d175ad603fd0e7720af12c0\jetified-firebase-common-20.0.0\AndroidManifest.xml:35:13-43
+86            android:exported="false" >
+86-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:51:13-37
+87            <meta-data
+87-->[:firebase_analytics] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_analytics\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-15:85
+88                android:name="com.google.firebase.components:io.flutter.plugins.firebaseanalytics.FlutterFirebaseAppRegistrar"
+88-->[:firebase_analytics] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_analytics\intermediates\library_manifest\debug\AndroidManifest.xml:14:17-127
+89                android:value="com.google.firebase.components.ComponentRegistrar" />
+89-->[:firebase_analytics] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_analytics\intermediates\library_manifest\debug\AndroidManifest.xml:15:17-82
+90            <meta-data
+90-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:34:13-36:85
+91                android:name="com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar"
+91-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:35:17-128
+92                android:value="com.google.firebase.components.ComponentRegistrar" />
+92-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:36:17-82
+93            <meta-data
+93-->[:firebase_core] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+94                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+94-->[:firebase_core] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
+95                android:value="com.google.firebase.components.ComponentRegistrar" />
+95-->[:firebase_core] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+96            <meta-data
+96-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:52:13-54:85
+97                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+97-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:53:17-119
+98                android:value="com.google.firebase.components.ComponentRegistrar" />
+98-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:54:17-82
+99            <meta-data
+99-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\606505aa2e4186fe89a406b07c0f82b4\play-services-measurement-api-20.0.0\AndroidManifest.xml:30:13-32:85
+100                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+100-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\606505aa2e4186fe89a406b07c0f82b4\play-services-measurement-api-20.0.0\AndroidManifest.xml:31:17-139
+101                android:value="com.google.firebase.components.ComponentRegistrar" />
+101-->[com.google.android.gms:play-services-measurement-api:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\606505aa2e4186fe89a406b07c0f82b4\play-services-measurement-api-20.0.0\AndroidManifest.xml:32:17-82
+102            <meta-data
+102-->[com.google.firebase:firebase-datatransport:18.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\29b8326bb86852119f771b5543a76f70\firebase-datatransport-18.0.0\AndroidManifest.xml:28:13-30:85
+103                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+103-->[com.google.firebase:firebase-datatransport:18.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\29b8326bb86852119f771b5543a76f70\firebase-datatransport-18.0.0\AndroidManifest.xml:29:17-115
+104                android:value="com.google.firebase.components.ComponentRegistrar" />
+104-->[com.google.firebase:firebase-datatransport:18.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\29b8326bb86852119f771b5543a76f70\firebase-datatransport-18.0.0\AndroidManifest.xml:30:17-82
+105            <meta-data
+105-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\3c4fb76b5867f8b02d407f353c87dffc\firebase-installations-17.0.0\AndroidManifest.xml:18:13-20:85
+106                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+106-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\3c4fb76b5867f8b02d407f353c87dffc\firebase-installations-17.0.0\AndroidManifest.xml:19:17-127
+107                android:value="com.google.firebase.components.ComponentRegistrar" />
+107-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\3c4fb76b5867f8b02d407f353c87dffc\firebase-installations-17.0.0\AndroidManifest.xml:20:17-82
+108        </service>
+109        <service
+109-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-15:72
+110            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService"
+110-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-107
+111            android:exported="false"
+111-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-37
+112            android:permission="android.permission.BIND_JOB_SERVICE" />
+112-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-69
+113        <service
+113-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:16:9-22:19
+114            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService"
+114-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-97
+115            android:exported="false" >
+115-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:18:13-37
+116            <intent-filter>
+116-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-21:29
+117                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+117-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:20:17-78
+117-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:20:25-75
+118            </intent-filter>
+119        </service>
+120
+121        <receiver
+121-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:24:9-31:20
+122            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver"
+122-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:25:13-98
+123            android:exported="true"
+123-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:26:13-36
+124            android:permission="com.google.android.c2dm.permission.SEND" >
+124-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:27:13-73
+125            <intent-filter>
+125-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-30:29
+126                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+126-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:29:17-81
+126-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:29:25-78
+127            </intent-filter>
+128        </receiver>
+129
+130        <provider
+130-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:39:9-43:38
+131            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider"
+131-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:40:13-102
+132            android:authorities="com.huynh.listar_flutter.flutterfirebasemessaginginitprovider"
+132-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:41:13-88
+133            android:exported="false"
+133-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:42:13-37
+134            android:initOrder="99" />
+134-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:43:13-35
+135        <provider
+135-->[:image_picker] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-16:20
+136            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+136-->[:image_picker] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-82
+137            android:authorities="com.huynh.listar_flutter.flutter.image_provider"
+137-->[:image_picker] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-74
+138            android:exported="false"
+138-->[:image_picker] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-37
+139            android:grantUriPermissions="true" >
+139-->[:image_picker] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-47
+140            <meta-data
+140-->[:image_picker] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-15:75
+141                android:name="android.support.FILE_PROVIDER_PATHS"
+141-->[:image_picker] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:14:17-67
+142                android:resource="@xml/flutter_image_picker_file_paths" />
+142-->[:image_picker] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:15:17-72
+143        </provider>
+144
+145        <meta-data
+145-->[:google_mobile_ads] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\google_mobile_ads\intermediates\library_manifest\debug\AndroidManifest.xml:10:9-12:36
+146            android:name="io.flutter.embedded_views_preview"
+146-->[:google_mobile_ads] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\google_mobile_ads\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-61
+147            android:value="true" />
+147-->[:google_mobile_ads] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\google_mobile_ads\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-33
+148
+149        <activity
+149-->[:url_launcher] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-11:74
+150            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+150-->[:url_launcher] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-74
+151            android:exported="false"
+151-->[:url_launcher] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-37
+152            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+152-->[:url_launcher] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-71
+153
+154        <provider
+154-->[:share] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\share\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-16:20
+155            android:name="io.flutter.plugins.share.ShareFileProvider"
+155-->[:share] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\share\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-70
+156            android:authorities="com.huynh.listar_flutter.flutter.share_provider"
+156-->[:share] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\share\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-74
+157            android:exported="false"
+157-->[:share] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\share\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-37
+158            android:grantUriPermissions="true" >
+158-->[:share] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\share\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-47
+159            <meta-data
+159-->[:image_picker] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-15:75
+160                android:name="android.support.FILE_PROVIDER_PATHS"
+160-->[:image_picker] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:14:17-67
+161                android:resource="@xml/flutter_share_file_paths" />
+161-->[:image_picker] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:15:17-72
+162        </provider>
+163
+164        <receiver
+164-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:28:9-35:20
+165            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+165-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:29:13-78
+166            android:exported="true"
+166-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:30:13-36
+167            android:permission="com.google.android.c2dm.permission.SEND" >
+167-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:31:13-73
+168            <intent-filter>
+168-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:28:13-30:29
+169                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+169-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:29:17-81
+169-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:29:25-78
+170            </intent-filter>
+171        </receiver>
+172        <!--
+173             FirebaseMessagingService performs security checks at runtime,
+174             but set to not exported to explicitly avoid allowing another app to call it.
+175        -->
+176        <service
+176-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:41:9-48:19
+177            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+177-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:42:13-82
+178            android:directBootAware="true"
+178-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:43:13-43
+179            android:exported="false" >
+179-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\ba983bc4a1c78ec12772a1ed0306d7f2\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:44:13-37
+180            <intent-filter android:priority="-500" >
+180-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:19:13-21:29
+181                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+181-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:20:17-78
+181-->[:firebase_messaging] C:\Users\asfan\Desktop\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\source\build\firebase_messaging\intermediates\library_manifest\debug\AndroidManifest.xml:20:25-75
+182            </intent-filter>
+183        </service>
+184
+185        <provider
+185-->[com.google.firebase:firebase-common:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\5d9f636b4d175ad603fd0e7720af12c0\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
+186            android:name="com.google.firebase.provider.FirebaseInitProvider"
+186-->[com.google.firebase:firebase-common:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\5d9f636b4d175ad603fd0e7720af12c0\jetified-firebase-common-20.0.0\AndroidManifest.xml:27:13-77
+187            android:authorities="com.huynh.listar_flutter.firebaseinitprovider"
+187-->[com.google.firebase:firebase-common:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\5d9f636b4d175ad603fd0e7720af12c0\jetified-firebase-common-20.0.0\AndroidManifest.xml:28:13-72
+188            android:directBootAware="true"
+188-->[com.google.firebase:firebase-common:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\5d9f636b4d175ad603fd0e7720af12c0\jetified-firebase-common-20.0.0\AndroidManifest.xml:29:13-43
+189            android:exported="false"
+189-->[com.google.firebase:firebase-common:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\5d9f636b4d175ad603fd0e7720af12c0\jetified-firebase-common-20.0.0\AndroidManifest.xml:30:13-37
+190            android:initOrder="100" />
+190-->[com.google.firebase:firebase-common:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\5d9f636b4d175ad603fd0e7720af12c0\jetified-firebase-common-20.0.0\AndroidManifest.xml:31:13-36
+191
+192        <receiver
+192-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:29:9-33:20
+193            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+193-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:30:13-85
+194            android:enabled="true"
+194-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:31:13-35
+195            android:exported="false" >
+195-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:32:13-37
+196        </receiver>
+197
+198        <service
+198-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:35:9-38:40
+199            android:name="com.google.android.gms.measurement.AppMeasurementService"
+199-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:36:13-84
+200            android:enabled="true"
+200-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:37:13-35
+201            android:exported="false" />
+201-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:38:13-37
+202        <service
+202-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:39:9-43:72
+203            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+203-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:40:13-87
+204            android:enabled="true"
+204-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:41:13-35
+205            android:exported="false"
+205-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:42:13-37
+206            android:permission="android.permission.BIND_JOB_SERVICE" /> <!-- Needs to be explicitly declared on P+ -->
+206-->[com.google.android.gms:play-services-measurement:20.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\e769b4edd52c7d9351e16d44362f1754\play-services-measurement-20.0.0\AndroidManifest.xml:43:13-69
+207        <uses-library
+207-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\35ca5acb9af9f5e41fc93d65fef5b062\play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+208            android:name="org.apache.http.legacy"
+208-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\35ca5acb9af9f5e41fc93d65fef5b062\play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+209            android:required="false" />
+209-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\35ca5acb9af9f5e41fc93d65fef5b062\play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+210
+211        <activity
+211-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\7140138e2c026678623b326251c2c7f5\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+212            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+212-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\7140138e2c026678623b326251c2c7f5\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+213            android:exported="false"
+213-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\7140138e2c026678623b326251c2c7f5\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+214            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+214-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\7140138e2c026678623b326251c2c7f5\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+215        <activity
+215-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:48:9-52:64
+216            android:name="com.google.android.gms.ads.AdActivity"
+216-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:49:13-65
+217            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+217-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:50:13-122
+218            android:exported="false"
+218-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:51:13-37
+219            android:theme="@android:style/Theme.Translucent" />
+219-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:52:13-61
+220
+221        <provider
+221-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:54:9-58:39
+222            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
+222-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:55:13-76
+223            android:authorities="com.huynh.listar_flutter.mobileadsinitprovider"
+223-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:56:13-73
+224            android:exported="false"
+224-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:57:13-37
+225            android:initOrder="100" />
+225-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:58:13-36
+226
+227        <service
+227-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:60:9-63:40
+228            android:name="com.google.android.gms.ads.AdService"
+228-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:61:13-64
+229            android:enabled="true"
+229-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:62:13-35
+230            android:exported="false" />
+230-->[com.google.android.gms:play-services-ads-lite:19.7.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\13fd76bb90e01d36d85d03d62451c5ce\play-services-ads-lite-19.7.0\AndroidManifest.xml:63:13-37
+231
+232        <meta-data
+232-->[com.google.android.gms:play-services-basement:17.3.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\221d6fdc94bb1ad10069da8d208e547f\jetified-play-services-basement-17.3.0\AndroidManifest.xml:23:9-25:69
+233            android:name="com.google.android.gms.version"
+233-->[com.google.android.gms:play-services-basement:17.3.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\221d6fdc94bb1ad10069da8d208e547f\jetified-play-services-basement-17.3.0\AndroidManifest.xml:24:13-58
+234            android:value="@integer/google_play_services_version" />
+234-->[com.google.android.gms:play-services-basement:17.3.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\221d6fdc94bb1ad10069da8d208e547f\jetified-play-services-basement-17.3.0\AndroidManifest.xml:25:13-66
+235
+236        <provider
+236-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:30:9-36:35
+237            android:name="androidx.work.impl.WorkManagerInitializer"
+237-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:31:13-69
+238            android:authorities="com.huynh.listar_flutter.workmanager-init"
+238-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:32:13-68
+239            android:directBootAware="false"
+239-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:33:13-44
+240            android:exported="false"
+240-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:34:13-37
+241            android:multiprocess="true" />
+241-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:35:13-40
+242
+243        <service
+243-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:38:9-43:35
+244            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+244-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:39:13-88
+245            android:directBootAware="false"
+245-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:40:13-44
+246            android:enabled="@bool/enable_system_alarm_service_default"
+246-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:41:13-72
+247            android:exported="false" />
+247-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:42:13-37
+248        <service
+248-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:44:9-50:35
+249            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+249-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:45:13-84
+250            android:directBootAware="false"
+250-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:46:13-44
+251            android:enabled="@bool/enable_system_job_service_default"
+251-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:47:13-70
+252            android:exported="true"
+252-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:48:13-36
+253            android:permission="android.permission.BIND_JOB_SERVICE" />
+253-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:49:13-69
+254
+255        <receiver
+255-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:52:9-57:35
+256            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+256-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:53:13-88
+257            android:directBootAware="false"
+257-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:54:13-44
+258            android:enabled="true"
+258-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:55:13-35
+259            android:exported="false" />
+259-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:56:13-37
+260        <receiver
+260-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:58:9-68:20
+261            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+261-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:59:13-106
+262            android:directBootAware="false"
+262-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:60:13-44
+263            android:enabled="false"
+263-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:61:13-36
+264            android:exported="false" >
+264-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:62:13-37
+265            <intent-filter>
+265-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:64:13-67:29
+266                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+266-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:65:17-87
+266-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:65:25-84
+267                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+267-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:66:17-90
+267-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:66:25-87
+268            </intent-filter>
+269        </receiver>
+270        <receiver
+270-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:69:9-79:20
+271            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+271-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:70:13-104
+272            android:directBootAware="false"
+272-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:71:13-44
+273            android:enabled="false"
+273-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:72:13-36
+274            android:exported="false" >
+274-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:73:13-37
+275            <intent-filter>
+275-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:75:13-78:29
+276                <action android:name="android.intent.action.BATTERY_OKAY" />
+276-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:76:17-77
+276-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:76:25-74
+277                <action android:name="android.intent.action.BATTERY_LOW" />
+277-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:77:17-76
+277-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:77:25-73
+278            </intent-filter>
+279        </receiver>
+280        <receiver
+280-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:80:9-90:20
+281            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+281-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:81:13-104
+282            android:directBootAware="false"
+282-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:82:13-44
+283            android:enabled="false"
+283-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:83:13-36
+284            android:exported="false" >
+284-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:84:13-37
+285            <intent-filter>
+285-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:86:13-89:29
+286                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+286-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:87:17-83
+286-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:87:25-80
+287                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+287-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:88:17-82
+287-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:88:25-79
+288            </intent-filter>
+289        </receiver>
+290        <receiver
+290-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:91:9-100:20
+291            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+291-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:92:13-103
+292            android:directBootAware="false"
+292-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:93:13-44
+293            android:enabled="false"
+293-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:94:13-36
+294            android:exported="false" >
+294-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:95:13-37
+295            <intent-filter>
+295-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:97:13-99:29
+296                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+296-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:98:17-79
+296-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:98:25-76
+297            </intent-filter>
+298        </receiver>
+299        <receiver
+299-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:101:9-112:20
+300            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+300-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:102:13-88
+301            android:directBootAware="false"
+301-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:103:13-44
+302            android:enabled="false"
+302-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:104:13-36
+303            android:exported="false" >
+303-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:105:13-37
+304            <intent-filter>
+304-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:107:13-111:29
+305                <action android:name="android.intent.action.BOOT_COMPLETED" />
+305-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:108:17-79
+305-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:108:25-76
+306                <action android:name="android.intent.action.TIME_SET" />
+306-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:109:17-73
+306-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:109:25-70
+307                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+307-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:110:17-81
+307-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:110:25-78
+308            </intent-filter>
+309        </receiver>
+310        <receiver
+310-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:113:9-122:20
+311            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+311-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:114:13-99
+312            android:directBootAware="false"
+312-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:115:13-44
+313            android:enabled="@bool/enable_system_alarm_service_default"
+313-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:116:13-72
+314            android:exported="false" >
+314-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:117:13-37
+315            <intent-filter>
+315-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:119:13-121:29
+316                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+316-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:120:17-98
+316-->[androidx.work:work-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\df9c06c7d10ae42e51ecebb2d03aad43\work-runtime-2.1.0\AndroidManifest.xml:120:25-95
+317            </intent-filter>
+318        </receiver>
+319
+320        <service
+320-->[androidx.room:room-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\bb1d883b563774ba89ee5022cf1c17ec\room-runtime-2.1.0\AndroidManifest.xml:25:9-27:40
+321            android:name="androidx.room.MultiInstanceInvalidationService"
+321-->[androidx.room:room-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\bb1d883b563774ba89ee5022cf1c17ec\room-runtime-2.1.0\AndroidManifest.xml:26:13-74
+322            android:exported="false" />
+322-->[androidx.room:room-runtime:2.1.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\bb1d883b563774ba89ee5022cf1c17ec\room-runtime-2.1.0\AndroidManifest.xml:27:13-37
+323        <service
+323-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\4db94bcedb3803554672302d32d0db52\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:29:9-35:19
+324            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+324-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\4db94bcedb3803554672302d32d0db52\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:30:13-103
+325            android:exported="false" >
+325-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\4db94bcedb3803554672302d32d0db52\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:31:13-37
+326            <meta-data
+326-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\4db94bcedb3803554672302d32d0db52\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:32:13-34:39
+327                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+327-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\4db94bcedb3803554672302d32d0db52\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:33:17-94
+328                android:value="cct" />
+328-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\4db94bcedb3803554672302d32d0db52\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:34:17-36
+329        </service>
+330        <service
+330-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\49f75b8cc6ed90605966325abe72c8fd\jetified-transport-runtime-3.0.0\AndroidManifest.xml:26:9-30:19
+331            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+331-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\49f75b8cc6ed90605966325abe72c8fd\jetified-transport-runtime-3.0.0\AndroidManifest.xml:27:13-117
+332            android:exported="false"
+332-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\49f75b8cc6ed90605966325abe72c8fd\jetified-transport-runtime-3.0.0\AndroidManifest.xml:28:13-37
+333            android:permission="android.permission.BIND_JOB_SERVICE" >
+333-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\49f75b8cc6ed90605966325abe72c8fd\jetified-transport-runtime-3.0.0\AndroidManifest.xml:29:13-69
+334        </service>
+335
+336        <receiver
+336-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\49f75b8cc6ed90605966325abe72c8fd\jetified-transport-runtime-3.0.0\AndroidManifest.xml:32:9-34:40
+337            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+337-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\49f75b8cc6ed90605966325abe72c8fd\jetified-transport-runtime-3.0.0\AndroidManifest.xml:33:13-132
+338            android:exported="false" />
+338-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\asfan\.gradle\caches\transforms-2\files-2.1\49f75b8cc6ed90605966325abe72c8fd\jetified-transport-runtime-3.0.0\AndroidManifest.xml:34:13-37
+339    </application>
+340
+341</manifest>

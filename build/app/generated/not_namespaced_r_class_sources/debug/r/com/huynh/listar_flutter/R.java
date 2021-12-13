@@ -191,6 +191,15 @@ public final class R {
      */
     public static final int fontProviderQuery=0x7f010016;
     /**
+     * Provides the system font family name to check before downloading the font. For
+     * example if the fontProviderQuery asked for "Sans Serif", it is possible to define
+     * fontProviderSystemFontFamily as "sans-serif" to tell the system to use "sans-serif" font
+     * family if it exists on the system.
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     */
+    public static final int fontProviderSystemFontFamily=0x7f010017;
+    /**
      * The style of the given font file. This will be used when the font is being loaded into
      * the font stack and will override any style information in the font's header tables. If
      * unspecified, the value in the font's header tables will be used.
@@ -204,7 +213,7 @@ public final class R {
      * <tr><td>normal</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int fontStyle=0x7f010017;
+    public static final int fontStyle=0x7f010018;
     /**
      * The variation settings to be applied to the font. The string should be in the following
      * format: "'tag1' value1, 'tag2' value2, ...". If the default variation settings should be
@@ -213,7 +222,7 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int fontVariationSettings=0x7f010018;
+    public static final int fontVariationSettings=0x7f010019;
     /**
      * The weight of the given font file. This will be used when the font is being loaded into
      * the font stack and will override any weight information in the font's header tables. Must
@@ -222,11 +231,11 @@ public final class R {
      * in the font's header tables will be used.
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int fontWeight=0x7f010019;
+    public static final int fontWeight=0x7f01001a;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int imageAspectRatio=0x7f01001a;
+    public static final int imageAspectRatio=0x7f01001b;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -239,7 +248,7 @@ public final class R {
      * <tr><td>none</td><td>0</td><td></td></tr>
      * </table>
      */
-    public static final int imageAspectRatioAdjust=0x7f01001b;
+    public static final int imageAspectRatioAdjust=0x7f01001c;
     /**
      * A reference to an array of integers representing the
      * locations of horizontal keylines in dp from the starting edge.
@@ -251,23 +260,23 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int keylines=0x7f01001c;
+    public static final int keylines=0x7f01001d;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int latLngBoundsNorthEastLatitude=0x7f01001d;
+    public static final int latLngBoundsNorthEastLatitude=0x7f01001e;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int latLngBoundsNorthEastLongitude=0x7f01001e;
+    public static final int latLngBoundsNorthEastLongitude=0x7f01001f;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int latLngBoundsSouthWestLatitude=0x7f01001f;
+    public static final int latLngBoundsSouthWestLatitude=0x7f010020;
     /**
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
-    public static final int latLngBoundsSouthWestLongitude=0x7f010020;
+    public static final int latLngBoundsSouthWestLongitude=0x7f010021;
     /**
      * The id of an anchor view that this view should position relative to.
      * <p>May be a reference to another resource, in the form
@@ -275,7 +284,7 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      */
-    public static final int layout_anchor=0x7f010021;
+    public static final int layout_anchor=0x7f010022;
     /**
      * Specifies how an object should position relative to an anchor, on both the X and Y axes,
      * within its parent's bounds.
@@ -307,14 +316,14 @@ public final class R {
      * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
      * </table>
      */
-    public static final int layout_anchorGravity=0x7f010022;
+    public static final int layout_anchorGravity=0x7f010023;
     /**
      * The class name of a Behavior class defining special runtime behavior
      * for this child view.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int layout_behavior=0x7f010023;
+    public static final int layout_behavior=0x7f010024;
     /**
      * Specifies how this view dodges the inset edges of the CoordinatorLayout.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -333,7 +342,7 @@ public final class R {
      * <tr><td>top</td><td>30</td><td>Dodge the top inset edge.</td></tr>
      * </table>
      */
-    public static final int layout_dodgeInsetEdges=0x7f010024;
+    public static final int layout_dodgeInsetEdges=0x7f010025;
     /**
      * Specifies how this view insets the CoordinatorLayout and make some other views
      * dodge it.
@@ -352,19 +361,19 @@ public final class R {
      * <tr><td>top</td><td>30</td><td>Inset the top edge.</td></tr>
      * </table>
      */
-    public static final int layout_insetEdge=0x7f010025;
+    public static final int layout_insetEdge=0x7f010026;
     /**
      * The index of a keyline this view should position relative to.
      * android:layout_gravity will affect how the view aligns to the
      * specified keyline.
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int layout_keyline=0x7f010026;
+    public static final int layout_keyline=0x7f010027;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int liteMode=0x7f010027;
+    public static final int liteMode=0x7f010028;
     /**
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -379,7 +388,22 @@ public final class R {
      * <tr><td>terrain</td><td>3</td><td></td></tr>
      * </table>
      */
-    public static final int mapType=0x7f010028;
+    public static final int mapType=0x7f010029;
+    /**
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int nestedScrollViewStyle=0x7f01002a;
+    /**
+     * Resource reference to the string array of query patterns for a custom capability.
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     */
+    public static final int queryPatterns=0x7f01002b;
     /**
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -388,7 +412,14 @@ public final class R {
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
-    public static final int scopeUris=0x7f010029;
+    public static final int scopeUris=0x7f01002c;
+    /**
+     * Indicates whether a parameter in a capability template can only contain a matched
+     * shortcut id and not an arbitrary string.
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     */
+    public static final int shortcutMatchRequired=0x7f01002d;
     /**
      * Drawable to display behind the status bar when the view is set to draw behind it.
      * <p>May be a reference to another resource, in the form
@@ -399,63 +430,63 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
-    public static final int statusBarBackground=0x7f01002a;
+    public static final int statusBarBackground=0x7f01002e;
     /**
      * The index of the font in the tcc font file. If the font file referenced is not in the
      * tcc format, this attribute needs not be specified.
      * <p>May be an integer value, such as "<code>100</code>".
      */
-    public static final int ttcIndex=0x7f01002b;
+    public static final int ttcIndex=0x7f01002f;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int uiCompass=0x7f01002c;
+    public static final int uiCompass=0x7f010030;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int uiMapToolbar=0x7f01002d;
+    public static final int uiMapToolbar=0x7f010031;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int uiRotateGestures=0x7f01002e;
+    public static final int uiRotateGestures=0x7f010032;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int uiScrollGestures=0x7f01002f;
+    public static final int uiScrollGestures=0x7f010033;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int uiScrollGesturesDuringRotateOrZoom=0x7f010030;
+    public static final int uiScrollGesturesDuringRotateOrZoom=0x7f010034;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int uiTiltGestures=0x7f010031;
+    public static final int uiTiltGestures=0x7f010035;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int uiZoomControls=0x7f010032;
+    public static final int uiZoomControls=0x7f010036;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int uiZoomGestures=0x7f010033;
+    public static final int uiZoomGestures=0x7f010037;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int useViewLifecycle=0x7f010034;
+    public static final int useViewLifecycle=0x7f010038;
     /**
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
-    public static final int zOrderOnTop=0x7f010035;
+    public static final int zOrderOnTop=0x7f010039;
   }
   public static final class bool {
     public static final int enable_system_alarm_service_default=0x7f020000;
@@ -635,17 +666,22 @@ public final class R {
     public static final int tag_accessibility_clickable_spans=0x7f060055;
     public static final int tag_accessibility_heading=0x7f060056;
     public static final int tag_accessibility_pane_title=0x7f060057;
-    public static final int tag_screen_reader_focusable=0x7f060058;
-    public static final int tag_transition_group=0x7f060059;
-    public static final int tag_unhandled_key_event_manager=0x7f06005a;
-    public static final int tag_unhandled_key_listeners=0x7f06005b;
-    public static final int terrain=0x7f06005c;
-    public static final int text=0x7f06005d;
-    public static final int text2=0x7f06005e;
-    public static final int time=0x7f06005f;
-    public static final int title=0x7f060060;
-    public static final int top=0x7f060061;
-    public static final int wide=0x7f060062;
+    public static final int tag_on_apply_window_listener=0x7f060058;
+    public static final int tag_on_receive_content_listener=0x7f060059;
+    public static final int tag_on_receive_content_mime_types=0x7f06005a;
+    public static final int tag_screen_reader_focusable=0x7f06005b;
+    public static final int tag_state_description=0x7f06005c;
+    public static final int tag_transition_group=0x7f06005d;
+    public static final int tag_unhandled_key_event_manager=0x7f06005e;
+    public static final int tag_unhandled_key_listeners=0x7f06005f;
+    public static final int tag_window_insets_animation_callback=0x7f060060;
+    public static final int terrain=0x7f060061;
+    public static final int text=0x7f060062;
+    public static final int text2=0x7f060063;
+    public static final int time=0x7f060064;
+    public static final int title=0x7f060065;
+    public static final int top=0x7f060066;
+    public static final int wide=0x7f060067;
   }
   public static final class integer {
     public static final int google_play_services_version=0x7f070000;
@@ -770,6 +806,48 @@ public final class R {
      */
     public static final int AdsAttrs_adUnitId=2;
     /**
+     * Attributes that can be used with a Capability.
+     * <p>Includes the following attributes:</p>
+     * <table>
+     * <colgroup align="left" />
+     * <colgroup align="left" />
+     * <tr><th>Attribute</th><th>Description</th></tr>
+     * <tr><td><code>{@link #Capability_queryPatterns com.huynh.listar_flutter:queryPatterns}</code></td><td>Resource reference to the string array of query patterns for a custom capability.</td></tr>
+     * <tr><td><code>{@link #Capability_shortcutMatchRequired com.huynh.listar_flutter:shortcutMatchRequired}</code></td><td>Indicates whether a parameter in a capability template can only contain a matched
+     * shortcut id and not an arbitrary string.</td></tr>
+     * </table>
+     * @see #Capability_queryPatterns
+     * @see #Capability_shortcutMatchRequired
+     */
+    public static final int[] Capability={
+      0x7f01002b, 0x7f01002d
+    };
+    /**
+     * <p>
+     * @attr description
+     * Resource reference to the string array of query patterns for a custom capability.
+     *
+     * <p>May be a reference to another resource, in the form
+     * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
+     * attribute in the form
+     * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
+     *
+     * @attr name com.huynh.listar_flutter:queryPatterns
+     */
+    public static final int Capability_queryPatterns=0;
+    /**
+     * <p>
+     * @attr description
+     * Indicates whether a parameter in a capability template can only contain a matched
+     * shortcut id and not an arbitrary string.
+     *
+     * <p>May be a boolean value, such as "<code>true</code>" or
+     * "<code>false</code>".
+     *
+     * @attr name com.huynh.listar_flutter:shortcutMatchRequired
+     */
+    public static final int Capability_shortcutMatchRequired=1;
+    /**
      * Attributes that can be used with a ColorStateListItem.
      * <p>Includes the following attributes:</p>
      * <table>
@@ -833,7 +911,7 @@ public final class R {
      * @see #CoordinatorLayout_statusBarBackground
      */
     public static final int[] CoordinatorLayout={
-      0x7f01001c, 0x7f01002a
+      0x7f01001d, 0x7f01002e
     };
     /**
      * <p>
@@ -895,8 +973,8 @@ public final class R {
      * @see #CoordinatorLayout_Layout_layout_keyline
      */
     public static final int[] CoordinatorLayout_Layout={
-      0x010100b3, 0x7f010021, 0x7f010022, 0x7f010023, 
-      0x7f010024, 0x7f010025, 0x7f010026
+      0x010100b3, 0x7f010022, 0x7f010023, 0x7f010024, 
+      0x7f010025, 0x7f010026, 0x7f010027
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#layout_gravity}
@@ -1062,6 +1140,7 @@ public final class R {
      * <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout com.huynh.listar_flutter:fontProviderFetchTimeout}</code></td><td>The length of the timeout during fetching.</td></tr>
      * <tr><td><code>{@link #FontFamily_fontProviderPackage com.huynh.listar_flutter:fontProviderPackage}</code></td><td>The package for the Font Provider to be used for the request.</td></tr>
      * <tr><td><code>{@link #FontFamily_fontProviderQuery com.huynh.listar_flutter:fontProviderQuery}</code></td><td>The query to be sent over to the provider.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderSystemFontFamily com.huynh.listar_flutter:fontProviderSystemFontFamily}</code></td><td>Provides the system font family name to check before downloading the font.</td></tr>
      * </table>
      * @see #FontFamily_fontProviderAuthority
      * @see #FontFamily_fontProviderCerts
@@ -1069,10 +1148,11 @@ public final class R {
      * @see #FontFamily_fontProviderFetchTimeout
      * @see #FontFamily_fontProviderPackage
      * @see #FontFamily_fontProviderQuery
+     * @see #FontFamily_fontProviderSystemFontFamily
      */
     public static final int[] FontFamily={
       0x7f010011, 0x7f010012, 0x7f010013, 0x7f010014, 
-      0x7f010015, 0x7f010016
+      0x7f010015, 0x7f010016, 0x7f010017
     };
     /**
      * <p>
@@ -1178,6 +1258,20 @@ public final class R {
      */
     public static final int FontFamily_fontProviderQuery=5;
     /**
+     * <p>
+     * @attr description
+     * Provides the system font family name to check before downloading the font. For
+     * example if the fontProviderQuery asked for "Sans Serif", it is possible to define
+     * fontProviderSystemFontFamily as "sans-serif" to tell the system to use "sans-serif" font
+     * family if it exists on the system.
+     *
+     * <p>May be a string value, using '\\;' to escape characters such as
+     * '\\n' or '\\uxxxx' for a unicode character;
+     *
+     * @attr name com.huynh.listar_flutter:fontProviderSystemFontFamily
+     */
+    public static final int FontFamily_fontProviderSystemFontFamily=6;
+    /**
      * Attributes that can be used with a FontFamilyFont.
      * <p>Includes the following attributes:</p>
      * <table>
@@ -1208,8 +1302,8 @@ public final class R {
      */
     public static final int[] FontFamilyFont={
       0x01010532, 0x01010533, 0x0101053f, 0x0101056f, 
-      0x01010570, 0x7f010010, 0x7f010017, 0x7f010018, 
-      0x7f010019, 0x7f01002b
+      0x01010570, 0x7f010010, 0x7f010018, 0x7f010019, 
+      0x7f01001a, 0x7f01002f
     };
     /**
      * <p>This symbol is the offset where the {@link android.R.attr#font}
@@ -1601,7 +1695,7 @@ public final class R {
      * @see #LoadingImageView_imageAspectRatioAdjust
      */
     public static final int[] LoadingImageView={
-      0x7f01000d, 0x7f01001a, 0x7f01001b
+      0x7f01000d, 0x7f01001b, 0x7f01001c
     };
     /**
      * <p>This symbol is the offset where the {@link com.huynh.listar_flutter.R.attr#circleCrop}
@@ -1700,10 +1794,10 @@ public final class R {
     public static final int[] MapAttrs={
       0x7f010004, 0x7f010006, 0x7f010007, 0x7f010008, 
       0x7f010009, 0x7f01000a, 0x7f01000b, 0x7f01000c, 
-      0x7f01001d, 0x7f01001e, 0x7f01001f, 0x7f010020, 
-      0x7f010027, 0x7f010028, 0x7f01002c, 0x7f01002d, 
-      0x7f01002e, 0x7f01002f, 0x7f010030, 0x7f010031, 
-      0x7f010032, 0x7f010033, 0x7f010034, 0x7f010035
+      0x7f01001e, 0x7f01001f, 0x7f010020, 0x7f010021, 
+      0x7f010028, 0x7f010029, 0x7f010030, 0x7f010031, 
+      0x7f010032, 0x7f010033, 0x7f010034, 0x7f010035, 
+      0x7f010036, 0x7f010037, 0x7f010038, 0x7f010039
     };
     /**
      * <p>This symbol is the offset where the {@link com.huynh.listar_flutter.R.attr#ambientEnabled}
@@ -1960,7 +2054,7 @@ public final class R {
      * @see #SignInButton_scopeUris
      */
     public static final int[] SignInButton={
-      0x7f010005, 0x7f01000e, 0x7f010029
+      0x7f010005, 0x7f01000e, 0x7f01002c
     };
     /**
      * <p>This symbol is the offset where the {@link com.huynh.listar_flutter.R.attr#buttonSize}
