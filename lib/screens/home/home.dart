@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:listar_flutter/api/api.dart';
 import 'package:listar_flutter/blocs/bloc.dart';
 import 'package:listar_flutter/configs/config.dart';
@@ -262,7 +263,8 @@ class _HomeState extends State<Home> {
 
   ///On navigate product detail
   void _onProductDetail(ProductModel item) {
-    Navigator.pushNamed(context, Routes.productDetail, arguments: item);
+    // Navigator.pushNamed(context, Routes.productDetail, arguments: item);
+    showDialog(context: context, builder: (_) => _buildDialog(item));
   }
 
   ///Is Selected Business
@@ -393,6 +395,76 @@ class _HomeState extends State<Home> {
       }).toList(),
     );
   }
+
+  Widget _buildDialog(ProductModel item) {
+    return AlertDialog(
+      title: Text(
+        item.title,
+        style: TextStyle(color: Theme.of(context).primaryColor),
+      ),
+      content: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Image.asset(item.image),
+          SizedBox(height: 30),
+          _buildContactInfo(icon: Icons.location_on, text: item.address),
+          SizedBox(height: 20),
+          _buildContactInfo(icon: Icons.phone, text: item.phone),
+          SizedBox(height: 20),
+          _buildContactInfo(icon: Icons.mail, text: item.email),
+          SizedBox(height: 20),
+          Text('Rating', style: TextStyle(fontWeight: FontWeight.bold)),
+          SizedBox(height: 20),
+          RatingBar.builder(
+            onRatingUpdate: (_) {},
+            initialRating: item.rate.toDouble(),
+            minRating: 1,
+            allowHalfRating: true,
+            unratedColor: Colors.black.withAlpha(100),
+            itemCount: 5,
+            itemSize: 20.0,
+            itemBuilder: (context, _) => Icon(
+              Icons.star,
+              color: Colors.black,
+            ),
+            ignoreGestures: true,
+          ),
+        ],
+      ),
+      actions: [
+        TextButton(
+          onPressed: () {},
+          style: ButtonStyle(
+            backgroundColor:
+                MaterialStateProperty.all(Theme.of(context).primaryColor),
+            foregroundColor: MaterialStateProperty.all(Colors.white),
+          ),
+          child: Text('Go to Profile'),
+        ),
+        TextButton(
+          onPressed: () => Navigator.pushNamed(context, Routes.productDetail,
+              arguments: item),
+          style: ButtonStyle(
+            backgroundColor:
+                MaterialStateProperty.all(Theme.of(context).primaryColor),
+            foregroundColor: MaterialStateProperty.all(Colors.white),
+          ),
+          child: Text('More'),
+        ),
+      ],
+    );
+  }
+
+  _buildContactInfo({IconData icon, String text}) => Row(
+        children: [
+          Icon(icon, color: Theme.of(context).primaryColor),
+          SizedBox(
+            width: 5,
+          ),
+          Expanded(child: Text(text))
+        ],
+      );
 
   @override
   Widget build(BuildContext context) {

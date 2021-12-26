@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:listar_flutter/api/api.dart';
 import 'package:listar_flutter/api/http_manager.dart';
-import 'package:listar_flutter/screens/about_us/about_us.dart';
 import 'package:listar_flutter/utils/other.dart';
 import 'package:listar_flutter/utils/translate.dart';
 import 'package:listar_flutter/widgets/app_button.dart';

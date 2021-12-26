@@ -26,7 +26,7 @@ class AppTheme {
   ///Default Theme
   static ThemeModel currentTheme = ThemeModel.fromJson({
     "name": "default",
-    "color": Color(0xffe5634d),
+    "color": Color(0xff5f05f2),
     "light": "primaryLight",
     "dark": "primaryDark",
   });
@@ -35,26 +35,26 @@ class AppTheme {
   static List themeSupport = [
     {
       "name": "default",
-      "color": Color(0xffe5634d),
+      "color": Color(0xff5f05f2),
       "light": "primaryLight",
       "dark": "primaryDark",
     },
     {
       "name": "green",
-      "color": Color(0xff82B541),
+      "color": Color(0xff5f05f2),
       "light": "greenLight",
       "dark": "greenDark",
     },
     {
       "name": "orange",
-      "color": Color(0xfff4a261),
+      "color": Color(0xff5f05f2),
       "light": "orangeLight",
       "dark": "orangeDark",
     },
   ].map((item) => ThemeModel.fromJson(item)).toList();
 
   ///Dark Theme option
-  static DarkOption darkThemeOption = DarkOption.dynamic;
+  static DarkOption darkThemeOption = DarkOption.alwaysOff;
 
   static ThemeData lightTheme = CollectionTheme.getCollectionTheme(
     theme: currentTheme.lightTheme,

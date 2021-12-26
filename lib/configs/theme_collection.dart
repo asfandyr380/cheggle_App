@@ -11,7 +11,7 @@ class CollectionTheme {
     switch (theme) {
       case "primaryLight":
         colorScheme = ColorScheme.light(
-          primary: Color(0xffe5634d),
+          primary: Color(0xff5f05f2),
           primaryVariant: Color(0xffad3324),
           secondary: Color(0xff4a91a4),
           secondaryVariant: Color(0xff0d6375),
@@ -28,7 +28,7 @@ class CollectionTheme {
         break;
       case "primaryDark":
         colorScheme = ColorScheme.dark(
-          primary: Color(0xffe5634d),
+          primary: Color(0xff5f05f2),
           primaryVariant: Color(0xffad3324),
           secondary: Color(0xff4a91a4),
           secondaryVariant: Color(0xff0d6375),
@@ -79,7 +79,7 @@ class CollectionTheme {
         break;
       case "orangeLight":
         colorScheme = ColorScheme.light(
-          primary: Color(0xfff4a261),
+          primary: Color(0xff5f05f2),
           primaryVariant: Color(0xffe76f51),
           secondary: Color(0xff2A9D8F),
           secondaryVariant: Color(0xff264653),
@@ -96,7 +96,7 @@ class CollectionTheme {
         break;
       case "orangeDark":
         colorScheme = ColorScheme.dark(
-          primary: Color(0xfff4a261),
+          primary: Color(0xff5f05f2),
           primaryVariant: Color(0xffe76f51),
           secondary: Color(0xff2A9D8F),
           secondaryVariant: Color(0xff264653),
@@ -113,8 +113,8 @@ class CollectionTheme {
         break;
       default:
         colorScheme = ColorScheme.light(
-          primary: Color(0xffe5634d),
-          primaryVariant: Color(0xffad3324),
+          primary: Color(0xff5f05f2),
+          primaryVariant: Color(0xff390391),
           secondary: Color(0xff4a91a4),
           secondaryVariant: Color(0xff0d6375),
           surface: Color(0xfff2f2f2),

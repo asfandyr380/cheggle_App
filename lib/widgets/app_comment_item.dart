@@ -172,7 +172,7 @@ class AppCommentItem extends StatelessWidget {
                       SizedBox(height: 4),
                       RatingBar.builder(
                         onRatingUpdate: (_) {},
-                        initialRating: item.rate,
+                        initialRating: item.rate.toDouble(),
                         minRating: 1,
                         allowHalfRating: true,
                         unratedColor: Colors.amber.withAlpha(100),

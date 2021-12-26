@@ -273,6 +273,9 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
                       SliverPersistentHeader(
                         delegate: _SliverAppBarDelegate(
                           TabBar(
+                            labelColor: Theme.of(context).primaryColor,
+                            indicatorColor: Theme.of(context).primaryColor,
+                            unselectedLabelColor: Theme.of(context).primaryColor.withAlpha(120),
                             isScrollable: true,
                             indicatorSize: TabBarIndicatorSize.label,
                             tabs: [
@@ -463,9 +466,9 @@ class ProfileHeader extends StatelessWidget {
                     Text(
                       user.companyName,
                       style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 32,
-                      ),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 32,
+                          color: Colors.white),
                     ),
                     SizedBox(height: 10),
                     Container(
@@ -509,11 +512,14 @@ class ProfileHeader extends StatelessWidget {
 
   _buildContactInfo({IconData icon, String text}) => Row(
         children: [
-          Icon(icon),
+          Icon(icon, color: Colors.white),
           SizedBox(
             width: 5,
           ),
-          Text(text)
+          Text(
+            text,
+            style: TextStyle(color: Colors.white),
+          )
         ],
       );
 }
