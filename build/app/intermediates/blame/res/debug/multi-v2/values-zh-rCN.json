@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\asfan\\Desktop\\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\\source\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rCN\\values-zh-rCN.xml",
+            "outputFile": "C:\\Users\\asfan\\Desktop\\Lister\\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\\source\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rCN\\values-zh-rCN.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\31243989ea9117b03b5c2a45da655090\\core-1.6.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "35",
-                        "startColumns": "4",
-                        "startOffsets": "3617",
-                        "endColumns": "100",
-                        "endOffsets": "3713"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\221d6fdc94bb1ad10069da8d208e547f\\jetified-play-services-basement-17.3.0\\res\\values-zh-rCN\\values.xml",
+                    "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\3f7520316adaa146eb0a5be252ba610d\\jetified-play-services-basement-17.3.0\\res\\values-zh-rCN\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -38,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\9fd36cd3bf545deae34b27943f15546e\\jetified-play-services-ads-19.7.0\\res\\values-zh-rCN\\values.xml",
+                    "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\ee4d0c31ce998a57dae58d234debd438\\jetified-play-services-ads-19.7.0\\res\\values-zh-rCN\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -52,6 +35,23 @@
                         "startOffsets": "2479,2572,2670,2754,2859,2944,3047,3139,3204,3281,3345,3409,3477,3551",
                         "endColumns": "92,97,83,104,84,102,91,64,76,63,63,67,73,65",
                         "endOffsets": "2567,2665,2749,2854,2939,3042,3134,3199,3276,3340,3404,3472,3546,3612"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\31243989ea9117b03b5c2a45da655090\\core-1.6.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "35",
+                        "startColumns": "4",
+                        "startOffsets": "3617",
+                        "endColumns": "100",
+                        "endOffsets": "3713"
                     }
                 },
                 {
@@ -72,7 +72,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\ba983bc4a1c78ec12772a1ed0306d7f2\\jetified-firebase-messaging-23.0.0\\res\\values-zh-rCN\\values.xml",
+                    "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\8e573a9dcfd38069f9be735503b8110e\\jetified-firebase-messaging-23.0.0\\res\\values-zh-rCN\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

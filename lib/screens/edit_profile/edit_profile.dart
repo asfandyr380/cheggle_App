@@ -49,7 +49,7 @@ class _EditProfileState extends State<EditProfile> {
       _textNameController.text = _profilePage.user.firstName;
       _textLastNameController.text = _profilePage.user.lastName;
       _textEmailController.text = _profilePage.user.email;
-      _textAddressController.text = _profilePage.user.description;
+      _textAddressController.text = _profilePage.user.address;
       _textWebsiteController.text = _profilePage.user.website;
     });
   }

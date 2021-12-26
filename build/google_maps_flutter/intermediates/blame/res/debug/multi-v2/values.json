@@ -1,8 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\asfan\\Desktop\\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\\source\\build\\google_maps_flutter\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\asfan\\Desktop\\Lister\\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\\source\\build\\google_maps_flutter\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
+                {
+                    "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\274a793038426415334d712e99b8ae42\\jetified-play-services-basement-17.0.0\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "4,7",
+                        "startColumns": "0,0",
+                        "startOffsets": "238,401",
+                        "endColumns": "63,166",
+                        "endOffsets": "301,567"
+                    },
+                    "to": {
+                        "startLines": "90,100",
+                        "startColumns": "4,4",
+                        "startOffsets": "5646,6824",
+                        "endColumns": "67,166",
+                        "endOffsets": "5709,6986"
+                    }
+                },
                 {
                     "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\31243989ea9117b03b5c2a45da655090\\core-1.6.0\\res\\values\\values.xml",
                     "from": {
@@ -58,30 +75,30 @@
                         "endLines": "5,6,7,8,9,10,11,12,92,93,94,95,96,97,98,99,101,102,103,104,105,106,107,108,109,274,352",
                         "endColumns": "89,79,89,89,79,80,79,79,104,180,124,106,179,122,115,102,187,104,180,124,174,147,62,61,78,20,20",
                         "endOffsets": "410,490,580,670,750,831,911,991,5884,6065,6190,6297,6477,6600,6716,6819,7174,7279,7460,7585,7760,7908,7971,8033,8112,17632,19471"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\cfefefe9db14db2e2fe930ffb4f67b88\\jetified-play-services-basement-17.0.0\\res\\values\\values.xml",
-                    "from": {
-                        "startLines": "4,7",
-                        "startColumns": "0,0",
-                        "startOffsets": "238,401",
-                        "endColumns": "63,166",
-                        "endOffsets": "301,567"
-                    },
-                    "to": {
-                        "startLines": "90,100",
-                        "startColumns": "4,4",
-                        "startOffsets": "5646,6824",
-                        "endColumns": "67,166",
-                        "endOffsets": "5709,6986"
                     }
                 }
             ]
         },
         {
-            "outputFile": "C:\\Users\\asfan\\Desktop\\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\\source\\build\\google_maps_flutter\\intermediates\\res\\merged\\debug\\values\\values.xml",
+            "outputFile": "C:\\Users\\asfan\\Desktop\\Lister\\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\\source\\build\\google_maps_flutter\\intermediates\\res\\merged\\debug\\values\\values.xml",
             "map": [
+                {
+                    "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\274a793038426415334d712e99b8ae42\\jetified-play-services-basement-17.0.0\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "4,7",
+                        "startColumns": "0,0",
+                        "startOffsets": "238,401",
+                        "endColumns": "63,166",
+                        "endOffsets": "301,567"
+                    },
+                    "to": {
+                        "startLines": "90,100",
+                        "startColumns": "4,4",
+                        "startOffsets": "5646,6824",
+                        "endColumns": "67,166",
+                        "endOffsets": "5709,6986"
+                    }
+                },
                 {
                     "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\31243989ea9117b03b5c2a45da655090\\core-1.6.0\\res\\values\\values.xml",
                     "from": {
@@ -137,23 +154,6 @@
                         "endLines": "5,6,7,8,9,10,11,12,92,93,94,95,96,97,98,99,101,102,103,104,105,106,107,108,109,274,352",
                         "endColumns": "89,79,89,89,79,80,79,79,104,180,124,106,179,122,115,102,187,104,180,124,174,147,62,61,78,20,20",
                         "endOffsets": "410,490,580,670,750,831,911,991,5884,6065,6190,6297,6477,6600,6716,6819,7174,7279,7460,7585,7760,7908,7971,8033,8112,17632,19471"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\cfefefe9db14db2e2fe930ffb4f67b88\\jetified-play-services-basement-17.0.0\\res\\values\\values.xml",
-                    "from": {
-                        "startLines": "4,7",
-                        "startColumns": "0,0",
-                        "startOffsets": "238,401",
-                        "endColumns": "63,166",
-                        "endOffsets": "301,567"
-                    },
-                    "to": {
-                        "startLines": "90,100",
-                        "startColumns": "4,4",
-                        "startOffsets": "5646,6824",
-                        "endColumns": "67,166",
-                        "endOffsets": "5709,6986"
                     }
                 }
             ]

@@ -352,7 +352,7 @@ class _ProductDetailEventState extends State<ProductDetailEvent> {
                     Text(
                       _detailPage.product.liked
                           .map((item) {
-                            return item.nickname;
+                            return item.lastName;
                           })
                           .toList()
                           .join(","),
@@ -575,7 +575,7 @@ class _ProductDetailEventState extends State<ProductDetailEvent> {
                           ),
                           SizedBox(height: 4),
                           Text(
-                            _detailPage.product.author.description,
+                            _detailPage.product.author.address,
                             style: Theme.of(context).textTheme.caption,
                           ),
                         ],

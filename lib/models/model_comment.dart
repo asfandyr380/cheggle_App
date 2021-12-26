@@ -1,7 +1,7 @@
 import 'package:listar_flutter/models/model.dart';
 
 class CommentModel {
-  final int id;
+  final String id;
   final UserModel user;
   final String title;
   final String comment;
@@ -20,7 +20,7 @@ class CommentModel {
   factory CommentModel.fromJson(Map<String, dynamic> json) {
     if (json == null) return null;
     return CommentModel(
-      json['id'] ?? 0,
+      json['id'] ?? "0",
       UserModel.fromJson(json['user']),
       json['title'] ?? 'Unknown',
       json['comment'] ?? 'Unknown',

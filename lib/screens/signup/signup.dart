@@ -185,38 +185,29 @@ class _SignUpState extends State<SignUp> {
   }
 
   Future _apiSignup() async {
-    final http = HTTPManager();
-    var result = await http.post(
-      url: 'http://192.168.100.8:3000/api/auth/signup',
-      data: {
-        'password': _textPassController.text,
-        'email': _textEmailController.text,
-        "person": selectedPerson,
-        "firstname": _textFirstNameController.text,
-        "lastname": _textLastNameController.text,
-        "phone": _textPhoneController.text,
-        "fax": _textFaxController.text,
-        "mobile": _textMobileController.text,
-        "website": _textWebsiteController.text,
-        "company": _textCompanyController.text,
-        "b1": selectedBusinessType,
-        "b2": selectedBusiness,
-        "street": _textStreetController.text,
-        "house": _textHouseNoController.text,
-        "postal": _textPostalController.text,
-        "city": _textCityController.text,
-        "district": _textDistrictController.text,
-        "country": selectedCountry,
-        "status": "InComplete"
-      },
-    );
-    if (result['success']) {
-      AppBloc.loginBloc.add(OnLogin(
-        username: _textEmailController.text,
-        password: _textPassController.text,
-      ));
-      Navigator.pushReplacementNamed(context, Routes.selectPackage);
-    }
+    Map form_data = {
+      'password': _textPassController.text,
+      'email': _textEmailController.text,
+      "person": selectedPerson,
+      "firstname": _textFirstNameController.text,
+      "lastname": _textLastNameController.text,
+      "phone": _textPhoneController.text,
+      "fax": _textFaxController.text,
+      "mobile": _textMobileController.text,
+      "website": _textWebsiteController.text,
+      "company": _textCompanyController.text,
+      "b1": selectedBusinessType,
+      "b2": selectedBusiness,
+      "street": _textStreetController.text,
+      "house": _textHouseNoController.text,
+      "postal": _textPostalController.text,
+      "city": _textCityController.text,
+      "district": _textDistrictController.text,
+      "country": selectedCountry,
+      "status": "InComplete"
+    };
+    Navigator.pushReplacementNamed(context, Routes.selectPackage,
+        arguments: form_data);
   }
 
   @override

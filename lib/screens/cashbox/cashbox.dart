@@ -1,6 +1,11 @@
 // ignore_for_file: sdk_version_ui_as_code
 
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:listar_flutter/api/api.dart';
+import 'package:listar_flutter/api/http_manager.dart';
+import 'package:listar_flutter/blocs/app_bloc.dart';
+import 'package:listar_flutter/blocs/login/login_event.dart';
 import 'package:listar_flutter/configs/config.dart';
 import 'package:listar_flutter/utils/utils.dart';
 import 'package:listar_flutter/widgets/app_button.dart';
@@ -77,6 +82,34 @@ class _CashBoxState extends State<CashBox> {
   bool instant_banking = false;
 
   Map selectedAddress;
+  bool _isLoading = false;
+  _buyNow() async {
+    setState(() {
+      _isLoading = true;
+    });
+    Map fromData = widget.data['form_data'];
+    final http = HTTPManager();
+    var result = await http.post(
+      url: '$BASE_URL/auth/signup',
+      data: fromData,
+    );
+    if (result['success']) {
+      AppBloc.loginBloc.add(OnLogin(
+        username: fromData['email'],
+        password: fromData['password'],
+      ));
+      if (widget.data['Package']['id'] == 1) {
+        Navigator.pop(context);
+      } else {
+        Navigator.pushReplacementNamed(context, Routes.profileSetup,
+            arguments: result['id']);
+      }
+    }
+    setState(() {
+      _isLoading = false;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -483,10 +516,8 @@ class _CashBoxState extends State<CashBox> {
 
               AppButton(
                 Translate.of(context).translate('Buy Now'),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                loading: false,
+                onPressed: () => _buyNow(),
+                loading: _isLoading,
                 disabled: (selectedAddress != null && transfer) ? false : true,
               ),
             ],

@@ -143,7 +143,7 @@ class AppUserInfo extends StatelessWidget {
                       color: Theme.of(context).primaryColor,
                     ),
                     child: Text(
-                      "${user.rate}",
+                      "${user.b1}",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 8,
@@ -166,13 +166,13 @@ class AppUserInfo extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.only(top: 4, bottom: 4),
                         child: Text(
-                          user.description,
+                          user.address,
                           maxLines: 1,
                           style: Theme.of(context).textTheme.caption,
                         ),
                       ),
                       Text(
-                        user.tag,
+                        user.b2,
                         maxLines: 1,
                         style: Theme.of(context).textTheme.caption,
                       ),
@@ -213,7 +213,7 @@ class AppUserInfo extends StatelessWidget {
                           .copyWith(fontWeight: FontWeight.w600),
                     ),
                     Text(
-                      user.description,
+                      user.address,
                       style: Theme.of(context).textTheme.caption,
                     )
                   ],

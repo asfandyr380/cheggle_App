@@ -1,18 +1,18 @@
 [
     {
-        "merged": "C:\\Users\\asfan\\Desktop\\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\\source\\build\\device_info\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
-        "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\31243989ea9117b03b5c2a45da655090\\core-1.6.0\\res\\drawable\\notification_bg.xml"
-    },
-    {
-        "merged": "C:\\Users\\asfan\\Desktop\\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\\source\\build\\device_info\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
-        "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\31243989ea9117b03b5c2a45da655090\\core-1.6.0\\res\\drawable\\notification_tile_bg.xml"
-    },
-    {
-        "merged": "C:\\Users\\asfan\\Desktop\\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\\source\\build\\device_info\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
+        "merged": "C:\\Users\\asfan\\Desktop\\Lister\\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\\source\\build\\device_info\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
         "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\31243989ea9117b03b5c2a45da655090\\core-1.6.0\\res\\drawable\\notification_icon_background.xml"
     },
     {
-        "merged": "C:\\Users\\asfan\\Desktop\\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\\source\\build\\device_info\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
+        "merged": "C:\\Users\\asfan\\Desktop\\Lister\\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\\source\\build\\device_info\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
+        "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\31243989ea9117b03b5c2a45da655090\\core-1.6.0\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\asfan\\Desktop\\Lister\\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\\source\\build\\device_info\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
+        "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\31243989ea9117b03b5c2a45da655090\\core-1.6.0\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\asfan\\Desktop\\Lister\\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\\source\\build\\device_info\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
         "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\31243989ea9117b03b5c2a45da655090\\core-1.6.0\\res\\drawable\\notification_bg_low.xml"
     }
 ]

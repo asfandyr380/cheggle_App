@@ -5,6 +5,7 @@ import 'package:listar_flutter/models/model.dart';
 import 'package:listar_flutter/screens/add_address/add_address.dart';
 import 'package:listar_flutter/screens/cashbox/cashbox.dart';
 import 'package:listar_flutter/screens/privacy_policy/privacy_policy.dart';
+import 'package:listar_flutter/screens/profileSetup/profilesetup.dart';
 import 'package:listar_flutter/screens/screen.dart';
 import 'package:listar_flutter/screens/select_package/selectPackage.dart';
 import 'package:listar_flutter/screens/terms_services/terms_services.dart';
@@ -41,6 +42,7 @@ class Routes {
   static const String selectPackage = "/packages";
   static const String cashBox = "/cashbox";
   static const String addAddress = "/address";
+  static const String profileSetup = "/setup";
 
   Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -279,9 +281,10 @@ class Routes {
         );
 
       case selectPackage:
+        Map data = settings.arguments as Map;
         return MaterialPageRoute(
           builder: (context) {
-            return SelectPackage();
+            return SelectPackage(data: data);
           },
         );
 
@@ -298,6 +301,14 @@ class Routes {
         return MaterialPageRoute(
           builder: (context) {
             return AddAdress();
+          },
+        );
+
+      case profileSetup:
+        final id = settings.arguments;
+        return MaterialPageRoute(
+          builder: (context) {
+            return ProfileSetup(id: id);
           },
         );
 

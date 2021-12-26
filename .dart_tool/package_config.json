@@ -38,6 +38,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "contained_tab_bar_view",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/contained_tab_bar_view-0.8.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "container_tab_indicator",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/container_tab_indicator-0.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "cross_file",
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/cross_file-0.3.2",
       "packageUri": "lib/",
@@ -64,6 +76,12 @@
     {
       "name": "dio",
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/dio-4.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "extended_sliver",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/extended_sliver-2.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -494,7 +512,7 @@
       "languageVersion": "2.1"
     }
   ],
-  "generated": "2021-12-13T13:44:14.149435Z",
+  "generated": "2021-12-25T07:03:51.879095Z",
   "generator": "pub",
   "generatorVersion": "2.15.0"
 }

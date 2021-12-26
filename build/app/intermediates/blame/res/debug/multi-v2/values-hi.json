@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\asfan\\Desktop\\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\\source\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hi\\values-hi.xml",
+            "outputFile": "C:\\Users\\asfan\\Desktop\\Lister\\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\\source\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hi\\values-hi.xml",
             "map": [
                 {
                     "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\31243989ea9117b03b5c2a45da655090\\core-1.6.0\\res\\values-hi\\values-hi.xml",
@@ -21,20 +21,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\9fd36cd3bf545deae34b27943f15546e\\jetified-play-services-ads-19.7.0\\res\\values-hi\\values.xml",
+                    "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\8e573a9dcfd38069f9be735503b8110e\\jetified-firebase-messaging-23.0.0\\res\\values-hi\\values.xml",
                     "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "199,310,452,536,676,762,912,1023,1093,1219,1288,1356,1433,1527",
-                        "endColumns": "110,141,83,139,85,149,110,69,125,68,67,76,93,70",
-                        "endOffsets": "309,451,535,675,761,911,1022,1092,1218,1287,1355,1432,1526,1597"
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "207",
+                        "endColumns": "68",
+                        "endOffsets": "275"
                     },
                     "to": {
-                        "startLines": "21,22,23,24,25,26,27,28,29,30,31,32,33,34",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "2898,3013,3159,3247,3391,3481,3635,3750,3824,3954,4027,4099,4180,4278",
-                        "endColumns": "114,145,87,143,89,153,114,73,129,72,71,80,97,74",
-                        "endOffsets": "3008,3154,3242,3386,3476,3630,3745,3819,3949,4022,4094,4175,4273,4348"
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "2825",
+                        "endColumns": "72",
+                        "endOffsets": "2893"
                     }
                 },
                 {
@@ -55,7 +55,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\221d6fdc94bb1ad10069da8d208e547f\\jetified-play-services-basement-17.3.0\\res\\values-hi\\values.xml",
+                    "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\ee4d0c31ce998a57dae58d234debd438\\jetified-play-services-ads-19.7.0\\res\\values-hi\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "199,310,452,536,676,762,912,1023,1093,1219,1288,1356,1433,1527",
+                        "endColumns": "110,141,83,139,85,149,110,69,125,68,67,76,93,70",
+                        "endOffsets": "309,451,535,675,761,911,1022,1092,1218,1287,1355,1432,1526,1597"
+                    },
+                    "to": {
+                        "startLines": "21,22,23,24,25,26,27,28,29,30,31,32,33,34",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "2898,3013,3159,3247,3391,3481,3635,3750,3824,3954,4027,4099,4180,4278",
+                        "endColumns": "114,145,87,143,89,153,114,73,129,72,71,80,97,74",
+                        "endOffsets": "3008,3154,3242,3386,3476,3630,3745,3819,3949,4022,4094,4175,4273,4348"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\3f7520316adaa146eb0a5be252ba610d\\jetified-play-services-basement-17.3.0\\res\\values-hi\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -69,23 +86,6 @@
                         "startOffsets": "1274",
                         "endColumns": "204",
                         "endOffsets": "1474"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\asfan\\.gradle\\caches\\transforms-2\\files-2.1\\ba983bc4a1c78ec12772a1ed0306d7f2\\jetified-firebase-messaging-23.0.0\\res\\values-hi\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "207",
-                        "endColumns": "68",
-                        "endOffsets": "275"
-                    },
-                    "to": {
-                        "startLines": "20",
-                        "startColumns": "4",
-                        "startOffsets": "2825",
-                        "endColumns": "72",
-                        "endOffsets": "2893"
                     }
                 }
             ]

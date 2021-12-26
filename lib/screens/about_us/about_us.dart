@@ -151,7 +151,7 @@ class _AboutUsState extends State<AboutUs> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        item.level,
+                        item.roles[0],
                         style: Theme.of(context)
                             .textTheme
                             .caption

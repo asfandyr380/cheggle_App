@@ -6,6 +6,8 @@ import 'package:listar_flutter/utils/translate.dart';
 import 'package:listar_flutter/widgets/app_button.dart';
 
 class SelectPackage extends StatefulWidget {
+  Map data;
+  SelectPackage({@required this.data});
   @override
   _SelectPackageState createState() => _SelectPackageState();
 }
@@ -13,6 +15,7 @@ class SelectPackage extends StatefulWidget {
 class _SelectPackageState extends State<SelectPackage> {
   List<Map> cards = [
     {
+      'id': 1,
       'title': "CHEGGl VIDEO",
       "subtitle": "Your individual marketing video",
       "price": "79.00",
@@ -33,6 +36,7 @@ class _SelectPackageState extends State<SelectPackage> {
       ],
     },
     {
+      'id': 2,
       'title': "PREMIUM PACKAGE",
       "subtitle": "including all top functions",
       "price": "5.00",
@@ -54,6 +58,7 @@ class _SelectPackageState extends State<SelectPackage> {
       ],
     },
     {
+      'id': 3,
       'title': "VIDEO + PREMIUM",
       "subtitle": "Your combo package to get you started",
       "price": "5.00",
@@ -98,7 +103,13 @@ class _SelectPackageState extends State<SelectPackage> {
                   child: PackageCard(
                     data: card,
                     onPress: () {
-                      Navigator.pushReplacementNamed(context, Routes.uploadContent, arguments: card);
+                      if (card['id'] == 2 || card['id'] == 3) {
+                        widget.data['roles'] = ['moderator'];
+                      }
+                      Map data = {'form_data': widget.data, 'card': card};
+                      Navigator.pushReplacementNamed(
+                          context, Routes.uploadContent,
+                          arguments: data);
                     },
                   ),
                 )

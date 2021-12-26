@@ -63,7 +63,11 @@ class _UploadContentState extends State<UploadContent> {
 
   _continue() async {
     if (_privacyPolicy && _terms) {
-      Map data = {"Package": widget.package, "Additional_Service": _selectedPackage};
+      Map data = {
+        "Package": widget.package['card'],
+        "Additional_Service": _selectedPackage,
+        'form_data': widget.package['form_data'],
+      };
       Navigator.pushReplacementNamed(context, Routes.cashBox, arguments: data);
     }
   }

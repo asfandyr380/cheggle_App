@@ -68,8 +68,7 @@ class HTTPManager {
     dynamic data,
     Options options,
   }) async {
-    print("Post URL ==> $url");
-    print("Post DATA ==> $data");
+    print("Map ==> $data");
     UtilLogger.log("POST URL", url);
     UtilLogger.log("DATA", data);
     Dio dio = new Dio(exportOption());

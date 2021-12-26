@@ -1,7 +1,7 @@
 listar_flutter
 2.1
-file:///C:/Users/asfan/Desktop/codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter/source/
-file:///C:/Users/asfan/Desktop/codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter/source/lib/
+file:///C:/Users/asfan/Desktop/Lister/codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter/source/
+file:///C:/Users/asfan/Desktop/Lister/codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter/source/lib/
 async
 2.12
 file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.8.2/
@@ -26,6 +26,14 @@ collection
 2.12
 file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.15.0/
 file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.15.0/lib/
+contained_tab_bar_view
+2.12
+file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/contained_tab_bar_view-0.8.0/
+file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/contained_tab_bar_view-0.8.0/lib/
+container_tab_indicator
+2.12
+file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/container_tab_indicator-0.3.0/
+file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/container_tab_indicator-0.3.0/lib/
 cross_file
 2.12
 file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/cross_file-0.3.2/
@@ -46,6 +54,10 @@ dio
 2.12
 file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/dio-4.0.3/
 file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/dio-4.0.3/lib/
+extended_sliver
+2.12
+file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/extended_sliver-2.0.1/
+file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/extended_sliver-2.0.1/lib/
 ffi
 2.12
 file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/ffi-1.1.2/

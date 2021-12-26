@@ -213,7 +213,7 @@ class _ProductDetailRealEstateState extends State<ProductDetailRealEstate> {
                           ),
                           SizedBox(height: 4),
                           Text(
-                            _detailPage.product.author.description,
+                            _detailPage.product.author.address,
                             style: Theme.of(context).textTheme.caption,
                           ),
                         ],

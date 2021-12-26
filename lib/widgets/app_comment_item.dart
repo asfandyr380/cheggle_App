@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:listar_flutter/api/api.dart';
 import 'package:listar_flutter/models/model.dart';
 import 'package:listar_flutter/widgets/widget.dart';
 
@@ -137,7 +138,7 @@ class AppCommentItem extends StatelessWidget {
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
-                    image: AssetImage(item.user.image),
+                    image: NetworkImage("$BASE_URL_Img/${item.user.image}"),
                     fit: BoxFit.cover,
                   ),
                 ),

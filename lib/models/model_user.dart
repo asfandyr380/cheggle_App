@@ -1,71 +1,125 @@
+import 'dart:developer';
+
+import 'package:listar_flutter/models/model.dart';
+
 class UserModel {
   final String id;
-  final String name;
+  final String person;
   final String firstName;
   final String lastName;
-  final String email;
-  final String nickname;
-  final String image;
-  final String link;
-  final String level;
-  final String description;
-  final String tag;
-  final double rate;
-  final String token;
+  final String phone;
+  final String fax;
+  final String mobile;
   final String website;
+  final String email;
+  final String companyName;
+  final String b1;
+  final String b2;
+  final String address;
+  final String postal;
+  final String city;
+  final String district;
+  final String country;
+  final String image;
+  final List roles;
+  final String name;
+  final String token;
+  final List<CommentModel> reviews;
+  final List servies;
+  final String aboutUs;
+  final List partners;
+
 
   UserModel(
     this.id,
-    this.name,
-    this.nickname,
-    this.image,
-    this.link,
-    this.level,
-    this.description,
-    this.tag,
-    this.rate,
-    this.token,
-    this.email,
-    this.website,
+    this.person,
     this.firstName,
     this.lastName,
+    this.phone,
+    this.fax,
+    this.mobile,
+    this.website,
+    this.email,
+    this.companyName,
+    this.b1,
+    this.b2,
+    this.address,
+    this.postal,
+    this.city,
+    this.district,
+    this.country,
+    this.image,
+    this.roles,
+    this.name,
+    this.token,
+    this.reviews,
+    this.servies,
+    this.aboutUs,
+    this.partners,
   );
 
-  factory UserModel.fromJson(Map<String, dynamic> json) {
+  factory UserModel.fromJson(Map<String, dynamic> json, {bool addReview}) {
+    bool _addReview = addReview ?? false;
     if (json == null) return null;
     return UserModel(
       json['id'] ?? '0',
-      json['full_name'] ?? 'Unknown',
-      json['nickname'] ?? 'Unknown',
-      json['photo'] ?? 'Unknown',
-      json['url'] ?? 'Unknown',
-      json['level'] ?? 'Unknown',
-      json['street'] ?? 'Unknown',
-      json['tag'] ?? 'Unknown',
-      json['rate'] ?? 0.0,
-      json['token'] ?? 'Unknown',
-      json['email'] ?? "Unknown",
-      json['url'] ?? "Unknown",
-      json['firstname'] ?? "Unknown",
-      json['lastname'] ?? "Unknown",
+      json['person'] ?? "Unknown",
+      json["firstname"] ?? "Unknown",
+      json["lastname"] ?? "Unknown",
+      json["phone"] ?? "Unknown",
+      json["fax"] ?? "Unknown",
+      json["mobile"] ?? "Unknown",
+      json["website"] ?? "Unknown",
+      json["email"] ?? "Unknown",
+      json["company"] ?? "Unknown",
+      json["b1"] ?? "Unknown",
+      json["b2"] ?? "Unknown",
+      json["address"] ?? "Unknown",
+      json["postal"] ?? "Unknown",
+      json["city"] ?? "Unknown",
+      json["district"] ?? "Unknown",
+      json["country"] ?? "Unknown",
+      json["photo"] ?? "Unknown",
+      json["roles"] ?? [],
+      json["full_name"] ?? "Unknown",
+      json["token"] ?? "Unknown",
+      _addReview
+          ? (json['reviews'] as List ?? []).map((item) {
+              return CommentModel.fromJson(item);
+            }).toList()
+          : <CommentModel>[],
+      json['services'] ?? [],
+      json['aboutUs'] ?? "Unknown",
+      json['partners'] ?? [],
     );
   }
 
   Map<String, dynamic> toJson() {
     return {
       'id': id,
-      'email': email,
-      'full_name': name,
-      'firstName': firstName,
-      'lastName': lastName,
-      'nickname': nickname,
-      'photo': image,
-      'url': link,
-      'level': level,
-      'description': description,
-      'tag': tag,
-      'rate': rate,
+      'person': person,
+      'firstname': firstName,
+      'lastname': lastName,
+      'phone': phone,
+      'fax': fax,
+      'mobile': mobile,
       'website': website,
+      'email': email,
+      'company': companyName,
+      'b1': b1,
+      'b2': b2,
+      'address': address,
+      'postal': postal,
+      'city': city,
+      'district': district,
+      'country': country,
+      'photo': image,
+      'roles': roles,
+      'full_name': name,
+      'reviews': reviews,
+      'services': servies,
+      'aboutUs': aboutUs,
+      'partners': partners,
       'token': token,
     };
   }
