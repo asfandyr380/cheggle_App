@@ -56,7 +56,7 @@ class _EditProfileState extends State<EditProfile> {
 
   ///Fetch API
   Future<void> _loadData() async {
-    final ResultApiModel result = await Api.getProfile();
+    final ResultApiModel result = await Api.getProfile(null);
     if (result.success) {
       setState(() {
         _profilePage = ProfilePageModel.fromJson(result.data);

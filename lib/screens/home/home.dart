@@ -9,7 +9,9 @@ import 'package:listar_flutter/models/screen_models/screen_models.dart';
 import 'package:listar_flutter/screens/home/home_category_item.dart';
 import 'package:listar_flutter/screens/home/home_category_list.dart';
 import 'package:listar_flutter/screens/home/home_sliver_app_bar.dart';
+import 'package:listar_flutter/screens/profile/profile.dart';
 import 'package:listar_flutter/utils/utils.dart';
+import 'package:listar_flutter/widgets/app_recommended_card.dart';
 import 'package:listar_flutter/widgets/widget.dart';
 
 class Home extends StatefulWidget {
@@ -313,7 +315,7 @@ class _HomeState extends State<Home> {
     ///More Category
     listBuild.add(HomeCategoryItem(
       item: CategoryModel.fromJson({
-        "id": 9,
+        "id": "9",
         "title": Translate.of(context).translate("more"),
         "icon": "more_horiz",
         "color": "#ff8a65",
@@ -367,6 +369,74 @@ class _HomeState extends State<Home> {
     );
   }
 
+  //Build list Hot
+  Widget _buildHot() {
+    if (_homePage?.popular == null) {
+      return ListView.builder(
+        scrollDirection: Axis.horizontal,
+        padding: EdgeInsets.all(16),
+        itemBuilder: (context, index) {
+          return Container(
+            width: MediaQuery.of(context).size.width / 2,
+            padding: EdgeInsets.only(left: 8, right: 8),
+            child: AppProductItem(type: ProductViewType.gird),
+          );
+        },
+        itemCount: List.generate(8, (index) => index).length,
+      );
+    }
+
+    return ListView.builder(
+      scrollDirection: Axis.horizontal,
+      padding: EdgeInsets.only(left: 16),
+      itemBuilder: (context, index) {
+        final ProductModel item = _homePage.hot[index];
+        return Container(
+          width: MediaQuery.of(context).size.width / 2,
+          padding: EdgeInsets.only(right: 16),
+          child: AppProductItem(
+            onPressed: _onProductDetail,
+            item: item,
+            type: ProductViewType.gird,
+          ),
+        );
+      },
+      itemCount: _homePage.hot.length,
+    );
+  }
+
+  //Build list Recommended
+  Widget _buildRecommended() {
+    if (_homePage?.popular == null) {
+      return ListView.builder(
+        scrollDirection: Axis.horizontal,
+        padding: EdgeInsets.all(16),
+        itemBuilder: (context, index) {
+          return Container(
+            width: MediaQuery.of(context).size.width / 2,
+            padding: EdgeInsets.only(left: 8, right: 8),
+            child: RecommendationCard(),
+          );
+        },
+        itemCount: List.generate(8, (index) => index).length,
+      );
+    }
+
+    return ListView.builder(
+      scrollDirection: Axis.horizontal,
+      padding: EdgeInsets.only(left: 16),
+      itemBuilder: (context, index) {
+        final CategoryModel item = _homePage.recommended[index];
+        return Container(
+          width: MediaQuery.of(context).size.width / 2,
+          padding: EdgeInsets.only(right: 16),
+          child: RecommendationCard(onPressed: () => _onTapService(item), item: item),
+        );
+      },
+      itemCount: _homePage.recommended.length,
+    );
+  }
+
   ///Build list recent
   Widget _buildList() {
     if (_homePage?.list == null) {
@@ -400,41 +470,47 @@ class _HomeState extends State<Home> {
     return AlertDialog(
       title: Text(
         item.title,
-        style: TextStyle(color: Theme.of(context).primaryColor),
+        style: TextStyle(color: Theme.of(context).primaryColor, fontWeight: FontWeight.bold),
       ),
-      content: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Image.asset(item.image),
-          SizedBox(height: 30),
-          _buildContactInfo(icon: Icons.location_on, text: item.address),
-          SizedBox(height: 20),
-          _buildContactInfo(icon: Icons.phone, text: item.phone),
-          SizedBox(height: 20),
-          _buildContactInfo(icon: Icons.mail, text: item.email),
-          SizedBox(height: 20),
-          Text('Rating', style: TextStyle(fontWeight: FontWeight.bold)),
-          SizedBox(height: 20),
-          RatingBar.builder(
-            onRatingUpdate: (_) {},
-            initialRating: item.rate.toDouble(),
-            minRating: 1,
-            allowHalfRating: true,
-            unratedColor: Colors.black.withAlpha(100),
-            itemCount: 5,
-            itemSize: 20.0,
-            itemBuilder: (context, _) => Icon(
-              Icons.star,
-              color: Colors.black,
+      content: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.asset(item.image),
+            SizedBox(height: 30),
+            _buildContactInfo(icon: Icons.location_on, text: item.address),
+            SizedBox(height: 20),
+            _buildContactInfo(icon: Icons.phone, text: item.phone),
+            SizedBox(height: 20),
+            _buildContactInfo(icon: Icons.mail, text: item.email),
+            SizedBox(height: 20),
+            Text('Rating', style: TextStyle(fontWeight: FontWeight.bold)),
+            SizedBox(height: 20),
+            RatingBar.builder(
+              onRatingUpdate: (_) {},
+              initialRating: item.rate.toDouble(),
+              minRating: 1,
+              allowHalfRating: true,
+              unratedColor: Colors.black.withAlpha(100),
+              itemCount: 5,
+              itemSize: 20.0,
+              itemBuilder: (context, _) => Icon(
+                Icons.star,
+                color: Colors.black,
+              ),
+              ignoreGestures: true,
             ),
-            ignoreGestures: true,
-          ),
-        ],
+          ],
+        ),
       ),
       actions: [
         TextButton(
-          onPressed: () {},
+          onPressed: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (_) => Profile(preview: true, id: item.author.id)),
+          ),
           style: ButtonStyle(
             backgroundColor:
                 MaterialStateProperty.all(Theme.of(context).primaryColor),
@@ -532,6 +608,60 @@ class _HomeState extends State<Home> {
                     ),
                     Container(
                       padding: EdgeInsets.only(
+                          top: 16, left: 16, right: 16, bottom: 16),
+                      child: Row(
+                        children: <Widget>[
+                          Text(
+                            Translate.of(context).translate(
+                              'Recommendations',
+                            ),
+                            style: Theme.of(context)
+                                .textTheme
+                                .headline6
+                                .copyWith(fontWeight: FontWeight.w600),
+                          )
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 80,
+                      child: _buildRecommended(),
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(
+                          top: 16, left: 16, right: 16, bottom: 16),
+                      child: Row(
+                        children: <Widget>[
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                Translate.of(context).translate(
+                                  'What\'s Hot',
+                                ),
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .headline6
+                                    .copyWith(fontWeight: FontWeight.w600),
+                              ),
+                              SizedBox(height: 4),
+                              Text(
+                                Translate.of(context).translate(
+                                  'Lets see what\'s trending',
+                                ),
+                                style: Theme.of(context).textTheme.bodyText2,
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 220,
+                      child: _buildHot(),
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(
                         left: 16,
                         right: 16,
                         top: 8,
@@ -586,3 +716,5 @@ class _HomeState extends State<Home> {
     );
   }
 }
+
+

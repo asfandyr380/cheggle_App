@@ -227,28 +227,28 @@ class AppProductItem extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Row(
-                        children: [status],
-                      ),
-                      // Row(
-                      //   mainAxisAlignment: MainAxisAlignment.end,
-                      //   children: <Widget>[
-                      //     Padding(
-                      //       padding: EdgeInsets.all(4),
-                      //       child: Icon(
-                      //         item.favorite
-                      //             ? Icons.favorite
-                      //             : Icons.favorite_border,
-                      //         color: Colors.white,
-                      //       ),
-                      //     )
-                      //   ],
-                      // )
-                    ],
-                  ),
+                  // child: Column(
+                  //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  //   children: <Widget>[
+                  //     Row(
+                  //       children: [status],
+                  //     ),
+                  //     // Row(
+                  //     //   mainAxisAlignment: MainAxisAlignment.end,
+                  //     //   children: <Widget>[
+                  //     //     Padding(
+                  //     //       padding: EdgeInsets.all(4),
+                  //     //       child: Icon(
+                  //     //         item.favorite
+                  //     //             ? Icons.favorite
+                  //     //             : Icons.favorite_border,
+                  //     //         color: Colors.white,
+                  //     //       ),
+                  //     //     )
+                  //     //   ],
+                  //     // )
+                  //   ],
+                  // ),
                 ),
                 SizedBox(height: 4),
                 Text(

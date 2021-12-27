@@ -28,7 +28,10 @@ class UserModel {
   final List servies;
   final String aboutUs;
   final List partners;
-
+  final String facebook_link;
+  final String instagram_link;
+  final String twitter_link;
+  final String linkdIn_link;
 
   UserModel(
     this.id,
@@ -56,13 +59,17 @@ class UserModel {
     this.servies,
     this.aboutUs,
     this.partners,
+    this.facebook_link,
+    this.instagram_link,
+    this.linkdIn_link,
+    this.twitter_link,
   );
 
   factory UserModel.fromJson(Map<String, dynamic> json, {bool addReview}) {
     bool _addReview = addReview ?? false;
     if (json == null) return null;
     return UserModel(
-      json['id'] ?? '0',
+      json['id'] ?? json['_id'] ?? '0',
       json['person'] ?? "Unknown",
       json["firstname"] ?? "Unknown",
       json["lastname"] ?? "Unknown",
@@ -91,6 +98,10 @@ class UserModel {
       json['services'] ?? [],
       json['aboutUs'] ?? "Unknown",
       json['partners'] ?? [],
+      json['facebook'] ?? "Unknown",
+      json['instagram'] ?? "Unknown",
+      json['linkdin'] ?? "Unknown",
+      json['twitter'] ?? "Unknown",
     );
   }
 
@@ -120,6 +131,10 @@ class UserModel {
       'services': servies,
       'aboutUs': aboutUs,
       'partners': partners,
+      'facebook': facebook_link,
+      'twitter': twitter_link,
+      'instagram': instagram_link,
+      'linkdin': linkdIn_link,
       'token': token,
     };
   }

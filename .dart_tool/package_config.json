@@ -212,6 +212,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "font_awesome_flutter",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-9.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "google_maps_flutter",
       "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/google_maps_flutter-2.1.0",
       "packageUri": "lib/",
@@ -512,7 +518,7 @@
       "languageVersion": "2.1"
     }
   ],
-  "generated": "2021-12-25T07:03:51.879095Z",
+  "generated": "2021-12-27T12:14:12.940784Z",
   "generator": "pub",
   "generatorVersion": "2.15.0"
 }

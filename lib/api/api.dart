@@ -93,13 +93,21 @@ class Api {
   }
 
   ///Get Profile Detail
-  static Future<dynamic> getProfile() async {
-    await Future.delayed(Duration(seconds: 1));
+  static Future<dynamic> getProfile(String id) async {
     // final result = await UtilData.getProfile();
     final userRepository = UserRepository();
     UserModel user = await userRepository.getUser();
     final http = HTTPManager();
-    final result = await http.get(url: '$BASE_URL/user/${user.id}');
+    var result;
+    if (id == null) {
+      print('NO ID');
+      result = await http.get(url: '$BASE_URL/user/${user.id}');
+    } else {
+      print('ON ID');
+
+      result = await http.get(url: '$BASE_URL/user/$id');
+    }
+    print(result);
     return ResultApiModel.fromJson(result);
   }
 

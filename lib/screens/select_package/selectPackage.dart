@@ -130,7 +130,8 @@ class PackageCard extends StatelessWidget {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-          color: Color(0xff3d3c3f), borderRadius: BorderRadius.circular(8)),
+        border: Border.all(color: Colors.black.withOpacity(0.1)),
+          color: Colors.white, borderRadius: BorderRadius.circular(8)),
       child: Padding(
         padding: EdgeInsets.all(10.0),
         child: Column(

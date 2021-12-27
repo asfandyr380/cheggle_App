@@ -59,6 +59,15 @@ class UtilData {
   static Future<Map<String, dynamic>> getHomeBasic() async {
     var result = await UtilAsset.loadJson("assets/data/home.json");
     var http = HTTPManager();
+    final res_banners = await http.get(url: '$BASE_URL/banners');
+    if (res_banners['success']) {
+      result['data']['banner'] = res_banners['data'];
+    }
+
+    final res_category = await http.get(url: '$BASE_URL/categories');
+    if (res_category['success']) {
+      result['data']['category'] = res_category['data'];
+    }
 
     final res_featured = await http.get(url: '$BASE_URL/product/featured');
     if (res_featured['success']) {
@@ -70,23 +79,16 @@ class UtilData {
       result['data']['list'] = res_recent['data'];
     }
 
-    // result['data']['list'] = [
-    //   await getProductDetailBasic(id: "1"),
-    //   await getProductDetailBasic(id: "2"),
-    //   // await getProductDetailBasic(id: "3"),
-    //   // await getProductDetailBasic(id: "3"),
-    //   // await getProductDetailBasic(id: "5"),
-    //   // await getProductDetailBasic(id: "6"),
-    //   // await getProductDetailBasic(id: "7"),
-    //   // await getProductDetailBasic(id: "8"),
-    //   // await getProductDetailBasic(id: "9"),
-    //   // await getProductDetailBasic(id: "10"),
-    //   // await getProductDetailBasic(id: "11"),
-    //   // await getProductDetailBasic(id: "12"),
-    //   // await getProductDetailBasic(id: "13"),
-    //   // await getProductDetailBasic(id: "14"),
-    //   // await getProductDetailBasic(id: "15"),
-    // ];
+    final res_hot = await http.get(url: '$BASE_URL/product/hot');
+    if (res_hot['success']) {
+      result['data']['hot'] = res_hot['data'];
+    }
+
+    final res_recommended_cate = await http.get(url: '$BASE_URL/categories/recommended');
+    if (res_recommended_cate['success']) {
+      result['data']['recommended'] = res_recommended_cate['data'];
+    }
+
     return result;
   }
 

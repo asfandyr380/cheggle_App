@@ -173,7 +173,7 @@ class _CashBoxState extends State<CashBox> {
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: Colors.white),
+                  border: Border.all(color: Colors.grey),
                 ),
                 child: TextButton(
                   onPressed: () async {
@@ -307,8 +307,9 @@ class _CashBoxState extends State<CashBox> {
                 width: double.infinity,
                 padding: EdgeInsets.all(8),
                 decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black.withOpacity(0.1)),
                   borderRadius: BorderRadius.circular(8),
-                  color: Color(0xff3d3c3f),
+                  color: Colors.white,
                 ),
                 child: Column(
                   children: [

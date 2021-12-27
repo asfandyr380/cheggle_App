@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:listar_flutter/api/api.dart';
 import 'package:listar_flutter/models/model.dart';
 import 'package:listar_flutter/widgets/app_placeholder.dart';
 
@@ -17,8 +18,8 @@ class HomeSwipe extends StatelessWidget {
     if (images != null && images.length > 0) {
       return Swiper(
         itemBuilder: (BuildContext context, int index) {
-          return Image.asset(
-            images[index].image,
+          return Image.network(
+            "$BASE_URL_Img/${images[index].image}",
             fit: BoxFit.cover,
           );
         },

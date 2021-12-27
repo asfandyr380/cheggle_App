@@ -1,23 +1,29 @@
-// ignore_for_file: sdk_version_ui_as_code
+// ignore_for_file: sdk_version_ui_as_code, sdk_version_set_literal
 
 import 'dart:developer';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:listar_flutter/api/api.dart';
+import 'package:listar_flutter/api/http_manager.dart';
 import 'package:listar_flutter/blocs/bloc.dart';
 import 'package:listar_flutter/configs/config.dart';
 import 'package:listar_flutter/models/model.dart';
 import 'package:listar_flutter/models/screen_models/screen_models.dart';
-import 'package:listar_flutter/utils/utils.dart';
+import 'package:listar_flutter/repository/repository.dart';
+import 'package:listar_flutter/utils/utils.dart' as util;
 import 'package:listar_flutter/widgets/widget.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 enum ProfileType { basic, premium }
 
 class Profile extends StatefulWidget {
   final bool preview;
-  Profile({this.preview});
+  final String id;
+  Profile({this.preview, this.id});
 
   @override
   _ProfileState createState() {
@@ -33,9 +39,9 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
     listener: AdListener(
       onAdLoaded: (Ad ad) {},
       onAdFailedToLoad: (ad, error) {},
-      onAdOpened: (Ad ad) => UtilLogger.log("DEBUGGGGG", 3),
-      onAdClosed: (Ad ad) => UtilLogger.log("DEBUGGGGG", 4),
-      onApplicationExit: (Ad ad) => UtilLogger.log("DEBUGGGGG", 5),
+      onAdOpened: (Ad ad) => util.UtilLogger.log("DEBUGGGGG", 3),
+      onAdClosed: (Ad ad) => util.UtilLogger.log("DEBUGGGGG", 4),
+      onApplicationExit: (Ad ad) => util.UtilLogger.log("DEBUGGGGG", 5),
     ),
   );
 
@@ -47,6 +53,19 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
   int tabs = 1;
   List<String> tabslist = [];
   List<Widget> tabslist_content = [];
+
+  String _validName;
+  String _validEmail;
+  String _validMessage;
+
+  final _nameController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _messageController = TextEditingController();
+
+  FocusNode _nameFocus = FocusNode();
+  FocusNode _emailFocus = FocusNode();
+  FocusNode _messageFocus = FocusNode();
+
   @override
   void initState() {
     super.initState();
@@ -62,11 +81,23 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
   void dispose() {
     super.dispose();
     _bannerAd?.dispose();
+    _nameController.dispose();
+    _emailController.dispose();
+    _messageController.dispose();
   }
 
   ///Fetch API
   Future<void> _loadData() async {
-    final ResultApiModel result = await Api.getProfile();
+    ResultApiModel result;
+    if (preview) {
+      print("On Preview");
+      print(widget.id);
+      result = await Api.getProfile(widget.id);
+    } else {
+      print("NO Preview");
+
+      result = await Api.getProfile(null);
+    }
     if (result.success) {
       setState(() {
         _profilePage = ProfilePageModel.fromJson(result.data);
@@ -143,12 +174,251 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
     Navigator.pushNamed(context, route);
   }
 
+  _share() {
+    return showDialog(
+      context: context,
+      builder: (_) => AlertDialog(
+        title: Text('Share'),
+        content: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            _socialIcons(
+              FontAwesomeIcons.facebookF,
+              onPress: () async {
+                if (await canLaunch(_profilePage.user.facebook_link)) {
+                  await launch(_profilePage.user.facebook_link);
+                }
+              },
+            ),
+            _socialIcons(
+              FontAwesomeIcons.twitter,
+              onPress: () async {
+                if (await canLaunch(_profilePage.user.twitter_link)) {
+                  await launch(_profilePage.user.twitter_link);
+                }
+              },
+            ),
+            _socialIcons(
+              FontAwesomeIcons.instagram,
+              onPress: () async {
+                if (await canLaunch(_profilePage.user.instagram_link)) {
+                  await launch(_profilePage.user.instagram_link);
+                }
+              },
+            ),
+            _socialIcons(
+              FontAwesomeIcons.linkedinIn,
+              onPress: () async {
+                if (await canLaunch(_profilePage.user.linkdIn_link)) {
+                  await launch(_profilePage.user.linkdIn_link);
+                }
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _socialIcons(IconData icon, {Function onPress}) => InkWell(
+        onTap: () => onPress(),
+        borderRadius: BorderRadius.circular(16),
+        child: Container(
+          padding: EdgeInsets.all(8),
+          decoration: BoxDecoration(
+              color: Theme.of(context).primaryColor, shape: BoxShape.circle),
+          child: Icon(icon, color: Colors.white, size: 32),
+        ),
+      );
+
+  bool isLoading = false;
+
+  _openReview() async {
+    var user = await UserRepository().getUser();
+    double initialRating = 1;
+    return showDialog(
+      context: context,
+      builder: (_) => AlertDialog(
+        title: Text(
+          'Give an appriasal'.toUpperCase(),
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        scrollable: true,
+        content: user != null
+            ? Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Your email address will not be published",
+                    style: TextStyle(fontWeight: FontWeight.w300),
+                  ),
+                  SizedBox(height: 20),
+                  AppTextInput(
+                    hintText: util.Translate.of(context).translate('Your Name'),
+                    errorText: _validName,
+                    icon: Icon(Icons.clear),
+                    controller: _nameController,
+                    focusNode: _nameFocus,
+                    textInputAction: TextInputAction.next,
+                    onChanged: (text) {
+                      setState(() {
+                        _validName = util.UtilValidator.validate(
+                          data: _nameController.text,
+                        );
+                      });
+                    },
+                    onSubmitted: (text) {
+                      // UtilOther.fieldFocusChange(context, _nameFocus, _emailFocus);
+                    },
+                    onTapIcon: () {
+                      _nameController.clear();
+                    },
+                  ),
+                  SizedBox(height: 10),
+                  AppTextInput(
+                    hintText:
+                        util.Translate.of(context).translate('Your Email'),
+                    errorText: _validEmail,
+                    icon: Icon(Icons.clear),
+                    controller: _emailController,
+                    focusNode: _emailFocus,
+                    textInputAction: TextInputAction.next,
+                    onChanged: (text) {
+                      setState(() {
+                        _validEmail = util.UtilValidator.validate(
+                          data: _emailController.text,
+                        );
+                      });
+                    },
+                    onSubmitted: (text) {
+                      // UtilOther.fieldFocusChange(context, _emailFocus, _messageFocus);
+                    },
+                    onTapIcon: () {
+                      _emailController.clear();
+                    },
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    children: [
+                      Text(
+                        'Rating',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(width: 8),
+                      RatingBar.builder(
+                        onRatingUpdate: (_) {
+                          setState(() {
+                            initialRating = _;
+                          });
+                        },
+                        initialRating: initialRating,
+                        minRating: 1,
+                        allowHalfRating: true,
+                        unratedColor: Colors.black.withAlpha(100),
+                        itemCount: 5,
+                        itemSize: 20.0,
+                        itemBuilder: (context, _) => Icon(
+                          Icons.star,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 10),
+                  AppTextInput(
+                    hintText:
+                        util.Translate.of(context).translate('Your Message'),
+                    errorText: _validMessage,
+                    icon: Icon(Icons.clear),
+                    controller: _messageController,
+                    focusNode: _messageFocus,
+                    maxLines: 7,
+                    onChanged: (text) {
+                      setState(() {
+                        _validMessage = util.UtilValidator.validate(
+                          data: _messageController.text,
+                        );
+                      });
+                    },
+                    onSubmitted: (text) {
+                      util.UtilOther.hiddenKeyboard(context);
+                    },
+                    onTapIcon: () {
+                      _messageController.clear();
+                    },
+                  ),
+                ],
+              )
+            : Center(
+                child: Text(
+                  'this service is not availble to you please SignIn/SignUp first'
+                      .toUpperCase(),
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 18,
+                  ),
+                ),
+              ),
+        actions: [
+          AppButton(
+              util.Translate.of(context)
+                  .translate(user != null ? 'Submit' : 'Close'),
+              disabled: isLoading,
+              loading: isLoading,
+              onPressed: user != null
+                  ? () => _sendReview(initialRating, user.id)
+                  : () => Navigator.pop(context))
+        ],
+      ),
+    );
+  }
+
+  _sendReview(double rate, String userId) async {
+    setState(() {
+      isLoading = true;
+      _validName = util.UtilValidator.validate(data: _nameController.text);
+      _validEmail = util.UtilValidator.validate(
+          data: _emailController.text, type: util.Type.email);
+      _validMessage = util.UtilValidator.validate(data: _nameController.text);
+    });
+
+    if (_validMessage == null && _validName == null && _validEmail == null) {
+      final http = HTTPManager();
+      var result = await http.post(
+        url: "$BASE_URL/review/create",
+        data: {
+          "user": userId,
+          "title": _nameController.text,
+          "comment": _messageController.text,
+          "rate": '$rate',
+        },
+      );
+      if (result['success']) {
+        Navigator.pop(context);
+      }
+    }
+    setState(() {
+      isLoading = false;
+    });
+  }
+
+  ///On refresh
+  Future<void> _onRefresh() async {
+    _loadData();
+  }
+
   void handleClick(String value) {
     switch (value) {
-      case 'Profile':
+      case 'Settings':
         _onNavigate(Routes.editProfile);
         break;
       case 'Share':
+        _share();
+        break;
+      case 'Add Review':
+        _openReview();
+        break;
+      case 'Open Time':
         break;
       case 'Map':
         Navigator.pushNamed(context, Routes.location,
@@ -174,6 +444,7 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
                     headerSliverBuilder:
                         (BuildContext context, bool innerBoxIsScrolled) => [
                       SliverAppBar(
+                        automaticallyImplyLeading: false,
                         expandedHeight: 250.0,
                         actions: <Widget>[
                           IconButton(
@@ -183,8 +454,12 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
                           PopupMenuButton<String>(
                             onSelected: (_) => handleClick(_),
                             itemBuilder: (BuildContext context) {
-                              return {'Profile', 'Share', 'Map', 'Logout'}
-                                  .map((String choice) {
+                              return {
+                                preview ? 'Add Review' : 'Settings',
+                                'Share',
+                                'Map',
+                                preview ? 'Open Time' : 'Logout',
+                              }.map((String choice) {
                                 return PopupMenuItem<String>(
                                   value: choice,
                                   child: Text(choice),
@@ -202,34 +477,36 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
                         pinned: true,
                       ),
                     ],
-                    body: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Updgrade to Premium',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 25,
+                    body: preview
+                        ? Container()
+                        : Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Updgrade to Premium',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 25,
+                                  ),
+                                ),
+                                SizedBox(height: 10),
+                                Text(
+                                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+                                  style: TextStyle(fontWeight: FontWeight.w400),
+                                ),
+                                SizedBox(height: 30),
+                                AppButton(
+                                  util.Translate.of(context)
+                                      .translate('Upgrade to Premium'),
+                                  onPressed: () {},
+                                  loading: false,
+                                  disabled: false,
+                                ),
+                              ],
                             ),
                           ),
-                          SizedBox(height: 10),
-                          Text(
-                            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-                            style: TextStyle(fontWeight: FontWeight.w200),
-                          ),
-                          SizedBox(height: 30),
-                          AppButton(
-                            Translate.of(context)
-                                .translate('Upgrade to Premium'),
-                            onPressed: () {},
-                            loading: false,
-                            disabled: false,
-                          ),
-                        ],
-                      ),
-                    ),
                   ),
                 ),
               )
@@ -243,6 +520,7 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
                     headerSliverBuilder:
                         (BuildContext context, bool innerBoxIsScrolled) => [
                       SliverAppBar(
+                        automaticallyImplyLeading: false,
                         expandedHeight: 250.0,
                         actions: <Widget>[
                           IconButton(
@@ -252,8 +530,12 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
                           PopupMenuButton<String>(
                             onSelected: (_) => handleClick(_),
                             itemBuilder: (BuildContext context) {
-                              return {'Profile', 'Share', 'Map', 'Logout'}
-                                  .map((String choice) {
+                              return {
+                                preview ? 'Add Review' : 'Settings',
+                                'Share',
+                                'Map',
+                                preview ? 'Open Time' : 'Logout',
+                              }.map((String choice) {
                                 return PopupMenuItem<String>(
                                   value: choice,
                                   child: Text(choice),
@@ -275,7 +557,8 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
                           TabBar(
                             labelColor: Theme.of(context).primaryColor,
                             indicatorColor: Theme.of(context).primaryColor,
-                            unselectedLabelColor: Theme.of(context).primaryColor.withAlpha(120),
+                            unselectedLabelColor:
+                                Theme.of(context).primaryColor.withAlpha(120),
                             isScrollable: true,
                             indicatorSize: TabBarIndicatorSize.label,
                             tabs: [
@@ -547,8 +830,6 @@ class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
     return false;
   }
 }
-
-
 
 // Scaffold(
 //             appBar: AppBar(

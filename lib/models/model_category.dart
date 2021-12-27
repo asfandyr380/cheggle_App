@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:listar_flutter/utils/utils.dart';
 
 class CategoryModel {
-  final int id;
+  final String id;
   final String title;
   final int count;
   final String image;
@@ -23,7 +23,7 @@ class CategoryModel {
     final icon = UtilIcon.getIconData(json['icon'] ?? "Unknown");
     final color = UtilColor.getColorFromHex(json['color'] ?? "#ff8a65");
     return CategoryModel(
-      id: json['id'] ?? 0,
+      id: json['id'] ?? "0",
       title: json['title'] ?? 'Unknown',
       count: json['count'] ?? 0,
       image: json['image'] ?? 'Unknown',
