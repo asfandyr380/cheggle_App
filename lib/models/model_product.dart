@@ -22,6 +22,11 @@ class ProductModel {
   final String hour;
   final String description;
   final String priceRange;
+  final String autherId;
+  final String facebook;
+  final String instagram;
+  final String linkdin;
+  final String twitter;
   final List<ImageModel> photo;
   final List<HourModel> hourDetail;
   final List<IconModel> service;
@@ -50,6 +55,11 @@ class ProductModel {
     this.description,
     this.priceRange,
     this.hourDetail,
+    this.autherId,
+    this.facebook,
+    this.instagram,
+    this.linkdin,
+    this.twitter,
     this.service,
     this.photo,
     this.feature,
@@ -86,6 +96,11 @@ class ProductModel {
       hour: json['hour'] ?? 'Unknown',
       description: json['description'] ?? 'Unknown',
       priceRange: json['price_range'] ?? 'Unknown',
+      facebook: json['facebook'] ?? "Unknown",
+      instagram: json['instagram'] ?? "Unknown",
+      twitter: json['twitter'] ?? "Unknown",
+      linkdin: json['linkdin'] ?? "Unknown",
+      autherId: json['auther_Id'] ?? "Unknown",
       hourDetail: (json['hour_detail'] as List ?? []).map((item) {
         return HourModel.fromJson(item);
       }).toList(),

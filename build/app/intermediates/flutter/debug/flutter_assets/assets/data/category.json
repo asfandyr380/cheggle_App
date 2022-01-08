@@ -3,7 +3,7 @@
   "data": {
     "category": [
       {
-        "id": 1,
+        "id": "1",
         "title": "Shopping",
         "count": 52,
         "image": "assets/images/category-1.jpg",
@@ -12,7 +12,7 @@
         "type": "shop"
       },
       {
-        "id": 2,
+        "id": "2",
         "title": "Coffee & Bar",
         "count": 54,
         "image": "assets/images/category-2.jpg",
@@ -21,7 +21,7 @@
         "type": "drink"
       },
       {
-        "id": 3,
+        "id": "3",
         "title": "Events",
         "count": 32,
         "image": "assets/images/category-3.jpg",
@@ -30,7 +30,7 @@
         "type": "event"
       },
       {
-        "id": 4,
+        "id": "4",
         "title": "Real Estate",
         "count": 12,
         "image": "assets/images/category-4.jpg",
@@ -39,7 +39,7 @@
         "type": "estate"
       },
       {
-        "id": 5,
+        "id": "5",
         "title": "Job Street",
         "count": 54,
         "image": "assets/images/location-1.jpg",
@@ -48,7 +48,7 @@
         "type": "job"
       },
       {
-        "id": 6,
+        "id": "6",
         "title": "Restaurant",
         "count": 63,
         "image": "assets/images/location-2.jpg",
@@ -57,7 +57,7 @@
         "type": "restaurant"
       },
       {
-        "id": 7,
+        "id": "7",
         "title": "Automotive",
         "count": 22,
         "image": "assets/images/location-3.jpg",
@@ -66,7 +66,7 @@
         "type": "automotive"
       },
       {
-        "id": 8,
+        "id": "8",
         "title": "Hotel",
         "count": 25,
         "image": "assets/images/room-1.jpg",

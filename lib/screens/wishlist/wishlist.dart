@@ -72,17 +72,26 @@ class _WishListState extends State<WishList> {
           right: 16,
           top: 16,
         ),
-        itemCount: _listPage.list.length,
+        itemCount: _listPage.list.isNotEmpty ? _listPage.list.length : 1,
         itemBuilder: (context, index) {
-          final item = _listPage.list[index];
-          return Padding(
-            padding: EdgeInsets.only(bottom: 16),
-            child: AppProductItem(
-              onPressed: _onProductDetail,
-              item: item,
-              type: ProductViewType.small,
-            ),
-          );
+          final item = _listPage.list.isNotEmpty ? _listPage.list[index] : null;
+          return _listPage.list.isNotEmpty
+              ? Padding(
+                  padding: EdgeInsets.only(bottom: 16),
+                  child: AppProductItem(
+                    onPressed: _onProductDetail,
+                    item: item,
+                    type: ProductViewType.small,
+                  ),
+                )
+              : Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Text(
+                    "There are no favorites yet add your favorites to wishlist and they will show here",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 16),
+                  ),
+                );
         },
       ),
     );
@@ -95,9 +104,7 @@ class _WishListState extends State<WishList> {
         centerTitle: true,
         title: Text(Translate.of(context).translate('wish_list')),
       ),
-      body: SafeArea(
-        child: _buildList(),
-      ),
+      body: SafeArea(child: _buildList()),
     );
   }
 }

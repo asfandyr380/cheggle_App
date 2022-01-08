@@ -100,14 +100,10 @@ class Api {
     final http = HTTPManager();
     var result;
     if (id == null) {
-      print('NO ID');
       result = await http.get(url: '$BASE_URL/user/${user.id}');
     } else {
-      print('ON ID');
-
       result = await http.get(url: '$BASE_URL/user/$id');
     }
-    print(result);
     return ResultApiModel.fromJson(result);
   }
 

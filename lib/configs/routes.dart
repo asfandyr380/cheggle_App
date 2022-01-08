@@ -4,6 +4,7 @@ import 'package:listar_flutter/blocs/bloc.dart';
 import 'package:listar_flutter/models/model.dart';
 import 'package:listar_flutter/screens/add_address/add_address.dart';
 import 'package:listar_flutter/screens/cashbox/cashbox.dart';
+import 'package:listar_flutter/screens/location_Picker/location_picker.dart';
 import 'package:listar_flutter/screens/privacy_policy/privacy_policy.dart';
 import 'package:listar_flutter/screens/profileSetup/profilesetup.dart';
 import 'package:listar_flutter/screens/screen.dart';
@@ -43,6 +44,7 @@ class Routes {
   static const String cashBox = "/cashbox";
   static const String addAddress = "/address";
   static const String profileSetup = "/setup";
+  static const String locationPicker = "/locationPicker";
 
   Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -309,6 +311,14 @@ class Routes {
         return MaterialPageRoute(
           builder: (context) {
             return ProfileSetup(id: id);
+          },
+        );
+
+      case locationPicker:
+        
+        return MaterialPageRoute(
+          builder: (context) {
+            return LocationPicker();
           },
         );
 

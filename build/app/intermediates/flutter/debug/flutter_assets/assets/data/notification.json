@@ -5,7 +5,7 @@
       {
         "id": 1,
         "category": {
-          "id": 1,
+          "id": "1",
           "title": "Shopping",
           "icon": "shopping_basket",
           "color": "#ff8a65",
@@ -18,7 +18,7 @@
       {
         "id": 2,
         "category": {
-          "id": 2,
+          "id": "2",
           "title": "Coffee & Bar",
           "icon": "local_drink",
           "color": "#5d6d7e",
@@ -31,7 +31,7 @@
       {
         "id": 3,
         "category": {
-          "id": 3,
+          "id": "3",
           "title": "Events",
           "icon": "event_available",
           "color": "#a569bd",
@@ -44,7 +44,7 @@
       {
         "id": 4,
         "category": {
-          "id": 4,
+          "id": "4",
           "title": "Real Estate",
           "icon": "all_inclusive",
           "color": "#5dade2",
@@ -57,7 +57,7 @@
       {
         "id": 5,
         "category": {
-          "id": 5,
+          "id": "5",
           "title": "Job Street",
           "icon": "card_travel",
           "color": "#4a90a4",
@@ -70,7 +70,7 @@
       {
         "id": 6,
         "category": {
-          "id": 6,
+          "id": "6",
           "title": "Restaurant",
           "icon": "restaurant",
           "color": "#58d68d",
@@ -83,7 +83,7 @@
       {
         "id": 7,
         "category": {
-          "id": 7,
+          "id": "7",
           "title": "Automotive",
           "icon": "directions_car",
           "color": "#fdc60a",

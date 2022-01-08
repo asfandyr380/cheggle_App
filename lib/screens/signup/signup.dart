@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:listar_flutter/api/api.dart';
 import 'package:listar_flutter/api/http_manager.dart';
 import 'package:listar_flutter/blocs/bloc.dart';
 import 'package:listar_flutter/configs/routes.dart';
@@ -46,39 +47,9 @@ class _SignUpState extends State<SignUp> {
   final _focusMobile = FocusNode();
   final _focusWebsite = FocusNode();
 
-  final List<String> businessTypelist = [
-    'one-man business',
-    'civil law city(Gbr)',
-    'Registered Businessman(ek)',
-    'Open Trading Company(OHG)',
-    'Limited Partnership(KG)',
-    'Limited Liability Company(Gmbh)',
-    'Entrepreneurial Society(UG)',
-    'Joint-stock Company',
-    'Gmbh & co',
-    'miscellaneous',
-  ];
-  final List<String> businesslist = [
-    'attorney',
-    'pharmacy',
-    'architect',
-    'doctor',
-    'automobile',
-    'building',
-    'beauty',
-    'clothing',
-    'advice / consulting',
-    'education',
-    'bistro',
-    'bakery',
-    'design',
-    'service',
-    'reside',
-    'dentist',
-    'barber',
-    'video markting',
-    'football club',
-  ];
+  List<String> businessTypelist = [];
+  List<String> businesslist = [];
+
   final List<String> countrylist = [
     'Germany',
     'Austria',
@@ -89,6 +60,7 @@ class _SignUpState extends State<SignUp> {
     'Mrs',
     'Companies',
   ];
+
   String selectedBusinessType;
   String selectedBusiness;
   String selectedCountry;
@@ -112,11 +84,30 @@ class _SignUpState extends State<SignUp> {
 
   @override
   void initState() {
+    getBusinesses().then((value) {
+      selectedBusinessType = businessTypelist[0];
+      selectedBusiness = businesslist[0];
+    });
     selectedCountry = countrylist[0];
     selectedPerson = personlist[0];
-    selectedBusinessType = businessTypelist[0];
-    selectedBusiness = businesslist[0];
+
     super.initState();
+  }
+
+  Future getBusinesses() async {
+    var http = HTTPManager();
+    var result = await http.get(url: '$BASE_URL/business');
+    if (result['success'] == true) {
+      List business = result['data']['Business'];
+      List types = result['data']['Types'];
+
+      business.forEach((e) => setState(() {
+            businesslist.add(e['name']);
+          }));
+      types.forEach((e) => setState(() {
+            businessTypelist.add(e['name']);
+          }));
+    }
   }
 
   ///On sign up
@@ -186,8 +177,6 @@ class _SignUpState extends State<SignUp> {
 
   Future _apiSignup() async {
     Map form_data = {
-      'password': _textPassController.text,
-      'email': _textEmailController.text,
       "person": selectedPerson,
       "firstname": _textFirstNameController.text,
       "lastname": _textLastNameController.text,
@@ -195,6 +184,8 @@ class _SignUpState extends State<SignUp> {
       "fax": _textFaxController.text,
       "mobile": _textMobileController.text,
       "website": _textWebsiteController.text,
+      'email': _textEmailController.text,
+      'password': _textPassController.text,
       "company": _textCompanyController.text,
       "b1": selectedBusinessType,
       "b2": selectedBusiness,
@@ -204,7 +195,6 @@ class _SignUpState extends State<SignUp> {
       "city": _textCityController.text,
       "district": _textDistrictController.text,
       "country": selectedCountry,
-      "status": "InComplete"
     };
     Navigator.pushReplacementNamed(context, Routes.selectPackage,
         arguments: form_data);

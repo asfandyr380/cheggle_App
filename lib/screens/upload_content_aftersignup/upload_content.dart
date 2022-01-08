@@ -1,7 +1,15 @@
+import 'dart:convert';
+import 'dart:typed_data';
+
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:listar_flutter/api/api.dart';
+import 'package:listar_flutter/api/http_manager.dart';
 import 'package:listar_flutter/configs/config.dart';
 import 'package:listar_flutter/utils/translate.dart';
 import 'package:listar_flutter/widgets/app_button.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class UploadContent extends StatefulWidget {
   UploadContent({@required this.package});
@@ -11,36 +19,75 @@ class UploadContent extends StatefulWidget {
 }
 
 class _UploadContentState extends State<UploadContent> {
-  List<Map> _pricing_list = [
-    {
-      'price': "199.00",
-      'title': 'CHEGGLE CLIP',
-      'isSelected': false,
-      'imagePath': "assets/images/webpc-passthru.webp",
-      'desc':
-          "Your product in focus. Ideal for campaigns, invitations, tips, etc. 1 professional marketing spot (10 seconds in length) Preparation for shooting with a Cheggl contact person, approx. 15 minutes of shooting on site Post-production including editing, color matching and setting of music licensed by Cheggl including all costs for the video equipment 1 location (free travel up to 15 km) 1 feedback loop before approval"
-    },
-    {
-      'price': "99.00",
-      'title': 'CHEGGLE SPOT',
-      'isSelected': false,
-      'imagePath': "assets/images/webpc-passthru (1).webp",
-      'desc':
-          'No time for a shoot? Does not matter! We also produce “remotely” for you. 1 professional video slider (15 seconds long) permanent contact from Cheggl Production with stock material and files supplied (photos, texts) including editing music licensed by Cheggl 1 feedback loop before approval no follow-up costs problem-free publication on your own website and social media platforms (Facebook, Whatsapp, youtube, Instagram)'
-    },
-    {
-      'price': "79.00",
-      'title': 'CHEGGLE SLIDER',
-      'isSelected': false,
-      'imagePath': "assets/images/webpc-passthru (2).webp",
-      'desc':
-          'Your company as a video in 30 seconds. The classic at an unbeatable top price! Your company in a high quality marketing video. Ideal for image films, product launches, explanatory videos, documentaries, etc.'
-    }
-  ];
+  List _pricing_list = [];
 
   Map _selectedPackage;
   bool _privacyPolicy = false;
   bool _terms = false;
+
+  ImagePicker picker = ImagePicker();
+  int progress = 0;
+  bool isLoading = false;
+
+  setBusy(bool state) {
+    setState(() {
+      isLoading = state;
+    });
+  }
+
+  Future pickVideo() async {
+    progress = 0;
+    XFile _pickedFile = await picker.pickVideo(source: ImageSource.gallery);
+    if (_pickedFile != null) {
+      uploadVideo(_pickedFile, uploadNotifier: (value) {
+        setState(() {
+          progress = value;
+        });
+      });
+    }
+  }
+
+  Future uploadVideo(XFile file, {dynamic uploadNotifier(int progress)}) async {
+    Uint8List byteFile = await file.readAsBytes();
+    String bearer = "bearer 4751b7865a4d5588920fc23952c16ee8";
+    try {
+      // Create Upload File
+      var response = await Dio().post('https://api.vimeo.com/me/videos',
+          data: {
+            "upload": {"approach": "tus", "size": "${byteFile.lengthInBytes}"},
+            "name": "${file.name}"
+          },
+          options: Options(
+            headers: {
+              "Authorization": bearer,
+              "Content-Type": "application/json",
+              "Accept": "application/vnd.vimeo.*+json;version=3.4"
+            },
+          ));
+      final Map parsed = json.decode(response.data);
+      final upload_link = parsed['upload']['upload_link'];
+      // Upload File for real
+      await Dio().patch(
+        upload_link,
+        data: Stream.fromIterable(byteFile.map((e) => [e])),
+        options: Options(
+          headers: {
+            "Content-Length": "${byteFile.lengthInBytes}",
+            "Tus-Resumable": "1.0.0",
+            "Upload-Offset": "0",
+            "Content-Type": "application/offset+octet-stream",
+            "Accept": "application/vnd.vimeo.*+json;version=3.4",
+          },
+        ),
+        onSendProgress: (int sent, int total) {
+          final progress = ((sent / total) * 100).floor();
+          uploadNotifier(progress);
+        },
+      );
+    } catch (e) {
+      print(e);
+    }
+  }
 
   _selectPackage(Map map) {
     _selectedPackage = map;
@@ -70,6 +117,24 @@ class _UploadContentState extends State<UploadContent> {
       };
       Navigator.pushReplacementNamed(context, Routes.cashBox, arguments: data);
     }
+  }
+
+  @override
+  void initState() {
+    _loadData();
+    super.initState();
+  }
+
+  _loadData() async {
+    setBusy(true);
+    var http = HTTPManager();
+    var result = await http.get(url: "$BASE_URL/packages/vPackages");
+    if (result['success']) {
+      setState(() {
+        _pricing_list = result['data'];
+      });
+    }
+    setBusy(false);
   }
 
   @override
@@ -111,10 +176,25 @@ class _UploadContentState extends State<UploadContent> {
                 ),
                 AppButton(
                   Translate.of(context).translate('Upload'),
-                  onPressed: () {},
+                  onPressed: () => pickVideo(),
                   loading: false,
                   disabled: false,
                 ),
+                SizedBox(height: 10),
+                progress != 0
+                    ? Center(
+                        child: SizedBox(
+                          width: 50,
+                          height: 60,
+                          child: CircularPercentIndicator(
+                            radius: 60,
+                            progressColor: Theme.of(context).primaryColor,
+                            center: Text('$progress'),
+                            percent: progress / 100,
+                          ),
+                        ),
+                      )
+                    : Container(),
                 Padding(
                   padding: EdgeInsets.only(top: 20.0),
                   child: Text(
@@ -154,19 +234,23 @@ class _UploadContentState extends State<UploadContent> {
                     children: [
                       // ignore: sdk_version_ui_as_code
                       for (var p in _pricing_list)
-                        GestureDetector(
-                          onTap: () => _selectPackage(p),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: VideoCard(
-                              price: p['price'],
-                              title: p['title'],
-                              isSelected: p['isSelected'],
-                              imagePath: p['imagePath'],
-                              desc: p['desc'],
-                            ),
-                          ),
-                        ),
+                        isLoading
+                            ? Center(
+                                child: CircularProgressIndicator(),
+                              )
+                            : GestureDetector(
+                                onTap: () => _selectPackage(p),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: VideoCard(
+                                    price: p['price'].toStringAsFixed(2),
+                                    title: p['title'],
+                                    isSelected: p['isSelected'],
+                                    imagePath: "$BASE_URL_Img/${p['imagePath']}",
+                                    desc: p['desc'],
+                                  ),
+                                ),
+                              ),
                     ],
                   ),
                 ),
@@ -251,7 +335,7 @@ class VideoCard extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               image: DecorationImage(
-                image: AssetImage(imagePath),
+                image: NetworkImage(imagePath),
                 fit: BoxFit.cover,
               ),
             ),

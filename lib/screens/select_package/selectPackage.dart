@@ -1,6 +1,8 @@
 // ignore_for_file: sdk_version_ui_as_code
 
 import 'package:flutter/material.dart';
+import 'package:listar_flutter/api/api.dart';
+import 'package:listar_flutter/api/http_manager.dart';
 import 'package:listar_flutter/configs/routes.dart';
 import 'package:listar_flutter/utils/translate.dart';
 import 'package:listar_flutter/widgets/app_button.dart';
@@ -13,72 +15,32 @@ class SelectPackage extends StatefulWidget {
 }
 
 class _SelectPackageState extends State<SelectPackage> {
-  List<Map> cards = [
-    {
-      'id': 1,
-      'title': "CHEGGl VIDEO",
-      "subtitle": "Your individual marketing video",
-      "price": "79.00",
-      'price_first': "from only",
-      'price_last': '/ plus 19% VAT.',
-      'button_text': 'Book a Cheggle Video',
-      'recursive': false,
-      "additional_price": "",
-      'feature_list': [
-        {'title': "Professional video production", 'spacial': false},
-        {'title': "Cut and Effects", 'spacial': false},
-        {'title': "Setting to music", 'spacial': false},
-        {'title': "HD quality", 'spacial': false},
-        {'title': "no follow-up costs", 'spacial': true},
-        {'title': "Ideal for social media", 'spacial': false},
-        {'title': "Integration into your website", 'spacial': false},
-        {'title': "Presentation at events", 'spacial': false},
-      ],
-    },
-    {
-      'id': 2,
-      'title': "PREMIUM PACKAGE",
-      "subtitle": "including all top functions",
-      "price": "5.00",
-      'price_first': "now only",
-      'price_last': '/ month.',
-      'button_text': 'Join Now',
-      'recursive': true,
-      "additional_price": "",
-      'feature_list': [
-        {'title': "multimedia company profile", 'spacial': false},
-        {'title': "can be canceled monthly", 'spacial': false},
-        {'title': "no follow-up costs", 'spacial': false},
-        {'title': "including ALL premium tools", 'spacial': false},
-        {'title': "booking request", 'spacial': false},
-        {'title': "video gallery", 'spacial': false},
-        {'title': "route planner", 'spacial': false},
-        {'title': "contact box", 'spacial': false},
-        {'title': "Document upload, etc", 'spacial': false},
-      ],
-    },
-    {
-      'id': 3,
-      'title': "VIDEO + PREMIUM",
-      "subtitle": "Your combo package to get you started",
-      "price": "5.00",
-      'price_first': "month /",
-      'price_last': '+ € 199.00 one-time',
-      'button_text': 'Book a Combination Package',
-      'recursive': true,
-      "additional_price": "199.00",
-      'feature_list': [
-        {'title': "Professional video production", 'spacial': false},
-        {'title': "complete post production", 'spacial': false},
-        {'title': "Hosting & Streaming", 'spacial': false},
-        {'title': "HD quality", 'spacial': false},
-        {'title': "Upload to your Cheggl profile", 'spacial': false},
-        {'title': "Multimedia profile page", 'spacial': false},
-        {'title': "all premium functions", 'spacial': true},
-        {'title': "extensive usage rights", 'spacial': false},
-      ],
-    },
-  ];
+  List cards = [];
+  bool isLoading = false;
+
+  setBusy(bool state) {
+    setState(() {
+      isLoading = state;
+    });
+  }
+
+  @override
+  void initState() {
+    _loadData();
+    super.initState();
+  }
+
+  _loadData() async {
+    setBusy(true);
+    var http = HTTPManager();
+    var result = await http.get(url: "$BASE_URL/packages");
+    if (result['success']) {
+      setState(() {
+        cards = result['data'];
+      });
+    }
+    setBusy(false);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -98,21 +60,27 @@ class _SelectPackageState extends State<SelectPackage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               for (var card in cards)
-                Padding(
-                  padding: EdgeInsets.only(top: 10.0),
-                  child: PackageCard(
-                    data: card,
-                    onPress: () {
-                      if (card['id'] == 2 || card['id'] == 3) {
-                        widget.data['roles'] = ['moderator'];
-                      }
-                      Map data = {'form_data': widget.data, 'card': card};
-                      Navigator.pushReplacementNamed(
-                          context, Routes.uploadContent,
-                          arguments: data);
-                    },
-                  ),
-                )
+                isLoading
+                    ? Center(
+                        child: CircularProgressIndicator(),
+                      )
+                    : Padding(
+                        padding: EdgeInsets.only(top: 10.0),
+                        child: PackageCard(
+                          data: card,
+                          onPress: () {
+                            if (card['premium']) {
+                              widget.data['roles'] = ['moderator'];
+                            }
+                            Map data = {'form_data': widget.data, 'card': card};
+                            Navigator.pushReplacementNamed(
+                              context,
+                              Routes.uploadContent,
+                              arguments: data,
+                            );
+                          },
+                        ),
+                      )
             ],
           ),
         ),
@@ -130,8 +98,9 @@ class PackageCard extends StatelessWidget {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.black.withOpacity(0.1)),
-          color: Colors.white, borderRadius: BorderRadius.circular(8)),
+          border: Border.all(color: Colors.black.withOpacity(0.1)),
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(8)),
       child: Padding(
         padding: EdgeInsets.all(10.0),
         child: Column(
@@ -155,31 +124,14 @@ class PackageCard extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "${data['price_first']} ",
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyText1
-                      .copyWith(height: 1.3, fontSize: 14),
-                ),
-                Text(
-                  "€ ${data['price']} ",
-                  style: Theme.of(context).textTheme.bodyText1.copyWith(
-                      height: 1.3,
-                      fontSize: 20,
-                      color: Theme.of(context).primaryColor),
-                ),
-                Text(
-                  "${data['price_last']}",
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyText1
-                      .copyWith(height: 1.3, fontSize: 14),
-                ),
-              ],
+            Center(
+              child: Text(
+                "€ ${data['price'].toStringAsFixed(2)}",
+                style: Theme.of(context).textTheme.bodyText1.copyWith(
+                    height: 1.3,
+                    fontSize: 30,
+                    color: Theme.of(context).primaryColor),
+              ),
             ),
             SizedBox(height: 20),
             Divider(

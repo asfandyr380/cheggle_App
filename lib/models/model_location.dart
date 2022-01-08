@@ -20,4 +20,13 @@ class LocationModel {
       json['long'] ?? 0.0,
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      "id": id,
+      "name": name,
+      "lat": lat,
+      "long": long,
+    };
+  }
 }

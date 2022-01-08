@@ -1,8 +1,6 @@
 // ignore_for_file: sdk_version_ui_as_code, sdk_version_set_literal
 
-import 'dart:developer';
-
-import 'package:flutter/cupertino.dart';
+import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -90,12 +88,8 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
   Future<void> _loadData() async {
     ResultApiModel result;
     if (preview) {
-      print("On Preview");
-      print(widget.id);
       result = await Api.getProfile(widget.id);
     } else {
-      print("NO Preview");
-
       result = await Api.getProfile(null);
     }
     if (result.success) {
@@ -126,7 +120,6 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
       setState(() {
         tabslist.add("Services");
         tabslist_content.add(_buildServicesList());
-
         tabs++;
       });
     }
@@ -134,7 +127,6 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
       setState(() {
         tabslist.add("Partners");
         tabslist_content.add(_buildPartners());
-
         tabs++;
       });
     }
@@ -145,29 +137,26 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
         tabs++;
       });
     }
+    if (_profilePage.user.pricing_list.length != 0) {
+      setState(() {
+        tabslist.add("Pricing");
+        tabslist_content.add(_buildPricing());
+        tabs++;
+      });
+    }
+    if (_profilePage.user.menu_list.length != 0) {
+      setState(() {
+        tabslist.add("Menu");
+        tabslist_content.add(_buildMenu());
+        tabs++;
+      });
+    }
   }
 
   ///On logout
   Future<void> _logout() async {
     AppBloc.loginBloc.add(OnLogout());
   }
-
-  ///Build profile UI
-  // Widget _buildProfile() {
-  //   return AppUserInfo(
-  //     user: _profilePage?.user,
-  //     onPressed: () {},
-  //     type: AppUserType.information,
-  //   );
-  // }
-
-  ///Build value
-  // Widget _buildValue() {
-  //   return AppProfilePerformance(
-  //     data: _profilePage?.value,
-  //     onPressed: (item) {},
-  //   );
-  // }
 
   ///On navigation
   void _onNavigate(String route) {
@@ -407,6 +396,41 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
     _loadData();
   }
 
+  _opentime() => showDialog(
+        context: context,
+        builder: (_) => AlertDialog(
+          title: Text("Open Time"),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              for (var hour in _profilePage.user.hour_details)
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 16.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        hour.title,
+                        style: TextStyle(
+                            color: Theme.of(context).primaryColor,
+                            fontSize: 16),
+                      ),
+                      Text(
+                        hour.time,
+                        style: TextStyle(fontSize: 16),
+                      )
+                    ],
+                  ),
+                )
+            ],
+          ),
+          actions: [
+            TextButton(
+                onPressed: () => Navigator.pop(context), child: Text("Close"))
+          ],
+        ),
+      );
+
   void handleClick(String value) {
     switch (value) {
       case 'Settings':
@@ -419,10 +443,11 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
         _openReview();
         break;
       case 'Open Time':
+        _opentime();
         break;
       case 'Map':
         Navigator.pushNamed(context, Routes.location,
-            arguments: LocationModel(1, 'loc', 37.774929, -122.419418));
+            arguments: _profilePage.user.location);
         break;
       case 'Logout':
         _logout();
@@ -573,7 +598,7 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
                     body: TabBarView(
                       children: [
                         for (var tab in tabslist_content) tab,
-                        Text('Events'),
+                        _buildEvents(),
                       ],
                     ),
                   ),
@@ -668,7 +693,78 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
   }
 
   Widget _buildEvents() {
-    return Column();
+    return Column(
+      children: [
+        
+      ],
+    );
+  }
+
+  Widget _buildPricing() {
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Our Pricing",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ),
+            ),
+            SizedBox(height: 10),
+            for (var pricing in _profilePage.user.pricing_list)
+              Padding(
+                padding: const EdgeInsets.only(bottom: 12),
+                child: PricingCard(pricing: pricing),
+              )
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildMenu() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "Our Popular Menu",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+            ),
+          ),
+          SizedBox(height: 10),
+          for (var menu in _profilePage.user.menu_list)
+            Padding(
+              padding: const EdgeInsets.only(bottom: 12.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "${menu['title']}",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                  SizedBox(width: 10),
+                  Expanded(
+                    child: DottedLine(),
+                  ),
+                  SizedBox(width: 10),
+                  Text(
+                    "€ ${menu['price']}",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  )
+                ],
+              ),
+            ),
+        ],
+      ),
+    );
   }
 }
 
@@ -691,6 +787,70 @@ class PartnerCard extends StatelessWidget {
           style: TextStyle(fontWeight: FontWeight.bold),
         )),
       ],
+    );
+  }
+}
+
+class PricingCard extends StatelessWidget {
+  final Map pricing;
+  const PricingCard({@required this.pricing});
+
+  @override
+  Widget build(BuildContext context) {
+    List services = pricing['services'];
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 16),
+      decoration: BoxDecoration(
+        border:
+            Border.all(color: Theme.of(context).primaryColor.withOpacity(0.2)),
+        borderRadius: BorderRadius.circular(9),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "${pricing['title']}",
+            style: TextStyle(color: Theme.of(context).primaryColor),
+          ),
+          SizedBox(height: 10),
+          Text(
+            "${pricing['name']}",
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 15,
+                color: Theme.of(context).primaryColor),
+          ),
+          SizedBox(height: 10),
+          Text(
+            "€ ${pricing['price']}",
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+                color: Theme.of(context).primaryColor),
+          ),
+          SizedBox(height: 15),
+          AppButton(
+            'Purchase Now',
+            onPressed: () {},
+            disabled: false,
+            loading: false,
+            type: ButtonType.outline,
+          ),
+          SizedBox(height: 15),
+          for (var service in services)
+            Row(
+              children: [
+                Icon(
+                  Icons.done,
+                  color: Theme.of(context).primaryColor,
+                ),
+                SizedBox(width: 10),
+                Text("$service"),
+              ],
+            )
+        ],
+      ),
     );
   }
 }
@@ -762,7 +922,7 @@ class ProfileHeader extends StatelessWidget {
                     SizedBox(height: 10),
                     RatingBar.builder(
                       onRatingUpdate: (_) {},
-                      initialRating: 1.5,
+                      initialRating: user.rate.toDouble(),
                       minRating: 1,
                       allowHalfRating: true,
                       unratedColor: Colors.white.withAlpha(100),

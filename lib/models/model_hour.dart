@@ -14,4 +14,11 @@ class HourModel {
       json['time'] ?? "Unknown",
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      "title": title,
+      "time": time,
+    };
+  }
 }

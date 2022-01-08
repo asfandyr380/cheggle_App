@@ -430,7 +430,8 @@ class _HomeState extends State<Home> {
         return Container(
           width: MediaQuery.of(context).size.width / 2,
           padding: EdgeInsets.only(right: 16),
-          child: RecommendationCard(onPressed: () => _onTapService(item), item: item),
+          child: RecommendationCard(
+              onPressed: () => _onTapService(item), item: item),
         );
       },
       itemCount: _homePage.recommended.length,
@@ -470,7 +471,8 @@ class _HomeState extends State<Home> {
     return AlertDialog(
       title: Text(
         item.title,
-        style: TextStyle(color: Theme.of(context).primaryColor, fontWeight: FontWeight.bold),
+        style: TextStyle(
+            color: Theme.of(context).primaryColor, fontWeight: FontWeight.bold),
       ),
       content: SingleChildScrollView(
         child: Column(
@@ -509,7 +511,7 @@ class _HomeState extends State<Home> {
           onPressed: () => Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (_) => Profile(preview: true, id: item.author.id)),
+                builder: (_) => Profile(preview: true, id: item.autherId)),
           ),
           style: ButtonStyle(
             backgroundColor:
@@ -517,16 +519,6 @@ class _HomeState extends State<Home> {
             foregroundColor: MaterialStateProperty.all(Colors.white),
           ),
           child: Text('Go to Profile'),
-        ),
-        TextButton(
-          onPressed: () => Navigator.pushNamed(context, Routes.productDetail,
-              arguments: item),
-          style: ButtonStyle(
-            backgroundColor:
-                MaterialStateProperty.all(Theme.of(context).primaryColor),
-            foregroundColor: MaterialStateProperty.all(Colors.white),
-          ),
-          child: Text('More'),
         ),
       ],
     );
@@ -716,5 +708,3 @@ class _HomeState extends State<Home> {
     );
   }
 }
-
-

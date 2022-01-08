@@ -1,6 +1,5 @@
 // ignore_for_file: sdk_version_ui_as_code
 
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:listar_flutter/api/api.dart';
 import 'package:listar_flutter/api/http_manager.dart';
@@ -43,8 +42,8 @@ class _CashBoxState extends State<CashBox> {
     setState(() {
       package = widget.data['Package'];
       addtional_service = widget.data['Additional_Service'];
-      double package_price = double.tryParse(package['price']);
-      package_additinal_price = double.tryParse(package['additional_price']);
+      double package_price = package['price'].toDouble();
+      package_additinal_price = package['additional_price'].toDouble();
       subtotal += package_price;
 
       if (addtional_service != null) {
@@ -98,11 +97,14 @@ class _CashBoxState extends State<CashBox> {
         username: fromData['email'],
         password: fromData['password'],
       ));
-      if (widget.data['Package']['id'] == 1) {
+      if (!widget.data['Package']['premium']) {
         Navigator.pop(context);
       } else {
-        Navigator.pushReplacementNamed(context, Routes.profileSetup,
-            arguments: result['id']);
+        Navigator.pushReplacementNamed(
+          context,
+          Routes.profileSetup,
+          arguments: result['id'],
+        );
       }
     }
     setState(() {
