@@ -1,9 +1,0 @@
-C:\flutter\.pub-cache\hosted\pub.dartlang.org\better_player-0.0.81\android\src\main\kotlin\com\jhomlala\better_player\BetterPlayer.kt
-C:\flutter\.pub-cache\hosted\pub.dartlang.org\better_player-0.0.81\android\src\main\kotlin\com\jhomlala\better_player\BetterPlayerCache.kt
-C:\flutter\.pub-cache\hosted\pub.dartlang.org\better_player-0.0.81\android\src\main\kotlin\com\jhomlala\better_player\BetterPlayerPlugin.kt
-C:\flutter\.pub-cache\hosted\pub.dartlang.org\better_player-0.0.81\android\src\main\kotlin\com\jhomlala\better_player\CacheDataSourceFactory.kt
-C:\flutter\.pub-cache\hosted\pub.dartlang.org\better_player-0.0.81\android\src\main\kotlin\com\jhomlala\better_player\CacheWorker.kt
-C:\flutter\.pub-cache\hosted\pub.dartlang.org\better_player-0.0.81\android\src\main\kotlin\com\jhomlala\better_player\CustomDefaultLoadControl.kt
-C:\flutter\.pub-cache\hosted\pub.dartlang.org\better_player-0.0.81\android\src\main\kotlin\com\jhomlala\better_player\DataSourceUtils.kt
-C:\flutter\.pub-cache\hosted\pub.dartlang.org\better_player-0.0.81\android\src\main\kotlin\com\jhomlala\better_player\ImageWorker.kt
-C:\flutter\.pub-cache\hosted\pub.dartlang.org\better_player-0.0.81\android\src\main\kotlin\com\jhomlala\better_player\QueuingEventSink.kt

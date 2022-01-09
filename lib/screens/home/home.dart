@@ -13,6 +13,7 @@ import 'package:listar_flutter/screens/profile/profile.dart';
 import 'package:listar_flutter/utils/utils.dart';
 import 'package:listar_flutter/widgets/app_recommended_card.dart';
 import 'package:listar_flutter/widgets/widget.dart';
+import 'dart:math' as math;
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
@@ -421,17 +422,21 @@ class _HomeState extends State<Home> {
         itemCount: List.generate(8, (index) => index).length,
       );
     }
-
     return ListView.builder(
       scrollDirection: Axis.horizontal,
       padding: EdgeInsets.only(left: 16),
       itemBuilder: (context, index) {
         final CategoryModel item = _homePage.recommended[index];
+        Color textColor = Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
+            .withOpacity(1.0);
         return Container(
           width: MediaQuery.of(context).size.width / 2,
           padding: EdgeInsets.only(right: 16),
           child: RecommendationCard(
-              onPressed: () => _onTapService(item), item: item),
+            onPressed: () => _onTapService(item),
+            item: item,
+            textColor: textColor,
+          ),
         );
       },
       itemCount: _homePage.recommended.length,
@@ -469,6 +474,7 @@ class _HomeState extends State<Home> {
 
   Widget _buildDialog(ProductModel item) {
     return AlertDialog(
+      actionsAlignment: MainAxisAlignment.start,
       title: Text(
         item.title,
         style: TextStyle(

@@ -1,6 +1,7 @@
 // ignore_for_file: sdk_version_ui_as_code, sdk_version_set_literal
 
 import 'package:dotted_line/dotted_line.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -692,11 +693,96 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
     );
   }
 
+  List<Map> eventMonths = [
+    {
+      "name": "December",
+      "selected": true,
+    },
+    {
+      "name": "January",
+      "selected": false,
+    },
+    {
+      "name": "Febraruy",
+      "selected": false,
+    },
+    {
+      "name": "November",
+      "selected": false,
+    },
+  ];
+
+  changeEventMonth(Map selectedMonth) {
+    eventMonths.forEach((month) {
+      if (month['name'] == selectedMonth['name']) {
+        setState(() {
+          month['selected'] = true;
+        });
+      } else {
+        setState(() {
+          month['selected'] = false;
+        });
+      }
+    });
+  }
+
   Widget _buildEvents() {
-    return Column(
-      children: [
-        
-      ],
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  for (var month in eventMonths)
+                    InkWell(
+                      onTap: () => changeEventMonth(month),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 8.0),
+                        child: Text(
+                          month['name'],
+                          style: TextStyle(
+                            fontSize: month['selected'] ? 22 : 18,
+                            color: month['selected']
+                                ? Theme.of(context).primaryColor
+                                : Colors.grey,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                ],
+              ),
+            ),
+            GridView.count(
+              physics: NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              crossAxisCount: 2,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 10, bottom: 10),
+                  child: EventCard(),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 10, bottom: 10),
+                  child: EventCard(),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 10, bottom: 10),
+                  child: EventCard(),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 10, bottom: 10),
+                  child: EventCard(),
+                ),
+              ],
+            )
+          ],
+        ),
+      ),
     );
   }
 
@@ -876,6 +962,67 @@ class ServicesCard extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class EventCard extends StatelessWidget {
+  // const EventCard({ Key? key }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          image: DecorationImage(
+            fit: BoxFit.cover,
+            colorFilter:
+                ColorFilter.mode(Colors.black.withAlpha(80), BlendMode.darken),
+            image: AssetImage("assets/images/automotive-01.jpg"),
+          )),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+        child: Stack(
+          children: [
+            Align(
+              alignment: Alignment.bottomLeft,
+              child: Wrap(
+                direction: Axis.vertical,
+                children: [
+                  Text(
+                    "Hanukkah",
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "3 Companies",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ],
+              ),
+            ),
+            Align(
+              alignment: Alignment.topRight,
+              child: Wrap(
+                direction: Axis.vertical,
+                children: [
+                  Text(
+                    "10",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20),
+                  ),
+                  Text(
+                    "Fri",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

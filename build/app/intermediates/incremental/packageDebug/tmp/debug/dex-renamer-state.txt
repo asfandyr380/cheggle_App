@@ -1,4 +1,4 @@
-#Sat Jan 08 23:03:17 PKT 2022
+#Mon Jan 10 03:32:07 PKT 2022
 base.2=C\:\\Users\\asfan\\Desktop\\Lister\\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\\source\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes3.dex
 path.2=classes3.dex
 base.1=C\:\\Users\\asfan\\Desktop\\Lister\\codecanyon-vK6KOXAk-listar-flux-mobile-directory-listing-app-template-for-flutter\\source\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes2.dex

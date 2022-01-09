@@ -7,8 +7,8 @@ import 'app_placeholder.dart';
 class RecommendationCard extends StatelessWidget {
   final Function onPressed;
   final CategoryModel item;
-
-  const RecommendationCard({this.item, this.onPressed});
+  final Color textColor;
+  const RecommendationCard({this.item, this.onPressed, this.textColor});
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,8 @@ class RecommendationCard extends StatelessWidget {
           border: Border.all(color: Colors.grey.shade400, width: 3),
           image: DecorationImage(
             fit: BoxFit.cover,
-            colorFilter: ColorFilter.mode(Colors.black.withAlpha(80), BlendMode.darken),
+            colorFilter:
+                ColorFilter.mode(Colors.black.withAlpha(80), BlendMode.darken),
             image: NetworkImage("$BASE_URL_Img/${item.image}"),
           ),
         ),
@@ -48,12 +49,13 @@ class RecommendationCard extends StatelessWidget {
           child: Container(
             padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10), color: Colors.grey.shade400),
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.grey.shade400),
             child: Text(
               item.title.toUpperCase(),
               style: TextStyle(
                 fontWeight: FontWeight.w500,
-                color: Colors.white,
+                color: textColor,
               ),
             ),
           ),
