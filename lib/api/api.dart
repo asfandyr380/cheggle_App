@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer';
 import 'package:dio/dio.dart';
 import 'package:listar_flutter/api/http_manager.dart';
 import 'package:listar_flutter/blocs/bloc.dart';
@@ -104,6 +105,7 @@ class Api {
     } else {
       result = await http.get(url: '$BASE_URL/user/$id');
     }
+    // print(result['data']['user']['events_data']);
     return ResultApiModel.fromJson(result);
   }
 

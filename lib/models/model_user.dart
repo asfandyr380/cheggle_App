@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:listar_flutter/models/model.dart';
+import 'package:listar_flutter/models/model_events.dart';
 
 class UserModel {
   final String id;
@@ -38,6 +39,8 @@ class UserModel {
   final List<HourModel> hour_details;
   final List pricing_list;
   final List menu_list;
+  final List<EventsModel> events;
+  List<EventMonths> eventMonths;
   final String token;
 
   UserModel(
@@ -76,12 +79,15 @@ class UserModel {
     this.hour_details,
     this.pricing_list,
     this.menu_list,
+    this.events,
+    this.eventMonths,
     this.token,
   );
 
   factory UserModel.fromJson(Map<String, dynamic> json, {bool addReview}) {
     bool _addReview = addReview ?? false;
     if (json == null) return null;
+    Map events = json['events_data'];
     return UserModel(
       json['id'] ?? json['_id'] ?? '0',
       json['person'] ?? "Unknown",
@@ -126,6 +132,16 @@ class UserModel {
       }).toList(),
       json['pricing_list'] ?? [],
       json['menu_list'] ?? [],
+      events != null
+          ? (events['data'] as List ?? []).map((item) {
+              return EventsModel.fromJson(item);
+            }).toList()
+          : [],
+      events != null
+          ? (events['months'] as List ?? []).map((item) {
+              return EventMonths.fromJson(item, false);
+            }).toList()
+          : [],
       json["token"] ?? "Unknown",
     );
   }
@@ -165,6 +181,8 @@ class UserModel {
       'partners': partners,
       'location': location,
       'hour_details': hour_details,
+      'events': events,
+      'eventMonths': eventMonths,
       'token': token,
     };
   }

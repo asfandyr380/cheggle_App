@@ -11,6 +11,7 @@ import 'package:listar_flutter/api/http_manager.dart';
 import 'package:listar_flutter/blocs/bloc.dart';
 import 'package:listar_flutter/configs/config.dart';
 import 'package:listar_flutter/models/model.dart';
+import 'package:listar_flutter/models/model_events.dart';
 import 'package:listar_flutter/models/screen_models/screen_models.dart';
 import 'package:listar_flutter/repository/repository.dart';
 import 'package:listar_flutter/utils/utils.dart' as util;
@@ -693,40 +694,36 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
     );
   }
 
-  List<Map> eventMonths = [
-    {
-      "name": "December",
-      "selected": true,
-    },
-    {
-      "name": "January",
-      "selected": false,
-    },
-    {
-      "name": "Febraruy",
-      "selected": false,
-    },
-    {
-      "name": "November",
-      "selected": false,
-    },
-  ];
-
-  changeEventMonth(Map selectedMonth) {
-    eventMonths.forEach((month) {
-      if (month['name'] == selectedMonth['name']) {
+  changeEventMonth(EventMonths selectedMonth) {
+    _profilePage.user.eventMonths.forEach((month) {
+      if (month.name == selectedMonth.name) {
         setState(() {
-          month['selected'] = true;
+          month.selected = true;
         });
       } else {
         setState(() {
-          month['selected'] = false;
+          month.selected = false;
         });
       }
     });
   }
 
+  // List<EventsModel> events;
+
+  // filterbyMonth(EventMonths month) {
+  //   setState(() {
+  //     events = [];
+  //     _profilePage.user.events.forEach((event) {
+  //       if (month.name == event.month) {
+  //         events.add(event);
+  //       }
+  //     });
+  //   });
+  //   print(events);
+  // }
+
   Widget _buildEvents() {
+    List<EventsModel> events = _profilePage.user.events;
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
@@ -737,16 +734,25 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  for (var month in eventMonths)
+                  for (var month in _profilePage.user.eventMonths)
                     InkWell(
-                      onTap: () => changeEventMonth(month),
+                      onTap: () {
+                        changeEventMonth(month);
+
+                        setState(() {
+                          events = [];
+                          events = _profilePage.user.events
+                              .where((event) => event.month == month.name)
+                              .toList();
+                        });
+                      },
                       child: Padding(
                         padding: const EdgeInsets.only(left: 8.0),
                         child: Text(
-                          month['name'],
+                          month.name,
                           style: TextStyle(
-                            fontSize: month['selected'] ? 22 : 18,
-                            color: month['selected']
+                            fontSize: month.selected ? 22 : 18,
+                            color: month.selected
                                 ? Theme.of(context).primaryColor
                                 : Colors.grey,
                             fontWeight: FontWeight.bold,
@@ -757,29 +763,29 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
                 ],
               ),
             ),
-            GridView.count(
-              physics: NeverScrollableScrollPhysics(),
+            GridView.builder(
+              gridDelegate:
+                  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
               shrinkWrap: true,
-              crossAxisCount: 2,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(right: 10, bottom: 10),
-                  child: EventCard(),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 10, bottom: 10),
-                  child: EventCard(),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 10, bottom: 10),
-                  child: EventCard(),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 10, bottom: 10),
-                  child: EventCard(),
-                ),
-              ],
-            )
+              physics: NeverScrollableScrollPhysics(),
+              itemCount: events.length,
+              itemBuilder: (context, i) {
+                return InkWell(
+                  onTap: () {
+                    setState(() {
+                      events.clear();
+                      events = _profilePage.user.events
+                          .where((event) => event.month == "December")
+                          .toList();
+                    });
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 10, bottom: 10),
+                    child: EventCard(event: events[i]),
+                  ),
+                );
+              },
+            ),
           ],
         ),
       ),
@@ -967,19 +973,21 @@ class ServicesCard extends StatelessWidget {
 }
 
 class EventCard extends StatelessWidget {
-  // const EventCard({ Key? key }) : super(key: key);
+  final EventsModel event;
+  const EventCard({@required this.event});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          image: DecorationImage(
-            fit: BoxFit.cover,
-            colorFilter:
-                ColorFilter.mode(Colors.black.withAlpha(80), BlendMode.darken),
-            image: AssetImage("assets/images/automotive-01.jpg"),
-          )),
+        borderRadius: BorderRadius.circular(10),
+        image: DecorationImage(
+          fit: BoxFit.cover,
+          colorFilter:
+              ColorFilter.mode(Colors.black.withAlpha(80), BlendMode.darken),
+          image: NetworkImage("$BASE_URL_Img/${event.image}"),
+        ),
+      ),
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
         child: Stack(
@@ -990,12 +998,14 @@ class EventCard extends StatelessWidget {
                 direction: Axis.vertical,
                 children: [
                   Text(
-                    "Hanukkah",
+                    event.title,
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    "3 Companies",
+                    event.joined_users.isNotEmpty
+                        ? "${event.joined_users.length} Companies"
+                        : "",
                     style: TextStyle(color: Colors.white),
                   ),
                 ],
@@ -1007,14 +1017,14 @@ class EventCard extends StatelessWidget {
                 direction: Axis.vertical,
                 children: [
                   Text(
-                    "10",
+                    event.day_num,
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
                         fontSize: 20),
                   ),
                   Text(
-                    "Fri",
+                    event.day.substring(0, 3),
                     style: TextStyle(color: Colors.white),
                   ),
                 ],
